@@ -24,6 +24,9 @@ def pic_split(img):
     img_array_green = img_array[:,:,1]
     img_array_blue = img_array[:,:,2]
 
+    np.where(img_array_red<128, 1, 0)
+    np.where(img_array_green<128, 1, 0)
+    np.where(img_array_blue<128,1 ,0)
     print(img_array_red.shape)
     print(img_array_green.shape)
     print(img_array_blue.shape)
@@ -35,7 +38,7 @@ def pic_split(img):
 
     return img_red, img_green, img_blue
 
-img = Image.open("/home/julius/PowerFolders/Masterarbeit/Bilder/acht/acht1_002.jpg")
+img = Image.open("/home/julius/PowerFolders/Masterarbeit/Bilder/acht/acht1_003.jpg")
 
 print(img.format, img.size, img.mode)
 
@@ -47,15 +50,18 @@ print(img_red.format)
 print(img_green.format)
 print(img_blue.format)
 
-#show the three color channel images
 
+"""
 img_red = img_red.filter(ImageFilter.MinFilter(3))
 img_green = img_green.filter(ImageFilter.MinFilter(3))
 img_blue = img_blue.filter(ImageFilter.MinFilter(3))
+"""
 
-img_red.show()
+#show the three color channel images
+
+#img_red.show()
 #img_green.show()
-#img_blue.show()
+img_blue.show()
 
 
 #grayscaling the image, printing its form and show
@@ -70,10 +76,3 @@ img.show()
 print("Red\n" + str(pytesseract.image_to_string(img_red)))
 #print("Green\n" + str(pytesseract.image_to_string(img_green)))
 #print("Blue\n" + str(pytesseract.image_to_string(img_blue)))
-
-#img.show()
-
-
-#img = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
-
-#img.show()
