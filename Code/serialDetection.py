@@ -23,9 +23,8 @@ try:
     
     image_list = sorted([picture for picture in os.listdir(path) if picture.endswith(".jpg")]) 
 
-    for counter, img in enumerate(image_list):
+    for img in image_list:
         image = cv2.imread(path + img)
-        # image = cv2.resize(image, (928,1392))
 
         cfg = get_cfg()
 
@@ -42,7 +41,7 @@ try:
         v = Visualizer(image[:, :, ::-1], MetadataCatalog.get(cfg.DATASETS.TRAIN[0]), scale=1.2)
         out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
 
-        cv2.imwrite(path + "image_" + str(counter) + ".jpg", out.get_image()[:, :, ::-1])
+        cv2.imwrite(path + img[:-4] + "_annotated.jpg", out.get_image()[:, :, ::-1])
 
 finally:
-    cv2.destroyAllWindows()
+    print("finished")
