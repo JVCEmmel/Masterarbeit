@@ -29,7 +29,6 @@ class Image:
         return imagedict
 
 
-
 class Category:
 
     __doc__ = "The class, representing the categorie Data for the COCO Dataset"
@@ -96,9 +95,8 @@ def PolyArea(x, y):
 # helper variables -
 # 
 # path gives the directory with images and .json,
-# images and categories store the classes created,
-# label_list keeps track over the gathered labels
-
+# images, categories and polygons store the classes created,
+# label_list and polygon_list keep track over the gathered labels and polygonids
 path = "/home/julius/PowerFolders/Masterarbeit/Bilder/1_Datensaetze/first_annotation_dataset/"
 json_dump = {}
 images = []
@@ -132,11 +130,13 @@ for id_count, json_file in enumerate(json_list):
 
             x_coordinates = []
             y_coordinates = []
+
+            # extract the polgon points
             for polygon in element["points"]:
                 x_coordinates.append(polygon[0])
                 y_coordinates.append(polygon[1])
 
-            # segmentation = list(zip(x_coordinates, y_coordinates))
+            # transform into COCO format
             segmentation = list(sum(zip(x_coordinates, y_coordinates), ()))
 
             # get the values of the bbox
@@ -159,6 +159,7 @@ for id_count, json_file in enumerate(json_list):
             polygons.append(polygon_as_dict)
             polygon_list.append(shape_count)
 
+# fill the dictionary to dump the data
 json_dump["images"] = images
 json_dump["categories"] = categories
 json_dump["annotations"] = polygons

@@ -18,11 +18,13 @@ from detectron2.config import get_cfg
 from detectron2.utils.visualizer import Visualizer
 from detectron2.data import MetadataCatalog, DatasetCatalog
 
-image = cv2.imread("/home/julius/MA Arbeit/Images/jazzplakat.jpg", 1)
+path = "/home/julius/PowerFolders/Masterarbeit/Bilder/1_Datensaetze/first_annotation_dataset/"
+
+image = cv2.imread(path + "acht1_036.jpg", 1)
 
 cv2.imshow("image", image)
 cv2.waitKey(3000)
-
+x
 
 
 cfg = get_cfg()
