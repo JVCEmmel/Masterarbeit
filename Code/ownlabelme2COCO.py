@@ -24,7 +24,7 @@ class Image:
         imagedict["height"] = self.height
         imagedict["width"] = self.width
         imagedict["id"] = self.id
-        imagedict["name"] = self.name
+        imagedict["file_name"] = self.name
 
         return imagedict
 
@@ -106,7 +106,7 @@ label_list = {}
 polygon_list = []
 
 # get all json files in directory
-json_list = sorted([f for f in os.listdir(path) if f.endswith(".json")])
+json_list = sorted([f for f in os.listdir(path + "labelme_annotations/") if f.endswith(".json")])
 
 # looping through the .json files
 # 
@@ -114,10 +114,10 @@ json_list = sorted([f for f in os.listdir(path) if f.endswith(".json")])
 # the first enclosed loop saves the label data
 # the second enclosed loop saves the coordinates of the poligons
 for id_count, json_file in enumerate(json_list):
-    with open(path + json_file, "r") as content:
+    with open(path + "labelme_annotations/" + json_file, "r") as content:
         data = json.load(content)
         
-        image = Image(id_count, json_file, data["imageHeight"], data["imageWidth"])
+        image = Image(id_count, json_file[:-4] + "jpg", data["imageHeight"], data["imageWidth"])
         image_as_dict = image.convertToDictionary()
         images.append(image_as_dict)
 
@@ -137,7 +137,8 @@ for id_count, json_file in enumerate(json_list):
                 y_coordinates.append(polygon[1])
 
             # transform into COCO format
-            segmentation = list(sum(zip(x_coordinates, y_coordinates), ()))
+            segmentation = []
+            segmentation.append(list(sum(zip(x_coordinates, y_coordinates), ())))
 
             # get the values of the bbox
             smallest_x = int(min(x_coordinates))
