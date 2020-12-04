@@ -97,7 +97,7 @@ def PolyArea(x, y):
 # path gives the directory with images and .json,
 # images, categories and polygons store the classes created,
 # label_list and polygon_list keep track over the gathered labels and polygonids
-path = "/home/julius/PowerFolders/Masterarbeit/Bilder/1_Datensaetze/first_annotation_dataset/"
+path = "/home/julius/PowerFolders/Masterarbeit/Bilder/1_Datensaetze/test/"
 json_dump = {}
 images = []
 categories = []
@@ -106,7 +106,7 @@ label_list = {}
 polygon_list = []
 
 # get all json files in directory
-json_list = sorted([f for f in os.listdir(path + "labelme_annotations/") if f.endswith(".json")])
+json_list = sorted([f for f in os.listdir(path) if f.endswith(".json")])
 
 # looping through the .json files
 # 
@@ -114,10 +114,10 @@ json_list = sorted([f for f in os.listdir(path + "labelme_annotations/") if f.en
 # the first enclosed loop saves the label data
 # the second enclosed loop saves the coordinates of the poligons
 for id_count, json_file in enumerate(json_list):
-    with open(path + "labelme_annotations/" + json_file, "r") as content:
+    with open(path + json_file, "r") as content:
         data = json.load(content)
         
-        image = Image(id_count, json_file[:-4] + "jpg", data["imageHeight"], data["imageWidth"])
+        image = Image(id_count, data["imagePath"][3:], data["imageHeight"], data["imageWidth"])
         image_as_dict = image.convertToDictionary()
         images.append(image_as_dict)
 
