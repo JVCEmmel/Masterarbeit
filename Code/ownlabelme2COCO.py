@@ -92,78 +92,84 @@ class Polygon:
 def PolyArea(x, y):
     return 0.5*np.abs(np.dot(x, np.roll(y, 1))-np.dot(y, np.roll(x, 1)))
 
-# helper variables -
-# 
-# path gives the directory with images and .json,
-# images, categories and polygons store the classes created,
-# label_list and polygon_list keep track over the gathered labels and polygonids
-path = "/home/julius/PowerFolders/Masterarbeit/Bilder/1_Datensaetze/test/"
-json_dump = {}
-images = []
-categories = []
-polygons = []
-label_list = {}
-polygon_list = []
 
-# get all json files in directory
-json_list = sorted([f for f in os.listdir(path) if f.endswith(".json")])
+def main(path):
+    # helper variables -
+    # 
+    # path gives the directory with images and .json,
+    # images, categories and polygons store the classes created,
+    # label_list and polygon_list keep track over the gathered labels and polygonids
+    json_dump = {}
+    images = []
+    categories = []
+    polygons = []
+    label_list = {}
+    polygon_list = []
 
-# looping through the .json files
-# 
-# the first loop saves the general image data
-# the first enclosed loop saves the label data
-# the second enclosed loop saves the coordinates of the poligons
-for id_count, json_file in enumerate(json_list):
-    with open(path + json_file, "r") as content:
-        data = json.load(content)
-        
-        image = Image(id_count, data["imagePath"][3:], data["imageHeight"], data["imageWidth"])
-        image_as_dict = image.convertToDictionary()
-        images.append(image_as_dict)
+    # get all json files in directory
+    json_list = sorted([f for f in os.listdir(path) if f.endswith(".json")])
 
-        for shape_count, element in enumerate(data["shapes"]):
-            if element["label"] not in label_list:
-                category = Category((len(label_list)), None, element["label"])
-                category_as_dict = category.convertToDictionary()
-                categories.append(category_as_dict)
-                label_list[element["label"]] = (len(label_list))
+    # looping through the .json files
+    # 
+    # the first loop saves the general image data
+    # the first enclosed loop saves the label data
+    # the second enclosed loop saves the coordinates of the poligons
+    for id_count, json_file in enumerate(json_list):
+        with open(path + json_file, "r") as content:
+            data = json.load(content)
+            
+            image = Image(id_count, data["imagePath"].replace("../", ""), data["imageHeight"], data["imageWidth"])
+            image_as_dict = image.convertToDictionary()
+            images.append(image_as_dict)
 
-            x_coordinates = []
-            y_coordinates = []
+            for shape_count, element in enumerate(data["shapes"]):
+                if element["label"] not in label_list:
+                    category = Category((len(label_list)), None, element["label"])
+                    category_as_dict = category.convertToDictionary()
+                    categories.append(category_as_dict)
+                    label_list[element["label"]] = (len(label_list))
 
-            # extract the polgon points
-            for polygon in element["points"]:
-                x_coordinates.append(polygon[0])
-                y_coordinates.append(polygon[1])
+                x_coordinates = []
+                y_coordinates = []
 
-            # transform into COCO format
-            segmentation = []
-            segmentation.append(list(sum(zip(x_coordinates, y_coordinates), ())))
+                # extract the polgon points
+                for polygon in element["points"]:
+                    x_coordinates.append(polygon[0])
+                    y_coordinates.append(polygon[1])
 
-            # get the values of the bbox
-            smallest_x = int(min(x_coordinates))
-            smallest_y = int(min(y_coordinates))
-            biggest_x = int(max(x_coordinates))
-            biggest_y = int(max(y_coordinates))
+                # transform into COCO format
+                segmentation = []
+                segmentation.append(list(sum(zip(x_coordinates, y_coordinates), ())))
 
-            bbox_height = biggest_y-smallest_y
-            bbox_width = biggest_x-smallest_x
+                # get the values of the bbox
+                smallest_x = int(min(x_coordinates))
+                smallest_y = int(min(y_coordinates))
+                biggest_x = int(max(x_coordinates))
+                biggest_y = int(max(y_coordinates))
 
-            bbox = [smallest_x, smallest_y, bbox_width, bbox_height]
+                bbox_height = biggest_y-smallest_y
+                bbox_width = biggest_x-smallest_x
 
-            # get the area of the polygon
-            polygon_area = PolyArea(x_coordinates, y_coordinates)
+                bbox = [smallest_x, smallest_y, bbox_width, bbox_height]
 
-            # create polygon instance and add it to the list
-            polygon = Polygon(len(polygon_list), label_list[element["label"]], id_count, 0, segmentation, bbox, polygon_area)
-            polygon_as_dict = polygon.convertToDictionary()
-            polygons.append(polygon_as_dict)
-            polygon_list.append(shape_count)
+                # get the area of the polygon
+                polygon_area = PolyArea(x_coordinates, y_coordinates)
 
-# fill the dictionary to dump the data
-json_dump["images"] = images
-json_dump["categories"] = categories
-json_dump["annotations"] = polygons
+                # create polygon instance and add it to the list
+                polygon = Polygon(len(polygon_list), label_list[element["label"]], id_count, 0, segmentation, bbox, polygon_area)
+                polygon_as_dict = polygon.convertToDictionary()
+                polygons.append(polygon_as_dict)
+                polygon_list.append(shape_count)
 
-with open(path + "output.json", "w") as output_file:
-    json.dump(json_dump, output_file, indent=4)
+    # fill the dictionary to dump the data
+    json_dump["images"] = images
+    json_dump["categories"] = categories
+    json_dump["annotations"] = polygons
+
+    with open(path + "output.json", "w") as output_file:
+        json.dump(json_dump, output_file, indent=4)
+
+
+if __name__ == "__main__":
+    path = "/home/julius/PowerFolders/Masterarbeit/Bilder/1_Datensaetze/data100/"
+    main(path)

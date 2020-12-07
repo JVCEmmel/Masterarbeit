@@ -1,72 +1,59 @@
-# dataset imports
 from detectron2.data.datasets import load_coco_json, register_coco_instances
 from detectron2.data import MetadataCatalog, DatasetCatalog
 from detectron2.utils.visualizer import Visualizer, ColorMode
-import random
-import cv2
 
-# training imports
-from detectron2.engine import DefaultTrainer, DefaultPredictor
 from detectron2.config import get_cfg
+from detectron2.engine import DefaultTrainer
+import cv2 as cv
 import os
+import random
+import helpfulFunctions, ownlabelme2COCO
 
-path = "/home/julius/PowerFolders/Masterarbeit/Bilder/1_Datensaetze/test/"
+def showRandomImage(train_set_data, train_set_metadata):
+    random_image = random.sample(train_set_data, 1)[0]
+    image = cv.imread(random_image["file_name"])
+    visualizer = Visualizer(image, metadata=train_set_metadata, scale=0.33, instance_mode=ColorMode.SEGMENTATION)
+    visualization = visualizer.draw_dataset_dict(random_image)
 
-# load and register the dataset
-load_coco_json(path + "output.json", path[:-1], "test_set")
-register_coco_instances("test_set", {}, path + "output.json", path[:-1])
+    helpfulFunctions.showImage(visualization.get_image())
 
-# get the Metadata
-test_set_metadata = MetadataCatalog.get("test_set")
-print(test_set_metadata)
+path = "/home/julius/PowerFolders/Masterarbeit/Bilder/1_Datensaetze/data100/"
+dataset_name = path.split("/")[-2]
 
-dataset_dicts = DatasetCatalog.get("test_set")
+if os.path.isdir(path + "train_split") == False:
+    helpfulFunctions.splitTrainTest(path, 5)
 
-# display an image of the dataset
-"""
-for d in random.sample(dataset_dicts, 1):
-    img = cv2.imread(d["file_name"])
-    visualizer = Visualizer(img[:,:,::-1], metadata=test_set_metadata, scale=0.5)
-    vis = visualizer.draw_dataset_dict(d)
-    
-    cv2.imshow("Bild", vis.get_image()[:,:,::-1])
-    cv2.waitKey(3000)
-    cv2.destroyWindow("Bild")
-"""
+ownlabelme2COCO.main(path + "train_split/")
+ownlabelme2COCO.main(path + "test_split/")
 
-# actual training
+#load and register dataset, generate Metadata - all required
+load_coco_json(path + "output.json", path[:-1], "train_set")
+register_coco_instances("train_set", {}, path + "output.json", path[:-1])
+train_set_metadata = MetadataCatalog.get("train_set")
+train_set_data = DatasetCatalog.get("train_set")
+
+print(train_set_metadata)
+
+showRandomImage(train_set_data, train_set_metadata)
+
 config = get_cfg()
-config.merge_from_file(
-    "/home/julius/detectron2/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"
-)
 
-config.DATASETS.TRAIN = ("test_set",)
-config.DATASETS.TEST = ()
+config.merge_from_file("/home/julius/detectron2/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
+# customize the config
+config.DATASETS.TRAIN = ("train_set",)
+config.DATASETS.TEST = ("test_set",)
 config.DATALOADER.NUM_WORKERS = 2
 config.MODEL.WEIGHTS = "detectron2://COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x/137849600/model_final_f10217.pkl"
-config.OUTPUT_DIR = "/home/julius/PowerFolders/Masterarbeit/detectron - training Output/"
+config.OUTPUT_DIR = "/home/julius/PowerFolders/Masterarbeit/detectron_training_output/" + dataset_name
 config.SOLVER.IMS_PER_BATCH = 2
 config.SOLVER.BASE_LR = 0.02
 config.SOLVER.MAX_ITER = (300)
 config.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = (128)
 config.MODEL.ROI_HEADS.NUM_CLASSES = 16
+config.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
 
 os.makedirs(config.OUTPUT_DIR, exist_ok=True)
-trainer = DefaultTrainer(config)
-trainer.resume_or_load(resume=False)
-trainer.train()
+trainer = DefaultTrainer
+
 
 config.MODEL.WEIGHTS = os.path.join(config.OUTPUT_DIR, "model_final.pth")
-config.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
-config.DATASETS.TEST = ("test_set",)
-predictor = DefaultPredictor(config)
-
-for d in random.sample(dataset_dicts, 3):
-    im = cv2.imread(d["file_name"])
-    outputs = predictor(im)
-    v = Visualizer(im[:,:,::-1], metadata=test_set_metadata, scale=0.8, instance_mode=ColorMode.IMAGE_BW)
-
-    v = v.draw_instance_predictions(outputs["instances"].to("cpu"))
-    cv2.imshow("Bild", v.get_image()[:,:,::-1])
-    cv2.waitKey(30000)
-    cv2.destroyWindow("Bild")
