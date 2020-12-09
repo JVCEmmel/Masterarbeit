@@ -55,8 +55,8 @@ def extractCSV(path, dataset_name):
 try:
     if __name__ == "__main__": 
         path = "/home/julius/PowerFolders/Masterarbeit/"
-        dataset_name = "data100"
+        dataset_name = "personData200"
         extractCSV(path, dataset_name)
     
 finally:
-    print("[INFO] Process F" + str(len([name for name in os.listdir(path + "Bilder/1_Datensaetze/" + dataset_name) if name.endswith(".JPG") or name.endswith(".jpg)")])) + " out of " + str(len(image_names)) + " had been copied")
+    print("[INFO] Process Finished")
