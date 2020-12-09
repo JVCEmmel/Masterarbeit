@@ -53,7 +53,7 @@ def extractCSV(path, dataset_name):
 
 
 try:
-    if if __name__ == "__main__": 
+    if __name__ == "__main__": 
         path = "/home/julius/PowerFolders/Masterarbeit/"
         dataset_name = "data100"
         extractCSV(path, dataset_name)
