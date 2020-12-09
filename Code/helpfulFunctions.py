@@ -9,6 +9,9 @@ try:
         cv.waitKey(15000)
         cv.destroyWindow("Bild")
     
+    def saveImage(img, output_path):
+        cv.imwrite(output_path + "prediction.jpg", img)
+    
     def splitTrainTest(path, split):
         if os.path.isdir(path + "train_split") == False:
             os.makedirs(path + "train_split")
