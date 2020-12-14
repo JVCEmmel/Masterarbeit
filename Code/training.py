@@ -18,6 +18,15 @@ def showRandomImage(train_set_data, train_set_metadata):
 
     helpfulFunctions.showImage(visualization.get_image())
 
+def predictImage(predictor, path):  
+    random_image = random.sample(test_set_data, 1)[0]
+    image = cv.imread(random_image["file_name"])
+    outputs = predictor(image)  # format is documented at https://detectron2.readthedocs.io/tutorials/models.html#model-output-format
+    visualizer = Visualizer(image, metadata=test_set_metadata, scale=0.5, instance_mode=ColorMode.IMAGE_BW)
+    visualzation = visualizer.draw_instance_predictions(outputs["instances"].to("cpu"))
+    
+    helpfulFunctions.saveImage(visualzation.get_image(), path + "predictions/")
+
 path = "/home/julius/PowerFolders/Masterarbeit/Bilder/1_Datensaetze/data100/"
 train_path = path + "train_split/"
 test_path = path + "test_split/"
