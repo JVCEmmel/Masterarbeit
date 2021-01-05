@@ -1,17 +1,15 @@
-class Example:
-    def __init__(self, count):
-        self.count = count
 
-examples = []
-count_list =[]
+element0 = {"Class": "74", "Class_name": "person", "Score": 1}
+element1 = {"Class":"65", "Class_name": "horse", "Score": -1}
 
-for count in range(10):
-    example = Example(count)
+elements = {"element0": element0, "element1": element1}
+to_be_deleted = {}
+for element in elements:
+    if elements[element]["Score"] < 0:
+        print(elements[element]["Score"])
+        to_be_deleted[element].append(element)
 
-    examples.append(example)
-    count_list.append(count)
-
-    print(example.count)
-
-    if 3 not in count_list:
-        print("Hier ist keine drei drin")
+[elements.pop(item) for item in to_be_deleted]
+print(to_be_deleted)
+print(len(elements))
+    
