@@ -13,6 +13,18 @@ from PIL import Image, ImageDraw
 import os
 from os.path import isfile, isdir
 
+from tensorflow.compat.v1 import ConfigProto
+from tensorflow.compat.v1 import InteractiveSession
+import tensorflow as tf
+
+config = ConfigProto()
+config.gpu_options.allow_growth = True
+session = InteractiveSession(config=config)
+
+physical_devices = tf.config.list_physical_devices('GPU')
+tf.config.experimental.set_memory_growth(physical_devices[0], True)
+
+
 print("[INFO]\tProgramm started! Imports completed")
 
 """
@@ -27,7 +39,7 @@ def get_images(path, all_image_names):
         if isfile(path + element) & (element.endswith(".jpg") or element.endswith(".JPG")):
             all_image_names.add((path + element).replace(base_path, ''))
         elif isdir(path + element):
-            get_images(path + element + "\\", all_image_names)
+            get_images(path + element + "/", all_image_names)
 
     all_image_names = list(all_image_names)
     all_image_names.sort()
@@ -65,7 +77,7 @@ def image_in_plot(i, name, X, Y, label):
 model = ResNet50(weights='imagenet', include_top=False)
 # model.summary()
 
-base_path = 'E:\\PowerFolders\\Masterarbeit\\1_Datensaetze\\first_annotation_dataset\\'
+base_path = '/home/julius/PowerFolders/Masterarbeit/1_Datensaetze/personData200/'
 clusters = 2
 
 all_image_names = set()
