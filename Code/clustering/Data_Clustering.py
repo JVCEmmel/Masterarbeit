@@ -11,19 +11,22 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 import numpy as np
 from PIL import Image, ImageDraw
 import os
+import time
 from os.path import isfile, isdir
 
 from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
 import tensorflow as tf
 
+"""
+# Configurations to ensure, that the GPU is implemented
 config = ConfigProto()
 config.gpu_options.allow_growth = True
 session = InteractiveSession(config=config)
 
 physical_devices = tf.config.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
-
+"""
 
 print("[INFO]\tProgramm started! Imports completed")
 
@@ -36,7 +39,7 @@ def get_images(path, all_image_names):
     file_name_list = os.listdir(path)
     
     for element in file_name_list:
-        if isfile(path + element) & (element.endswith(".jpg") or element.endswith(".JPG")):
+        if isfile(path + element) & (element.lower().endswith(".jpg")):
             all_image_names.add((path + element).replace(base_path, ''))
         elif isdir(path + element):
             get_images(path + element + "/", all_image_names)
@@ -61,7 +64,15 @@ def image_in_plot(i, name, X, Y, label):
         6 : "black",
         7 : "pink",
         8 : "gray",
-        9 : "orange"
+        9 : "orange",
+        10: "brown",
+        11: "lime",
+        12: "dodgerblue",
+        13: "turquoise",
+        14: "magenta",
+        15: "navy",
+        16: "khaki",
+        17: "lightgray"
         }
     image = Image.open(base_path + name)
     frame = ImageDraw.Draw(image)
@@ -78,7 +89,8 @@ model = ResNet50(weights='imagenet', include_top=False)
 # model.summary()
 
 base_path = '/home/julius/PowerFolders/Masterarbeit/1_Datensaetze/personData200/'
-clusters = 2
+output_path = '/home/julius/PowerFolders/Masterarbeit/cluster_outputs/'
+clusters = 17
 
 all_image_names = set()
 all_image_names = get_images(base_path, all_image_names)
@@ -125,17 +137,44 @@ for i, label in enumerate(label_list):
     else:
         labels_and_names[label].append(all_image_names[i])
 
-fig = plt.figure(figsize=(75, 75))
+# save only the scatter plot
+
+scatter_fig = plt.figure(figsize=(20,20))
 
 for label in range(clusters):
     filtered_label = pca_features[label_list == label]
     
     plt.scatter(filtered_label[:, 0], filtered_label[:, 1])
+    for i, name in enumerate(labels_and_names[label]):
+        plt.text(filtered_label[:, 0][i], filtered_label[:, 1][i], name)
+    
+plt.savefig(output_path + time.strftime("%d,%m,%Y-%H,%M,%S") + "_scatter.png")
 
+# save the plot with all images combined
+
+image_fig = plt.figure(figsize=(20, 20))
+
+for label in range(clusters):
+    ax = plt.subplot(5, 5, label+1)
+    filtered_label = pca_features[label_list == label]
+    plt.scatter(filtered_label[:, 0], filtered_label[:, 1])
+    plt.axis("off")
     for j, name in enumerate(labels_and_names[label]):
         image_in_plot(j, name, filtered_label[:, 0][j], filtered_label[:, 1][j], label)
 
-    
+plt.savefig(output_path + time.strftime("%d,%m,%Y-%H,%M,%S") + "_image.png")
 
-# plt.legend()
-plt.show()
+# Save all cluster figures seprately
+
+sub_fig = plt.figure(figsize=(20, 20))
+
+for label in range(clusters):
+    ax = plt.subplot(5, 5, label+1)
+    filtered_label = pca_features[label_list == label]
+    plt.scatter(filtered_label[:, 0], filtered_label[:, 1])
+    plt.axis("off")
+    for j, name in enumerate(labels_and_names[label]):
+        image_in_plot(j, name, filtered_label[:, 0][j], filtered_label[:, 1][j], label)
+    
+    cut_out = ax.get_window_extent().transformed(sub_fig.dpi_scale_trans.inverted())
+    plt.savefig(output_path + time.strftime("%d,%m,%Y-%H,%M,%S") + "_{}_image.png".format(label), bbox_inches=cut_out)
