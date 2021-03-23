@@ -19,9 +19,9 @@ from detectron2.utils.visualizer import Visualizer
 from detectron2.data import MetadataCatalog, DatasetCatalog
 
 try:
-    path = "/home/julius/PowerFolders/Masterarbeit/Bilder/1_Datensaetze/first_annotation_dataset/"
+    path = "/home/julius/PowerFolders/Masterarbeit/Auswahl/"
     
-    image_list = sorted([picture for picture in os.listdir(path) if picture.endswith(".jpg")]) 
+    image_list = sorted([picture for picture in os.listdir(path) if picture.lower().endswith(".jpg")]) 
 
     for img in image_list:
         image = cv2.imread(path + img)
