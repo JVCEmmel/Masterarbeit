@@ -166,10 +166,14 @@ def main(path):
     json_dump["categories"] = categories
     json_dump["annotations"] = polygons
 
-    with open(path + "output.json", "w") as output_file:
+    output_path = path + "COCO_json"
+    if not os.path.isdir(output_path):
+        os.mkdir(output_path)
+
+    with open(output_path + "/output.json", "w") as output_file:
         json.dump(json_dump, output_file, indent=4)
 
 
 if __name__ == "__main__":
-    path = "/home/julius/PowerFolders/Masterarbeit/Bilder/1_Datensaetze/data100/"
+    path = "/home/julius/PowerFolders/Masterarbeit/1_Datensaetze/first_annotation_dataset/"
     main(path)
