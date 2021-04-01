@@ -166,11 +166,11 @@ def main(path):
     json_dump["categories"] = categories
     json_dump["annotations"] = polygons
 
-    output_path = path + "COCO_json"
+    output_path = path + "COCO_json/"
     if not os.path.isdir(output_path):
         os.mkdir(output_path)
 
-    with open(output_path + "/output.json", "w") as output_file:
+    with open(output_path + "output.json", "w") as output_file:
         json.dump(json_dump, output_file, indent=4)
 
 
