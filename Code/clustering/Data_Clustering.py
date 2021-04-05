@@ -35,14 +35,14 @@ FUNCTION - This function gets all ".jpg" and ".JPG" files in a directory and all
             A path to the directory and a set or list is required, to store the data - it's returning a sorted list
 """
 
-def get_images(path, all_image_names):
-    file_name_list = os.listdir(path)
+def get_images(base_path, all_image_names):
+    file_name_list = os.listdir(base_path)
     
     for element in file_name_list:
-        if isfile(path + element) & (element.lower().endswith(".jpg")):
-            all_image_names.add((path + element).replace(base_path, ''))
-        elif isdir(path + element):
-            get_images(path + element + "/", all_image_names)
+        if isfile(base_path + element) & (element.lower().endswith(".jpg")):
+            all_image_names.add((base_path + element).replace(base_path, ''))
+        elif isdir(base_path + element):
+            get_images(base_path + element + "/", all_image_names)
 
     all_image_names = list(all_image_names)
     all_image_names.sort()
