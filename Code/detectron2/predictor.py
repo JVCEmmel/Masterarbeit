@@ -4,7 +4,7 @@ from detectron2.utils.visualizer import ColorMode, Visualizer
 from detectron2.data.datasets import load_coco_json, register_coco_instances
 from detectron2.data import MetadataCatalog, DatasetCatalog, build_detection_test_loader
 from detectron2.evaluation import COCOEvaluator, inference_on_dataset
-import os, cv2, helpfulFunctions
+import os, cv2
 
 def serialPredictor(config, path, test_set_data, test_set_metadata):
     config.MODEL.WEIGHTS = os.path.join(config.OUTPUT_DIR, "model_final.pth")

@@ -1,4 +1,4 @@
 {
     "jupyter.jupyterServerType": "local",
-    "python.pythonPath": "E:\\anaconda3\\envs\\tenscorflow\\python.exe"
+    "python.pythonPath": "/home/julius/venv/detectron2/bin/python3"
 }
