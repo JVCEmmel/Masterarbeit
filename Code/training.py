@@ -7,15 +7,7 @@ from detectron2.config import get_cfg
 from detectron2.engine import DefaultTrainer, DefaultPredictor
 import cv2 as cv
 import os
-import random
-
-def showRandomImage(train_set_data, train_set_metadata):
-    random_image = random.sample(train_set_data, 1)[0]
-    image = cv.imread(random_image["file_name"])
-    visualizer = Visualizer(image, metadata=train_set_metadata, scale=0.33, instance_mode=ColorMode.SEGMENTATION)
-    visualization = visualizer.draw_dataset_dict(random_image)
-
-    helpfulFunctions.showImage(visualization.get_image())
+import random, predictor
 
 path = "/home/julius/Schreibtisch/test_dir/1_Datensaetze/data100/"
 train_set_path = path + "train_split/"
