@@ -40,7 +40,7 @@ def get_images(base_path, all_image_names):
     
     for element in file_name_list:
         if isfile(base_path + element) & (element.lower().endswith(".jpg")):
-            all_image_names.add((base_path + element).replace(base_path, ''))
+            all_image_names.add((base_path + element).replace(path, ''))
         elif isdir(base_path + element):
             get_images(base_path + element + "/", all_image_names)
 
@@ -88,12 +88,12 @@ def image_in_plot(i, name, X, Y, label):
 model = ResNet50(weights='imagenet', include_top=False)
 # model.summary()
 
-base_path = '/home/julius/PowerFolders/Masterarbeit/1_Datensaetze/personData200/'
+path = '/home/julius/PowerFolders/Masterarbeit/1_Datensaetze/personData200/'
 output_path = '/home/julius/PowerFolders/Masterarbeit/cluster_outputs/'
 clusters = 17
 
 all_image_names = set()
-all_image_names = get_images(base_path, all_image_names)
+all_image_names = get_images(path, all_image_names)
 
 print("[INFO] {} Images were collected!".format(len(all_image_names)))
 
