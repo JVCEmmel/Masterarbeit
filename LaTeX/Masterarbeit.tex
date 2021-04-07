@@ -5,7 +5,8 @@
 \usepackage{times}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
-\usepackage{fontspec}
+%\usepackage{fontspec}
+\usepackage{helvet}
 \usepackage{graphicx}
 \usepackage{ngerman}
 \usepackage[doublespacing]{setspace}
@@ -17,10 +18,10 @@
 \usepackage[leftcaption]{sidecap}
 \usepackage{hyperref}
 \usepackage{pythonhighlight}
-\graphicspath{{./Abbildungen/}{./Abbildungen/detections/24,03,2021-11,29,46/}}
+\graphicspath{{./Abbildungen/}{./Abbildungen/detections/05,04,2021-15,39,10/}{./Abbildungen/graphs/}}
 
 
-\setmainfont{Arial}
+%\setmainfont{Arial}
 
 %%%%%%pagestyle%%%%%%%%%
 \setlength{\headheight}{15pt}
@@ -434,7 +435,7 @@ Der hier gewählte Ansatz greift auf die Technik der \textit{Feature Extraction}
 
 Zum Sammeln der Bilddateien wird im angegebenen Pfad jede jpg-Datei in jedem Unterordner mit Verweis auf ihren Pfad in eine Liste gespeichert. \\
 
-Die eigentliche Extraktion der \textit{Features} geschieht über eine einfache for-Schleife. In ihr wird einem zuvor geladenen Modell jedes Bild in der Liste gezeigt - die \textit{Features} ergeben sich dadurch, dass beim Laden des Modells auf den klassifizierenden Kopf verzichtet wurde.
+Die eigentliche Extraktion der \textit{Features} geschieht über eine einfache for-Schleife. In ihr wird einem zuvor geladenen Modell jedes Bild in der Liste gezeigt - die \textit{Features} ergeben sich dadurch, dass beim Laden des Modells auf den klassifizierenden Kopf verzichtet wurde. Genutzt wird ein ResNet50 Modell mit Gewichten, die auf den ImageNet Datenssatz trainiert worden sind. \\
 
 \begin{python}
 	resnet_feature_dict = {}
@@ -451,7 +452,48 @@ Die eigentliche Extraktion der \textit{Features} geschieht über eine einfache f
 		resnet_feature_dict[image_file] = np_resnet_feature.flatten()
 \end{python}
 
-Die \textit{Features} sind nach der Extraktion noch äußerst Komplex und besitzen über 100.000 Werte. Zur Reduktion der Werte auf zwei Dimensionen können verschiedene Funktionen genutzt werden. 
+Die \textit{Features} sind nach der Extraktion noch äußerst Komplex und besitzen über 100.000 Werte. Zur Reduktion der Werte auf zwei Dimensionen können verschiedene Funktionen genutzt werden. In diesem Fall wird die \textit{principal component analysis} (PCA) Funktion benutzt\footnote{Die PCA Funktion dient der Dimensionsreduktion von mehrdimensionalen Daten. Sie beschränkt sich dafür auf statistisch bedeutsammere Datenpunkte, vgl. Jolliffe: principal component analysis (2002).} \\
+Bevor die Daten mittels der KMeans Funktion geclustert werden können muss noch die ideale Anzahl von Clustern bestsimmt werden. Die einfachste Methode hierfür ist die sogenannte \textit{Ellbow Method}. Hierbei werden die Daten mehrmals mit unterschiedlich vielen Clustern analysiert. Für jeden dieser Vorgänge wird ein Fehlerwert von der KMeans Funktion zurückgegeben. Die beste Anzahl von Clustern ergibt sich dabei aus einem möglicht geringen Fehlerwert bei kleiner Clusterzahl (Abb. 56). Wie auf dem Graphen abzulesen ist, liegt die Optimale Clusterzahl für den Tensorflow Datensatz bei vier. Da für den Datensatz acht Kategorien entwickelt wurden, wird auch diese Zahl für die weiteren Untersuchungen gewählt. //
+Das Clustern der Bilder ermöglicht es auch abzulesen, welche Bildkategorien in welchem Cluster verortet werden. Wie Abbildung 57 zeigt, ist sowohl für vier, als auch für acht Cluster, keine klare Zuordnung der Kategorien in ein Cluster gegeben. //
+Visualisiert werden diese Cluster am Ende des Programms mit Hilfe von Scatterplots. Diese zeigen welche Bilder auf Grund ihrer räumlichen Nähe eine Ähnlichkeit besitzen (Abb. 58).\footnote{Neben dem gesamten Cluster wurden ebenfalls Darstellungen der einzelnen Cluster und eine reine Punktwolke gespeichert. Sie befinden sich im Hauptverzeichnis der Arbeit im Unterverzeichnis "cluster\_outputs.} Das untrainierte Modell liefert auf den ersten Blick drei größere Cluster, wobei sich eins in zwei Cluster teilt. Auffällig ist, dass sich die Scans abhängig vom Format, der Position und der Farbigkeit des Plakats gliedern. //
+Dies ist nachvollziehbar, da das Modell die benannten Kategorien nicht kennt und nach größeren, allgemeineren Kriterien auswählen muss. Die weiße Scanfläche ist dabei das auffälligste Element, das sich zwischen den einzelnen Bilddateien dadurch verändert, dass verschiedengroße Plakate in verschiedenen Positionen sich von ihr abheben - und durch geringe Farbigkeit auch oft weniger stark. Es ist zu vermuten, dass bei bildfüllenden Scans von Plakaten andere, auf die Plakate selbst bezogene Kriterien entscheidend wären. //
+
+\subsection{Tensorflow Training}
+
+Es ist von Interesse, ob sich die Ergebnisse des Clusterns mit einem anderen, auf den Datensatz angepassten Modell, verändern würden und wodurch sich diese Veränderung bemerkbar macht. Um dies zu ermitteln wird in der Datei \textit{Tensorflow\_training} ein Modell auf den Tensorflow Datensatz trainiert.\footnote{In der Zusammenstellung des Programms wurde auf verschiedene Codebeispiele von der Tensorflow Website zurückgegriffen, vgl. Tensorflow (17.03.2021).} Bedient wird sich hierbei neben der Methode der \textit{Feature Extraction} auch der des \textit{Fine Tuning}. Diese beiden Methoden werden dazu genutzt, um kein neues Modell von Grund auf trainieren zu müssen. So eine Vorgehensweise ist mit dem vorliegenden Datensatz nicht möglich, da es zu wenige kuratierte Bilder gibt und ein solches Training zudem zeitaufwändiger wäre.//
+
+\begin{python}
+	train_dataset = image_dataset_from_directory(path, validation_split=0.25, subset="training", seed=123, image_size=(160, 160), batch_size=25)
+	validation_dataset = image_dataset_from_directory(path, validation_split=0.25, subset="validation", seed=123, image_size=(160, 160), batch_size=25)
+
+	validation_batchs = tf.data.experimental.cardinality(validation_dataset)
+	test_dataset = validation_dataset.take(validation_batchs//2)
+	validation_dataset = validation_dataset.skip(validation_batchs//2)
+\end{python}
+
+Nach dem einlesen des Datensatzes über eingebaute Tensorflow Methoden wird der Datensatz für die Validation erneut unterteilt, um auch einen testdatensatz zu erhalten. Somit ist gesichert, dass das Netz während dem Training auf jeden Fall einen Teil der Daten nicht sehen wird. \\
+
+\begin{python}
+	inputs = tf.keras.Input(shape=(160, 160, 3))
+	x = data_augmentation(inputs)
+	x = preprocess_input(x)
+	X = normalization_layer(x)
+	x = base_model(x, training=False)
+	x = global_average_layer(x)
+	x = tf.keras.layers.Dropout(0.2)(x)
+	outputs = prediction_layer(x)
+	model = tf.keras.Model(inputs, outputs)
+\end{python}
+
+Im Anschluss wird das Modell zusammengebaut. Es fußt in seiner Architektur auf dem gleichen Modell, das das Clustern der Bilddateien vorgenommen hat und besitzt zum Beginn des Trainings auch die gleichen Gewichte. Um dieses Modell werden zusätzliche Schichten zum Vorprozessieren der Bilder und zur Klassifikation gelegt. \\
+Nach einer ersten Evaluation des Modells vor dem Training ergibt sich eine genauigkeit von 8\% auf dem Testdatensatz. Das \textit{Loss}, der Wert, der die Qualität der Klassifizierung angibt, ist mit 2.8456 zudem sehr hoch. \\
+In einem ersten Trainingsschritt wird das Modell in zehn Durchgängen auf den Datensatz trainiert. Wichtig ist hierbei, dass bei der Zusammensetzung des Modells die Gewichte des ursprünglichen Modells eingefroren wurden. Dies bedeutet, dass ein Großteil der Gewichte im ersten Training nicht verändert werden und die visuellen \textit{Feature} liefern, die auch beim Clustern der Bilder bereits verwendet wurden. Diese Features werden dann durch eine relativ kleine Schicht klassifiziert. Diese Schicht verändert ihre Gewichte und merkt sich dadurch, welche \textit{Feature} am Ehesten zu einer entsprechenden Kategorie gehören könnten. \\
+Die durch das Training erzeugten Daten für \textit{Loss} und Genauigkeit zeigen, wie das Modell im Laufe des Trainings durch den Datensatz verändert wird (Abb. 59).  Durch die beiden Graphen wird ersichtlich, dass das Modell bereits ab der ersten Epoche zu \textit{over fitten} beginnt. Dies beudetet, dass das Modell zur Klassifizierung der Bilder keine allgeminenen Kriterien findet, sondern den Datensatz viel mehr auswendig lernt. Das kann durch eine geringe Menge von Trainingsmaterial und einer simplen Modellstruktur liegen. Das Phänomen äußert sich dadurch, dass die Genauigkeit während der Validation des Modells geringer ist als während dem Training und die Leistung auch keine weitere Verbesserung zu erkennen ist. Genau so sinkt das \textit{Loss} im Training stärker als in der Validierung des Modells. \\
+Im zweiten Trainingsschritt wird ein Teil des Modells aufgetaut. Dadurch soll erreicht werden, dass auch die an die Klassifizierungsschicht gelieferten \textit{Feature} auf den Datensatz angepasst werden und gemessen an der validierung des Modells sich versuchen anzupassen. Dieser Schritt ist ebenfalls für die Versuchsanordnung dieser Arbeit wichtig, da nach dem Training nur die Gewichte des ursprünglichen Modells gespeichert werden - der im ersten Schritt trainierte Kopf des Modells ist somit unerheblich. Dies macht das \textit{Overfitting} des Kopfes weniger entscheidend. Würden die Gewichte des eigentlichen ResNet50 Modells nicht trainiert werden, würde das Training zu keinem Ergebnis führen. \\
+Nach dem zweiten Training setzt sich der Trend des ersten Trainings weiter fort (Abb. 60). Zwar können Genauigkeit und \textit{Loss} weiter gesteigert, beziehungsweise vermindert werden, aber die beiden Werte stagnieren am Ende des Trainings und verschlechtern sich im Falle der Genauigkeit. Die zweite Evaluation des Modells nach dem Training zeigt, dass das \textit{Loss} auf 2.0255 verringert werden konnte, aber hoch bleibt. Die Genauigkeit steigt auf 23\%. Beide Werte sind im Vergleich zu anderen Modellen und anderen Datensätzen gering - ein Lernerfolg ist dennoch festzustellen. Es ist denkbar, dass mit einem ausgereifteren Datensatz und einem intensiveren Training bessere Ergebnisse zu erzielen sind. Auch ein Vergleich unterschiedlicher Modellarchitekturen könnte zur allgemeinen Verbesserung beitragen. \\
+
+\subsection{Vergleich der Ergebnisse}
+
 
 \newpage
 
@@ -600,7 +642,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_13b_(acht1_006)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_17_(acht1_006)_with_detections}
 	\end{subfigure}
 	\caption{Theaterplakat - La Société de Challe. Nouveau Theatre de Belgique, ohne Datum (acht1\_006); Rechts: Mit Annotationen.}
 \end{figure}
@@ -615,7 +657,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_14_(acht4_096)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_18_(acht4_096)_with_detections}
 	\end{subfigure}
 	\caption{Veranstaltungsplakat – Torsten Zwingenberger im Podium \& Band, 20.09 (acht4\_096); Rechts: Mit Annotationen.}
 \end{figure}
@@ -659,7 +701,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{\linewidth}
 	\centering
-	\includegraphics[height=\linewidth, angle=90]{Abbildung_19_(acht2_105)_with_detections}
+	\includegraphics[height=\linewidth, angle=90]{Abbildung_23_(acht2_105)_with_detections}
 	\end{subfigure}
 	\caption{Veranstaltungsplakat - Musik der Gegenwart, Sender Freies Berlin, 19.09.1964 (acht2\_105); Unten: Mit Annotationen.}
 \end{figure}
@@ -674,7 +716,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_20_(acht1_109)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_24_(acht1_109)_with_detections}
 	\end{subfigure}
 	\caption{Ausstellungsplakat – Haiku \& Haiga, Museum Schloss Moyland, 30.04.2006-03.09.2006 (acht1\_109); Rechts: Mit Annotationen.}
 \end{figure}
@@ -689,7 +731,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_21_(acht1_165)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_25_(acht1_165)_with_detections}
 	\end{subfigure}
 	\caption{Werbeplakat –Madrid. Capital Mundial del Turismo, Ministerio de Transportes, Turismo y Comunicaciones, ohne Datum (acht1\_165); Rechts: Mit Annotationen.}
 \end{figure}
@@ -713,7 +755,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_23_(acht2_068)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_27_(acht2_068)_with_detections}
 	\end{subfigure}
 	\caption{Veranstaltungsplakat – Kostümfest, Hochschule für bildende Künste in Berlin, 10.02.-13.02 (acht2\_068); Rechts: Mit Annotationen.}
 \end{figure}
@@ -734,7 +776,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{\linewidth}
 	\centering
-	\includegraphics[height=\linewidth, angle=90]{Abbildung_25_(acht1_015)_with_detections}
+	\includegraphics[height=\linewidth, angle=90]{Abbildung_29_(acht1_015)_with_detections}
 	\end{subfigure}
 	\caption{Werbeplakat – Die Stadtbücherei ist mitreißend, ohne Datum (acht1\_015); Unten: Mit Annotationen.}
 \end{figure}
@@ -748,7 +790,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_26_(acht1_023)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_30_(acht1_023)_with_detections}
 	\end{subfigure}
 	\caption{Veranstaltungsplakat – Biennale of Illustrations Bratislava, 1993 (acht1\_023); Rechts: Mit Annotationen.}
 \end{figure}
@@ -763,7 +805,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_27_(acht1_016)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_31_(acht1_016)_with_detections}
 	\end{subfigure}
 	\caption{Veranstaltungsplakat – Festival International de Francophonies, Haute Vienne, 28.09.1990-13.10.1990 (acht1\_016); Rechts: Mit Annotationen.}
 \end{figure}
@@ -806,7 +848,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_32_(acht1_029)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_36_(acht1_029)_with_detections}
 	\end{subfigure}
 	\caption{Ausstellungsplakat – Klasicismus. Empir. Biedermeier, Moravská galérie Brno, ca. 1983 (acht1\_029); Rechts: Mit Annotationen.}
 \end{figure}
@@ -821,7 +863,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_33_(acht1_038)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_37_(acht1_038)_with_detections}
 	\end{subfigure}
 	\caption{Ausstellungsplakat – Sylva Lacinová, Moravska galerie v Brne, 1983 (acht1\_038); Rechts: Mit Annotationen.}
 \end{figure}
@@ -836,7 +878,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_34_(acht1_108)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_38_(acht1_108)_with_detections}
 	\end{subfigure}
 	\caption{Ausstellungsplakat – Henry Moore. Shelter Drawings, Rupertinum, 23.07.1994-23.10.1994 (acht1\_108); Rechts: Mit Annotationen.}
 \end{figure}
@@ -858,7 +900,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_36_(acht2_147)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_40_(acht2_147)_with_detections}
 	\end{subfigure}
 	\caption{Werbeplakat – Wenn Frau will, steht alles still. Landesweiter Frauenstreik, 14.06.1991 (acht2\_147); Rechts: Mit Annotationen.}
 \end{figure}
@@ -873,7 +915,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_37_(acht3_006)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_41_(acht3_006)_with_detections}
 	\end{subfigure}
 	\caption{Werbeplakat – Graswurzelrevolution. Monatszeitung für eine gewaltfreie, herrschaftslose Gesellschaft, ohne Datum (acht3\_006); Rechts: Mit Annotationen.}
 \end{figure}
@@ -902,7 +944,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_40_(acht1_124)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_44_(acht1_124)_with_detections}
 	\end{subfigure}
 	\caption{Ausstellungsplakat - Fokus Franken. Triennale Schweinfurt für Zeitgenössische Kunst, Kunsthalle Schweinfurt, 13.11.2009-14.02.2010 (acht1\_124); Rechts: Mit Annotationen.}
 \end{figure}
@@ -954,7 +996,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\linewidth}
 	\centering
-	\includegraphics[height=\linewidth]{Abbildung_46_(acht1_033)_with_detections}
+	\includegraphics[height=\linewidth]{Abbildung_50_(acht1_033)_with_detections}
 	\end{subfigure}
 	\caption{Ausstellungsplakat – Ceské moderní malírství (II), Dum Umení Mesta Brna, 17.05.1983-03.07.1983 (acht1\_033); Rechts: Mit Annotationen.}
 \end{figure}
@@ -975,7 +1017,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\end{subfigure}
 	\begin{subfigure}[b]{\linewidth}
 	\centering
-	\includegraphics[height=\linewidth, angle=90]{Abbildung_48_(achtzehn2_025)_with_detections}
+	\includegraphics[height=\linewidth, angle=90]{Abbildung_52_(achtzehn2_025)_with_detections}
 	\end{subfigure}
 	\caption{Ausstellungsplakat – Günter Eich 1907-19[…], Deutsches Literaturarchiv, 09.04.-28.[…] (achtzehn2\_025); Unten: Mit Annotationen.}
 \end{figure}
@@ -993,19 +1035,63 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\centering
 	\includegraphics[height=0.49\linewidth]{Abbildung_54a_(acht2_074)}
 	\centering
-	\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)_enlarged}
+	\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
 	\centering
-	\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)_enlarged}
+	\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
 	\caption{Veranstaltungsplakat – Herr Senator Carl-Heinz Evers. Die Entwicklung des Berliner Erziehungswesens im europäischen Vergleich, Amerika-Gedenkbibliothek am Halleschen Tor, 5.11.1963 (acht2\_074); Mitte: Detection mit einem adaptiven Threshold; Rechts: Detection mit globalem Threshold.}
 \end{figure}
 \end{landscape}
 
 \newpage
 \begin{figure}[ht]
-\includegraphics[width=\linewidth]{Labelme_Screenshot_enlarged}
+\includegraphics[width=\linewidth]{Labelme_Screenshot}
 \centering
 \caption{Screenshot eines annotierten Plakats in der Software \textit{Labelme}.}
 \end{figure}
+
+\newpage
+\begin{figure}[ht]
+\includegraphics[width=\linewidth]{Ellbow_Method}
+\centering
+\caption{Ermittlung der Optimalen Anzahl an Clustern durch die \textit{Ellbow Method}.}
+\end{figure}
+
+\newpage
+\begin{landscape}
+\begin{figure}[ht]
+	\begin{subfigure}[b]{0.5\linewidth}
+	\centering
+	\includegraphics[height=\linewidth]{4_clusters_untrained}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\linewidth}
+	\centering
+	\includegraphics[height=\linewidth]{8_clusters_untrained}
+	\end{subfigure}
+	\caption{Verteilung der Plakatkategorien zwischen den einzelnen Clustern mit einem untrainierten Modell}
+\end{figure}
+\end{landscape}
+
+\newpage
+\begin{figure}[ht]
+\includegraphics[width=\linewidth]{image_cluster_untrained}
+\centering
+\caption{Darstellung des geclusterten Tensorflow Datensatz durch ein untrainiertes Modell.}
+\end{figure}
+
+\newpage
+\begin{figure}[ht]
+\includegraphics[width=\linewidth]{first_training}
+\centering
+\caption{Entwicklung von Genauigkeit und \textit{Loss} während dem ersten Training.}
+\end{figure}
+
+\newpage
+\begin{figure}[ht]
+\includegraphics[width=\linewidth]{second_training}
+\centering
+\caption{Entwicklung von Genauigkeit und \textit{Loss} während dem zweiten Training.}
+\end{figure}
+
 
 \newpage
 \section{Anlagen}
@@ -1102,6 +1188,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 \item Grohnert, René: Sand fürs Getriebe. Plakate von Klaus Staeck, in: Klaus Staeck. Sand fürs Getriebe, hrsg. Deutsches Plakat Museum, Ausst.-Kat. Essen, Deutsches Plakat Museum, 2018, S. 93-100.
 \item Goldsborough, Peter: A Tour of TensorFlow, Technische Universität München (2016).
 \item Hirt-Tenger, Hans: Entwicklung und Techniken der Lithografie, in: Reklamekunst und Reiseträume. Anton Reckziegel (1865-1936) zurück in der Gegenwart, hrsg. Alpines Museum der Schweiz, Ausst.-Kat. Bern, Alpines Museum der Schweiz, Zürich 2016, S. 40-45.
+\item Jolliffe, Ian: Principal Component Analysis, New York (2002).
 \item Krause, Jürgen: Einleitung. „Zwischen Oberlehrer-Traktaten, ‚Granatsplitter-Stil‘ und Horror-Monstern – Stichworte zum Bildwandel auf deutschen und alliierten Kriegsplakaten um 1915“, in: Propaganda trifft Grabenkrieg. Plakatkunst um 1915, hrsg. Landschaftsverband Westfalen-Lippe, Ausst.-Kat. Münster, LWL-Museum, Köln 2015, S. 9-13.
 \item Kühnel, Anita: Werbegrafik in Deutschland seit 1945, in: Kühnel, Anita (Hrsg.): Schrift Bild Zeichen. Werbegrafik in Deutschland 1945-2015, Bönen (2016), S. 8-145.
 \item Lin, Tsung-Yi; Maire, Michael; Belongie, Serge; Bourdev, Lubomir; Girshick, Ross; Hays, James; Perona, Pietro; Ramanan, Deva; Dollár, Piotr; Zitnick, C. Lawrence: Microsoft COCO. Common Objects in Context, European Conference on Computer Vision (ECCV) (2015).
