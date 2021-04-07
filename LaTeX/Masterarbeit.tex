@@ -417,6 +417,42 @@ Nach dem Auslesen und Sortieren der Daten werden diese in das \textit{Dictionary
 Wie in der Einleitung angedeutet, gibt es mehrere Möglichkeiten sich einer Datensammlung zu nähern. Ein quantitativer Ansatz ist das vergleichende Betrachten mehrerer Bilddateien im Bezug auf visueller Ähnlichkeiten. Dies kann dazu führen, Untergruppen im Datensatz zu erkennen, welche eine tiefer gehende Auseinandersetzung erfordern. Dieser Ansatz kann so eine zunächst unüberschaubare Menge an Bildern gliedern und helfen, diese einfacher zu erschließen. \\
 Der hier gewählte Ansatz greift auf die Technik der \textit{Feature Extraction} zurück. Hierzu wird einem neuronalen Netz die zu analysierende Bildmenge zugeführt. Anstatt eine endgültige Einordnung in Klassen durch den Algorithmus vorzunehmen, werden die vom Netz erzeugten \textit{Features}, auf denen diese Einordnung basieren würde, gesammelt. Diese Features werden dazu benutzt die Position der Bilder in einem zweidimensionalem Raum zu ermitteln. Der für dieses Programm notwendige Code findet sich in der Datei \textit{Data\_Clustering}. \footnote{Das Notebook entstand durch die Orientierung an einigen Tutorials, vgl. Stackoverflow, Image Clustering by its similarity in python (20.01.2021); Towards data science, How to cluster images based on visual similarity (20.01.2021); Franky, Using Keras' pre-trained models for feature extraction in image clustering (20.01.2021); AskPython, How to Plot K-Means Clusters with Python (20.01.2021); Scikit learn, A demo of K-Means clustering on the handwritten digits data (20.01.2021); Stackoverflow, How to use custom png image marker with plot? (20.01.2021).} \\
 
+\begin{python}
+	def get_images(base_path, all_image_names):
+    file_name_list = os.listdir(base_path)
+    
+    for element in file_name_list:
+        if isfile(base_path + element) & (element.lower().endswith(".jpg")):
+            all_image_names.add((base_path + element).replace(path, ''))
+        elif isdir(base_path + element):
+            get_images(base_path + element + "/", all_image_names)
+
+    all_image_names = list(all_image_names)
+    all_image_names.sort()
+	return all_image_names
+\end{python}
+
+Zum Sammeln der Bilddateien wird im angegebenen Pfad jede jpg-Datei in jedem Unterordner mit Verweis auf ihren Pfad in eine Liste gespeichert. \\
+
+Die eigentliche Extraktion der \textit{Features} geschieht über eine einfache for-Schleife. In ihr wird einem zuvor geladenen Modell jedes Bild in der Liste gezeigt - die \textit{Features} ergeben sich dadurch, dass beim Laden des Modells auf den klassifizierenden Kopf verzichtet wurde.
+
+\begin{python}
+	resnet_feature_dict = {}
+
+	for i, image_file in enumerate(all_image_names):
+		img = keras_img.load_img(base_path + image_file, target_size=(224, 224))
+
+		img_data = keras_img.img_to_array(img)
+		img_data = np.expand_dims(img_data, axis=0)
+		img_data = preprocess_input(img_data)
+
+		resnet_feature = model.predict(img_data)
+		np_resnet_feature = np.array(resnet_feature)
+		resnet_feature_dict[image_file] = np_resnet_feature.flatten()
+\end{python}
+
+Die \textit{Features} sind nach der Extraktion noch äußerst Komplex und besitzen über 100.000 Werte. Zur Reduktion der Werte auf zwei Dimensionen können verschiedene Funktionen genutzt werden. 
+
 \newpage
 
 \section{Abbildungen}
