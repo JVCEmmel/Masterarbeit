@@ -1,0 +1,41 @@
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Einführung in das Thema}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Erläuterung der Fragestellung}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Besprechung des Datensatzes}{5}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Die Struktur der Arbeit}{6}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Plakatkunst}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Die Geschichte des Plakats}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Herausforderungen der Bilderkennung – An Beispielen aus der digitalen Plakatsammlung Bayreuth}{17}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Das Ausstellungsplakat}{18}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Das Programmplakat}{18}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Das Veranstaltungsplakat}{19}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Das politische Plakat}{19}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Das Filmplakat}{20}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}Das Theaterplakat}{21}{subsubsection.2.2.6}%
+\contentsline {subsubsection}{\numberline {2.2.7}Das Produktplakat}{21}{subsubsection.2.2.7}%
+\contentsline {subsubsection}{\numberline {2.2.8}Das Buchplakat}{22}{subsubsection.2.2.8}%
+\contentsline {subsubsection}{\numberline {2.2.9}Schrift}{23}{subsubsection.2.2.9}%
+\contentsline {subsubsection}{\numberline {2.2.10}Grafik}{26}{subsubsection.2.2.10}%
+\contentsline {subsubsection}{\numberline {2.2.11}Schrift-Grafik-Verschränkungen}{31}{subsubsection.2.2.11}%
+\contentsline {subsubsection}{\numberline {2.2.12}Scans}{34}{subsubsection.2.2.12}%
+\contentsline {subsection}{\numberline {2.3}Digitale Plakatsammlungen in drei Museen}{36}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}René Grohnert – Deutsches Plakat Museum}{36}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Anna Schultz – Akademie der Künste}{38}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Insa Brinkmann und Dr. Antje Schmidt – Museum für Kunst und Gewerbe}{40}{subsubsection.2.3.3}%
+\contentsline {section}{\numberline {3}Computergestützte Erschließung der Plakatsammlung}{43}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Die technischen Grundlagen}{44}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Tensorflow}{44}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Detectron2}{45}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Tesseract}{46}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Datensätze}{46}{subsubsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.2}Erstellung von Datensätzen aus der Bayreuther Plakatsammlung}{47}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Labelme}{48}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.3}Image Clustering}{53}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Tensorflow Training}{56}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Vergleich der Ergebnisse}{58}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Abbildungen}{59}{section.4}%
+\contentsline {section}{\numberline {5}Anlagen}{120}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Fragebogen: Fragen bezüglich der Digitalisierung}{120}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Literaturverzeichnis}{122}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Links}{122}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Literatur}{125}{subsection.6.2}%
