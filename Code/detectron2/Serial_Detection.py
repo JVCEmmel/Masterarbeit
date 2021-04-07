@@ -34,8 +34,8 @@ def get_images(base_path, all_image_names):
 def serial_Predictor(config, path, save_images = False):
     # Generate path and variables for output 
     output_dict = {}
-    all_output_dict = {}
-    output_path = "/".join(path.split("/")[:-3]) + "/detections/{}/{}/".format(path.split("/")[-2], time.strftime("%d,%m,%Y-%H,%M"))
+    boxes_dict = {}
+    output_path = "./detections/{}/{}/".format(path.split("/")[-2], time.strftime("%d,%m,%Y-%H,%M"))
     if not isdir(output_path):
         os.makedirs(output_path)
 
@@ -57,13 +57,16 @@ def serial_Predictor(config, path, save_images = False):
 
         # extract esssential informations
         predicted_classes = list(np.asarray(outputs["instances"].pred_classes.to("cpu")))
-        prediction_scores =  list(np.asarray(outputs["instances"].scores.to("cpu")))
+        prediction_scores = list(np.asarray(outputs["instances"].scores.to("cpu")))
+        prediction_boxes = outputs["instances"].pred_boxes.to("cpu")
+        prediction_boxes = [[float(value) for value in list(np.asarray(element))] for element in prediction_boxes]
+
         prediction_scores = [float(element) for element in prediction_scores]
         thing_classes = MetadataCatalog.get(config.DATASETS.TRAIN[0]).thing_classes
         predicted_classes_names = [thing_classes[element] for element in predicted_classes]
-
+        
         output_dict[element] = {"category_names": predicted_classes_names, "prediction_scores": prediction_scores}
-        all_output_dict[element] = outputs
+        boxes_dict[element] = {"category_names": predicted_classes_names, "prediction_boxes": prediction_boxes}
 
         ###CONSOLE OUTPUT###
         print("[INFO] Predicted {}\t{}/{}".format(element, count+1, len(image_list)))
@@ -77,12 +80,11 @@ def serial_Predictor(config, path, save_images = False):
     
     # save essential prediciton informations
     with open(output_path + "detections.json", "w+") as output_file:
-        json.dump(output_dict, output_file)
+        json.dump(output_dict, output_file, indent=4)
 
-    # save all outputs
-    with open(output_path + "detections_complete.txt", "w+") as output_file:
-        output_file.write(str(all_output_dict))
-    
+    with open(output_path + "bounding_boxes.json", "w+") as output_file:
+        json.dump(boxes_dict, output_file, indent=4)
+
     # analyse predictions
     prediction_analysis(output_path)
 
@@ -92,22 +94,32 @@ if __name__ == "__main__":
     work_dir = "/home/julius/PowerFolders/Masterarbeit/"
     os.chdir(work_dir)
 
-    ###PATH TO DATASET###
-    path = "./1_Datensaetze/data100/"
+    ###PATH TO IMAGES###
+    path = "./Bilder/"
+
+    ###PATH TO TRAINED MODEL###
+    model_path = None #"./trained_models/detectron2/personData200/06,04,2021-21,27/"
+
+    ###PATH TO DATASET - which the model is trained on###
     dataset_path = "./1_Datensaetze/personData200/"
     train_set_path = dataset_path + "train_split/"
 
     ###CONFIG FOR MODEL###
     config = get_cfg()
-    config.merge_from_file("./trained_models/detectron2/personData200/06,04,2021-21,27/config.yaml")
-    # config.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"))
+    if model_path != None:
+        config.merge_from_file(model_path + "config.yaml")
+        config.MODEL.WEIGHTS = model_path + "model_final.pth"
+    else:
+        config.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"))
+        config.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
+    
     config.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
-    config.MODEL.WEIGHTS = "./trained_models/detectron2/personData200/06,04,2021-21,27/model_final.pth"
-    config.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 20
 
-    load_coco_json(train_set_path + "COCO_json/output.json", train_set_path, "train_set")
-    register_coco_instances("train_set", {}, train_set_path + "COCO_json/output.json", train_set_path)
-    train_set_metadata = MetadataCatalog.get("train_set")
+    # registering the trained dataset
+    if model_path != None:
+        load_coco_json(train_set_path + "COCO_json/output.json", train_set_path, "train_set")
+        register_coco_instances("train_set", {}, train_set_path + "COCO_json/output.json", train_set_path)
+        train_set_metadata = MetadataCatalog.get("train_set")
 
     ###START###
-    serial_Predictor(config, path, save_images=True)
+    serial_Predictor(config, path, save_images=False)
