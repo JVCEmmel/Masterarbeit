@@ -494,11 +494,119 @@ Nach dem zweiten Training setzt sich der Trend des ersten Trainings weiter fort 
 
 \subsection{Vergleich der Ergebnisse}
 
+Das Clustern des Tensorflow Datensatzes mit dem trainierten Modell führt zu einer etwas anderen Verteilung der Kategorien auf die einzelnen Cluster (Abb. 61). Bei acht Clustern scheint das aus 121 Abbildungen bestehende Cluster größtenteils intakt geblieben zu sein. Auch andere Cluster bleiben in ihrer Verteilung größtenteils bestehen, verändern sich aber in ihrer Größe. So zählt das 61er Cluster nach dem Training 64 Abbildungen, die Verhältnisse zwischen den einzelnen Kategorien bleiben intakt. Ebenfalls ist festzustellen, dass Ausstellungsplakate sich nach dem Training aus dem Cluster mit 92 Abbildungen beginnen auf andere Cluster zu verteilen. Bei Filmplakaten bleibt eine große Teilung weiter bestehen. Nach dem Training kann weiterhin keines der Cluster eine absolute Mehrheit der Kategorien auf sich vereinen. \\
+Das gleiche Bild ergibt sich bei einer Zahl von vier Clustern. Die Verteilung von Labeln innerhlab der Cluster bleiben in großen Teilen gleich die Anzahl der Plakate in den Clustern variieren - wenn auch nicht stark. \\
+Der Scatterplot nach dem Training hat sich ebenfalls nur minimal verändert (Abb. 62). Die Cluster sind horizontal gespiegelt, sind aber in ihrer grundlegenden Verteilung gleich geblieben. Die offensichtlichste Veränderung ist die größere Entzerrung der Cluster auf der rechten und unteren Region des Graphen. Die Verteilung der Plakate scheint immernoch stark vom Format und der Position des Plakats abzuhängen. So besteht das alleinstehende Cluster in der oberen, linken Ecke hauptsächlich aus Scans deren Plakate in der oberen rechten Bildhälfte liegen. Von diesen Scans lassen sich auch Exemplare im linken, unteren Cluster entdecken. Die rechten Cluster besitzen wiederum Scans, die größere Plakate zeigen und in denen die Position des Plakats mehr in die Mitte der Bildfäche rückt. \\
+\\
+Insgesamt ist festzuhalten, dass das Clustern der Bilddateien wenige bis garkeine Rückschlüsse auf den Plakatinhalt geben. Viel mehr ist das Verhältnis zwischen Plakat und Scanfläche ausschlaggebend für die Positionierung der Plakate im Raum. Hilfreich kann diese Methode im Bereich des Aufspürens von Doubletten sein - hierfür müsste auch kein spezielles Modell trainiert werden. Durch das gleiche Erscheinungsbild von Doubletten wird vermutlich jedes Modell die beiden Bilder in eine enge Verbindung zueinander setzen. Konkret Umgesetzt könnte eine Abstandsmessung zwischen zwei Bildpositionen Ungewöhnlich nah beieinaderliegende Bilder identifizieren und deren Dateien entsprechend erfassen und sortieren. Das es solche Anwendungsfelder im konkreten Museumsalltag gibt konnte von Schultz bestätigt werden. \\
+Es ist zu vermuten, dass ein ausgefeilteres Training, mit mehr Daten und unterschiedlichen Modellarchitekturen bessere Ergebnisse liefern kann. Gerade im Hinblick auf die Scans muss gewährleistet sein, dass auf den zu analysierenden Bilddateien in der Hauptsache die Plakate zu sehen sind. \\
+
+\section{Objekterkennung auf Plakaten}
+
+Eine große Fragestellung dieser Arbeit ist, ob es möglich ist, mit neuronalen Netzen eine automatische Verschlagwortung von Bilddateien zu generieren. Wichtig ist dabei, dass das neuronale Netz sowohl die Abbildungen, als auch den Text auf den hier behandelten Plakaten erkennen kann. \\
+Wie im ersten Teil dieser Arbeit festgestellt wurde, ist die größere und wichtigere Informationsquelle auf Plakaten der Text. Er enthält konkrete Informationen über die Art und die Verwendung des Plakats, sowie der Sache, die es Vermarktet. Die Bilderkennung spielt in dem Sinne eine kleinere, aber nicht unerhebliche Rolle. So vermittelt das Dargestellte eine unkonkretere Information über das Beworbene, ist aber meist ein wichtiger Anhaltspunkt zur Einordnung von Plakten in Kontexte und bleibt auch eher in Erinnerung. Somit sind beide Elemente für Algorithmen, die Plakate erkennen sollen, wichtig. \\
+
+Ähnlich wie beim Clustern der Scans ist eine wichtige erste Erkenntnis, welche Elemente zunächst von einem untrainierten Netzwerk erkannt werden. Für diesen Zweck wurde das Programm \textit{Serial\_Detection} geschrieben. \\
+
+\begin{python}
+	# load image and get prediction
+	torch.cuda.empty_cache()
+	picture = cv2.imread(path + element)
+	predictor = DefaultPredictor(config)
+	outputs = predictor(picture)
+
+	# extract esssential informations
+	predicted_classes = list(np.asarray(outputs["instances"].pred_classes.to("cpu")))
+	prediction_scores = list(np.asarray(outputs["instances"].scores.to("cpu")))
+	prediction_boxes = outputs["instances"].pred_boxes.to("cpu")
+	prediction_boxes = [[float(value) for value in list(np.asarray(element))] for element in prediction_boxes]
+
+	prediction_scores = [float(element) for element in prediction_scores]
+	thing_classes = MetadataCatalog.get(config.DATASETS.TRAIN[0]).thing_classes
+	predicted_classes_names = [thing_classes[element] for element in predicted_classes]
+	
+	output_dict[element] = {"category_names": predicted_classes_names, "prediction_scores": prediction_scores}
+	boxes_dict[element] = {"category_names": predicted_classes_names, "prediction_boxes": prediction_boxes}
+
+	###CONSOLE OUTPUT###
+	print("[INFO] Predicted {}\t{}/{}".format(element, count+1, len(image_list)))
+
+	# Save images if it's wanted
+	if save_images:
+		v = Visualizer(picture[:,:, ::-1], MetadataCatalog.get(config.DATASETS.TRAIN[0]), scale=1.2)
+		out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
+
+		cv2.imwrite(output_path + element[:-4] + "_with_detections.jpg", out.get_image()[:, :, ::-1])
+\end{python}
+
+Im Zentrum des Programms steht eine for-Schleife, die über eine Liste aus Dateinamen iteriert. Jedes Bild wird dem Modell vorgelegt. In dieser Arbeit wird das Mask-RCNN R50 aus der in detectron2 ernthaltenen Sammlung von Modellen entnommen. Geladen werden auf ImageNet trainierte Gewichte. Die zu erkennenden Klassen entstammen demm MS COCO Datensatz. Aus den vom Modell ausgegebenen \textit{Outputs} werden die erkannten Kategorien, die Wahrscheinlichkeiten und die \textit{Bounding Boxes} in \textit{Dictionaries} gespeichert. Gegebenenfalls werden auch die Bilder, auf denen die erkannten Objekte eingezeichnet werden, gespeichert. \\
+Die gespeicherten \textit{Dictionaries} geben Aufschluss über die erkannten Bildobjekte. Wie die Balkendiagramme in Abbildung 63 zeigen, erkennt das Netz im gesamten Datensatz der Plakatsammlung des Museum Bayreuth, bei 17540 Bildern, zu einem großen Teil Personen - 16528. Danach folgen Bücher (2963), Vögel (1609) und Krawatten (1103). Bei 6342 Plakaten, gut einem Drittel der Sammlung erkennt das Netz keine Objekte. \\
+Ohne das Wissen, wie viele Objekte im Datensatz konkret vorhanden sind, sind diese Zahlen mit großer Vorsicht zu betrachten. Klar wird durch das gehäufte Aufkommen von Personen, dass diese Kategorie sowohl häufig vorkommen, als auch besonders gut vom verwendeten Modell erkannt werden kann. Zusätzlich zu dieser reinen Datenerhebung wurde auch eine Stichprobe des Datensatzes mit den erkannten Objekten gespeichert (Abb. 64-73).\footnote{Diese Stichprobe ist unter dem Dateipfad \textit{./1\_Datensaetze/first\_annotation\_dataset/} zu finden. Dieser Datensatz diente zu Beginn der Arbeit dem probeweise Annotieren und Klassifizieren von Bildern.} Dies Hilft die erkannten Objektkategorien in einen Kontext zu setzen. Wie Abbildung 65 zeigt werden trotz der hohen Zahl erkannter Personen nicht alle Personen auf Plakaten erkannt. Zudem kann es zu falschen Erkennungen wie der des \textit{Teddy Bärs} oder der \textit{Uhr} auf Abbildung 66 kommen. Abbildung 64 und 68 zeigen, dass die erkennung von gezeichneten Menschen gut gelingen kann, 70 und 72 zeigen das Gegenteil. Der letzte Scan ist auch ein Beispiel dafür, dass die Zahl der Plakate ohne Objekterkennung trügt. Hier wurde die Farbskala vom Algorithmus fälschlicherweise als Uhr erkannt. Somit fällt dieser Scan in der statistischen Auswertung nicht in die Kategorie \textit{no\_detection}. Abbildung 73 zeigt schließlich, dass auch eine eindeutige Darstellung eines Vogels zu einer falschen Erkennung führen kann. Was nicht überrascht ist, dass das Modell mit dem Text auf den Plakaten nichts anzufangen weiß. \\
+Um eine Vergleichbarkeit zwischen den verschiedenen Trainingsständen und den statistischen Auswertungen herzustellen, werden insgesamt sechs Runden von Klassifizierungen vorgenommen. Jedem Modell wird einmal der Tensorflow Datensatz und die Stichprobe gezeigt. Bei den Modellen handelt es sich um ein untrainiertes Mask-RCNN R50 mit ImageNet Gewichten und MS COCO Klassen, einem auf den Datensatz \textit{personData200} trainierten Modell und einem auf den Datensatz \textit{personData200Modified} trainierten Modell. \\
+
+\subsection{detectron2 Training}
+
+Für das Training mit detectron2 wurde das Programm \textit{Training\_and\_evaluation} geschrieben. Das eigentliche Training wird über die folgenden Codezeilen durchgeführt: \\
+
+\begin{python}
+	# train the model
+    torch.cuda.empty_cache()
+    trainer = DefaultTrainer(config)
+    trainer.resume_or_load(resume=False)
+    trainer.train()
+
+    # evaluate the model
+    torch.cuda.empty_cache()
+    evaluator = COCOEvaluator("test_set", config, distributed=False, output_dir=evaluation_path, use_fast_impl=False)
+    test_loader = build_detection_test_loader(config, "test_set")
+    inference_on_dataset(trainer.model, test_loader, evaluator)
+\end{python}
+
+Entscheidend im Umgang mit detectron2 ist die Konfigurationsdatei. Sie gibt an, wie sich das Modell und seine Parameter zusammensetzen und wie das Training und Testen des Modells ablaufen. \\
+
+\begin{python}
+	# load general config and merge with model config
+    config = get_cfg()
+    config.merge_from_file("/home/julius/detectron2/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
+    
+    # change Datasets for testing and training
+    config.DATASETS.TRAIN = ("train_set",)
+    config.DATASETS.TEST = ("test_set",)
+    
+    # config.DATALOADER.NUM_WORKERS = 2
+    
+    # load COCO trained weights 
+    config.MODEL.WEIGHTS = "detectron2://COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x/137849600/model_final_f10217.pkl"
+    
+    # set output dir
+    config.OUTPUT_DIR = model_path
+
+    # set batchsize
+    config.SOLVER.IMS_PER_BATCH = 2
+    
+    # set number of GPUs
+    config.SOLVER.REFERENCE_WORLD_SIZE = 1
+
+    # set learn rate
+    config.SOLVER.BASE_LR = 0.02
+
+    # set number of epochs
+    config.SOLVER.MAX_ITER = 300
+
+    # set RoIs per Image
+    config.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128
+
+    # set number of classes
+    config.MODEL.RETINANET.NUM_CLASSES = 4
+    config.MODEL.ROI_HEADS.NUM_CLASSES = 4
+\end{python}
+
+Eine komplette Aufschlüsselung der Konfigurationsdatei ist in der Dokumentation von detectron2 nachzulesen.\footnote{Vgl. detectron2, Dokumentation, Config (08.04.2021).}
 
 \newpage
 
 \section{Abbildungen}
-Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie – Titel, Veröffentlichende, Datum (Dateiname); Verweis“ benannt. In wenigen Fällen konnte dies nicht eingehalten werden. \\
+Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Muster „Kategorie – Titel, Veröffentlichende, Datum (Dateiname); Verweis“ benannt. In wenigen Fällen konnte dies nicht eingehalten werden. \\
 
 \begin{figure}[ht]
 \includegraphics[width=\linewidth]{Abbildung_1_(acht1_028)}
@@ -1067,7 +1175,7 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 	\centering
 	\includegraphics[height=\linewidth]{8_clusters_untrained}
 	\end{subfigure}
-	\caption{Verteilung der Plakatkategorien zwischen den einzelnen Clustern mit einem untrainierten Modell}
+	\caption{Verteilung der Plakatkategorien zwischen den einzelnen Clustern mit einem untrainierten Modell.}
 \end{figure}
 \end{landscape}
 
@@ -1091,6 +1199,166 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 \centering
 \caption{Entwicklung von Genauigkeit und \textit{Loss} während dem zweiten Training.}
 \end{figure}
+
+\newpage
+\begin{landscape}
+\begin{figure}[ht]
+	\begin{subfigure}[b]{0.5\linewidth}
+	\centering
+	\includegraphics[height=\linewidth]{4_clusters_trained}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\linewidth}
+	\centering
+	\includegraphics[height=\linewidth]{8_clusters_trained}
+	\end{subfigure}
+	\caption{Verteilung der Plakatkategorien zwischen den einzelnen Clustern mit einem trainierten Modell.}
+\end{figure}
+\end{landscape}
+
+\newpage
+\begin{figure}[ht]
+\includegraphics[width=\linewidth]{image_cluster_trained}
+\centering
+\caption{Darstellung des geclusterten Tensorflow Datensatz durch ein trainiertes Modell.}
+\end{figure}
+
+\newpage
+\begin{figure}[ht]
+\includegraphics[width=\linewidth]{Analyse_des_gesamten_Datensatzes}
+\centering
+\caption{Analyse der erkannten Objekte im gesamten Datensatz. Das Diagramm oben links zeigt die Anzahl der erkannten Objektklassen. Oben rechts wird die durchschnittliche Wahrscheinlichkeit mit der die Objekte erkannt wurden gezeigt. In den unteren beiden Diagrammen sind die maximale und die minimale Wahrscheinlichkeit der aufgeschlüsselt.}
+\end{figure}
+
+\newpage
+\begin{landscape}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_64a_(acht1_036)_with_detections}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\caption{Ausstellungsplakat – Ceské Umení 20. století, Dum Umení Mesta Brna, 19.02.1985-31.03.1985 (acht1\_036); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
+\end{figure}
+\end{landscape}
+
+\newpage
+\begin{landscape}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.49\linewidth, angle=90]{Abbildung_65a_(acht1_067)_with_detections}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\caption{Werbeplakat – Erfolgreich ist die Werbung, die Spaß macht und informiert, Wüstenrot, ohne Datum (acht1\_067); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
+\end{figure}
+\end{landscape}
+
+\newpage
+\begin{landscape}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_66a_(acht1_100)_with_detections}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\caption{Ausstellungsplakat – Genius I, Weltkulturerbe Völklinger Hütte, 13.05.2007-30.03.2008 (acht1\_100); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
+\end{figure}
+\end{landscape}
+
+\newpage
+\begin{landscape}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_67a_(acht1_158)_with_detections}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\caption{Werbeplakat – Fascinating Malaysia, ohne Datum (acht1\_158); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
+\end{figure}
+\end{landscape}
+
+\newpage
+\begin{landscape}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_68a_(acht2_024)_with_detections}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\caption{Werbeplakat – Jules Verne, Diogenes, 24.03.2005 (acht2\_024); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
+\end{figure}
+\end{landscape}
+
+\newpage
+\begin{landscape}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_69a_(acht2_085)_with_detections}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\caption{Ausstellungsplakat – Even Bottishelli knows, Die Galerie Niebuhr, 01.12.1968-15.12.1968 (acht2\_085); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
+\end{figure}
+\end{landscape}
+
+\newpage
+\begin{landscape}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_70a_(acht2_140)_with_detections}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\caption{Filmplakat – Brigitta, ohne Datum (acht2\_140); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
+\end{figure}
+\end{landscape}
+
+\newpage
+\begin{landscape}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_71a_(acht2_153)_with_detections}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\caption{Politisches Plakat – Grün wirkt - Wir machen's gleich!, Bündnis 90 die Grünen, ohne Datum (acht2\_153); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
+\end{figure}
+\end{landscape}
+
+\newpage
+\begin{landscape}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_72a_(acht2_242)_with_detections}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\caption{Buchplakat – 10 Jahre Bibliothek der Erstausgaben, dtv, ohne Datum (acht2\_242); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
+\end{figure}
+\end{landscape}
+
+\newpage
+\begin{landscape}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_73a_(acht5_030)_with_detections}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
+	%\centering
+	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\caption{Theaterplakat – Die Zauberflöte, Bayerische Staatsoper, 31.10.2004 (acht5\_030); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
+\end{figure}
+\end{landscape}
+
 
 
 \newpage
@@ -1137,40 +1405,41 @@ Die Abbildungen 1 - 54 in diesem Verzeichnis wurden nach dem Muster „Kategorie
 \subsection{Links}
 
 \begin{itemize}
-\item A Dictionary of Computer Science, Machine Learning: \href{https://www.oxfordreference.com/view/10.1093/acref/9780199688975.001.0001/acref-9780199688975-e-3056?rskey=8mKnpL\&result=1}{Machine learning - Oxford Reference}, (Aufgerufen am 17.03.2021).
-\item A Dictionary of Computer Science, neural network: \href{https://www.oxfordreference.com/view/10.1093/acref/9780199688975.001.0001/acref-9780199688975-e-3475?rskey=q7GLM6\&result=3842}{Neural network - Oxford Reference}, (Aufgerufen am 17.03.2021).
-\item Akademie der Künste, digitale Sammlung: \href{https://digital.adk.de/}{Digitale Sammlungen der Akademie der Künste (adk.de)}, (Aufgerufen am 09.03.2021).
-\item Akademie der Künste, John Heartfield Online: \href{https://heartfield.adk.de/}{Heartfield Online | Katalog des grafischen Nachlasses von John Heartfield (adk.de)}, (Aufgerufen am 09.03.2021).
-\item Akademie der Künste, Wittkugel Veröffentlichung: \href{https://www.adk.de/de/news/?we_objectID=56717}{Vier Jahrzehnte Gebrauchsgrafik: Der künstlerische Nachlass von Klaus Wittkugel ist online | Akademie der Künste, Berlin (adk.de)}, (Aufgerufen am 24.03.2021).
-\item Akademie der Künste, Plakatsammlung: \href{https://www.adk.de/de/archiv/kunstsammlung/plakatsammlung.htm}{Plakatsammlung | Akademie der Künste, Berlin (adk.de)}, (Aufgerufen am 07.01.2021).
-\item AskPython, How to Plot K-Means Clusters with Python: \href{https://www.askpython.com/python/examples/plot-k-means-clusters-python}{How to Plot K-Means Clusters with Python? - AskPython}, (Aufgerufen am 20.01.2021).
-\item Detectron2, Dokumentation, Datasets: \href{https://detectron2.readthedocs.io/en/latest/tutorials/datasets.html}{Use Custom Datasets — detectron2 0.4 documentation}, (Aufgerufen am 30.03.2021).
-\item DigiCULT, digiCULT.web: \href{https://www.digicult-verbund.de/de/digicultweb}{digiCULT.web | digiCULT Verbund eG (digicult-verbund.de)}, (Aufgerufen am 10.03.2021).
-\item Dlology, How to create custom COCO data set for instance segmentation: \href{https://www.dlology.com/blog/how-to-create-custom-coco-data-set-for-instance-segmentation/}{How to create custom COCO data set for instance segmentation | DLology}, (Aufgerufen am 30.03.2021).
-\item GitHub, detectron2: \href{https://github.com/facebookresearch/detectron2}{facebookresearch/detectron2: Detectron2 is FAIR's next-generation platform for object detection and segmentation. (github.com)}, (Aufgerufen am 17.03.2021).
-\item GitHub, Labelme: \href{https://github.com/wkentaro/labelme}{wkentaro/labelme: Image Polygonal Annotation with Python (polygon, rectangle, circle, line, point and image-level flag annotation). (github.com)}, (Aufgerufen am 30.03.2021).
-\item GitHub, tesseract: \href{https://github.com/tesseract-ocr/tesseract}{tesseract-ocr/tesseract: Tesseract Open Source OCR Engine (main repository) (github.com)}, (Aufgerufen am 17.03.2021).
-\item Hamburger Note: \href{http://hamburger-note.de/}{Hamburger Note (hamburger-note.de)}, (Aufgerufen am 11.03.2021)
-\item Iconclass: \href{http://www.iconclass.nl/}{Home — Iconclass}, (Aufgerufen am 15.03.2021).
-\item ImageNet: \href{http://image-net.org/about}{ImageNet (image-net.org)}, (Aufgerufen am 26.03.2021).
-\item Keras: \href{https://keras.io/about/}{About Keras}, (Aufgerufen am 17.03.2021).
-\item Klaus Staeck, Plakatshop: \href{https://www.edition-staeck.de/kuenstler/klaus-staeck/?art=plakat}{Klaus Staeck – Edition Staeck (edition-staeck.de)}, (Aufgerufen am 28.02.2021).
-\item Kunstmuseum Bayreuth, Plakatsammlung: \href{https://www.kunstmuseum-bayreuth.de/sammlungen/2012-plakatmuseum-im-kunstmuseum-bayreuth/}{https://www.kunstmuseum-bayreuth.de/sammlungen/2012-plakatmuseum-im-kunstmuseum-bayreuth/}, (Aufgerufen am 12.10.2020).
-\item Medium, Using Keras' pre-trained models for feature extraction in image clustering: \href{https://franky07724-57962.medium.com/using-keras-pre-trained-models-for-feature-extraction-in-image-clustering-a142c6cdf5b1}{Using Keras’ Pre-trained Models for Feature Extraction in Image Clustering | by franky | Medium}, (Aufgerufen am 20.01.2021)
-\item Museum Folkwang, \href{https://www.museum-folkwang.de/de/ueber-uns/sammlung/deutsches-plakat-museum.html}{Deutsches Plakat Museum: Deutsches Plakat Museum - Museum Folkwang (museum-folkwang.de)}, (Aufgerufen am 07.01.2021).
-\item Museum Folkwang, Sammlung online: \href{http://sammlung-online.museum-folkwang.de/eMP/eMuseumPlus?service=RedirectService\&sp=Scollection\&sp=SfieldValue\&sp=0\&sp=3\&sp=3\&sp=SsimpleList\&sp=0\&sp=Sdetail\&sp=1\&sp=F}{Museum Folkwang - Sammlung Online - Werke | Resultat (museum-folkwang.de)}, (Aufgerufen am 09.03.2021).
-\item Museum für Kunst und Gewerbe, NEO Collections: \href{https://www.mkg-hamburg.de/de/das-mkg/neo-collections.html}{NEO Collections (mkg-hamburg.de)}, (Aufgerufen am 10.03.2021).
-\item Museum für Kunst und Gewerbe, Personen: \href{https://www.mkg-hamburg.de/de/das-mkg/team-kontakt.html}{Team \& Kontakt (mkg-hamburg.de)}, (Aufgerufen am 07.01.2021).
-\item Museum für Kunst und Gewerbe, Plakatsammlung: \href{https://www.mkg-hamburg.de/de/sammlung/sammlungen/plakat.html}{Plakat (mkg-hamburg.de)}, (Aufgerufen am 07.01.2021).
-\item MS COCO: \href{https://cocodataset.org/\#home}{COCO - Common Objects in Context (cocodataset.org)}, (Aufgerufen am 26.03.2021).
-\item Scikit learn, A demo of K-Means clustering on the handwritten digits data: \href{https://scikit-learn.org/stable/auto\_examples/cluster/plot\_kmeans\_digits.html\#sphx-glr-auto-examples-cluster-plot-kmeans-digits-py}{A demo of K-Means clustering on the handwritten digits data — scikit-learn 0.24.1 documentation (scikit-learn.org)}, (Aufgerufen am 20.01.2021).
-\item Staatliche Museen zu Berlin, Das Erbe Schinkels: \href{http://schinkel.smb.museum/index.php?page_id=25}{Das Erbe Schinkels - Der Onlinekatalog (smb.museum)}, (Aufgerufen am 09.03.2021).
-\item Stackoverflow, How to use custom png image marker with plot? \href{https://stackoverflow.com/questions/2318288/how-to-use-custom-png-image-marker-with-plot}{python - How to use custom png image marker with plot? - Stack Overflow}, (Aufgerufen am 20.01.2021).
-\item Stackoverflow, Image Clustering by its similarity in python \href{https://stackoverflow.com/questions/39123421/image-clustering-by-its-similarity-in-python}{machine learning - Image clustering by its similarity in python - Stack Overflow}, (Aufgerufen am 20.01.2021).
-\item Stackoverflow, PolyArea: \href{https://stackoverflow.com/questions/24467972/calculate-area-of-polygon-given-x-y-coordinates}{python - Calculate area of polygon given (x,y) coordinates - Stack Overflow}, (Aufgerufen am 05.04.2021).
-\item Tensorflow: \href{https://www.tensorflow.org/}{TensorFlow}, (Aufgerufen am 17.03.2021).
-\item Towards data science, How to cluster images based on visual similarity: \href{https://towardsdatascience.com/how-to-cluster-images-based-on-visual-similarity-cd6e7209fe34}{How to cluster images based on visual similarity | by Gabe Flomo | Towards Data Science}, (Aufgerufen am 20.01.2021).
-\item WordNet: \href{https://wordnet.princeton.edu/}{WordNet | A Lexical Database for English (princeton.edu)}, (Aufgerufen am 26.03.2021).
+\item A Dictionary of Computer Science, Machine Learning: \newline \href{https://www.oxfordreference.com/view/10.1093/acref/9780199688975.001.0001/acref-9780199688975-e-3056?rskey=8mKnpL\&result=1}{https://www.oxfordreference.com/view/10.1093/acref/9780199688975.001.0001/acref-9780199688975-e-3056?rskey=8mKnpL\&result=1} \newline Aufgerufen am 17.03.2021
+\item A Dictionary of Computer Science, neural network: \newline \href{https://www.oxfordreference.com/view/10.1093/acref/9780199688975.001.0001/acref-9780199688975-e-3475?rskey=q7GLM6\&result=3842}{https://www.oxfordreference.com/view/10.1093/acref/9780199688975.001.0001/acref-9780199688975-e-3475?rskey=q7GLM6\&result=3842} \newline Aufgerufen am 17.03.2021
+\item Akademie der Künste, digitale Sammlung: \newline \href{https://digital.adk.de/}{https://digital.adk.de/} \newline Aufgerufen am 09.03.2021
+\item Akademie der Künste, John Heartfield Online: \newline \href{https://heartfield.adk.de/}{https://heartfield.adk.de/} \newline Aufgerufen am 09.03.2021
+\item Akademie der Künste, Wittkugel Veröffentlichung: \newline \href{https://www.adk.de/de/news/?we_objectID=56717}{https://www.adk.de/de/news/?we\_objectID=56717} \newline Aufgerufen am 24.03.2021
+\item Akademie der Künste, Plakatsammlung: \newline \href{https://www.adk.de/de/archiv/kunstsammlung/plakatsammlung.htm}{https://www.adk.de/de/archiv/kunstsammlung/plakatsammlung.htm} \newline Aufgerufen am 07.01.2021
+\item AskPython, How to Plot K-Means Clusters with Python: \newline \href{https://www.askpython.com/python/examples/plot-k-means-clusters-python}{https://www.askpython.com/python/examples/plot-k-means-clusters-python} \newline Aufgerufen am 20.01.2021
+\item Detectron2, Dokumentation, Config:\newline \href{https://detectron2.readthedocs.io/en/latest/modules/config.html}{https://detectron2.readthedocs.io/en/latest/modules/config.html} \newline Aufgerufen am 08.04.2021
+\item Detectron2, Dokumentation, Datasets: \newline \href{https://detectron2.readthedocs.io/en/latest/tutorials/datasets.html}{https://detectron2.readthedocs.io/en/latest/tutorials/datasets.html}\newline Aufgerufen am 30.03.2021
+\item DigiCULT, digiCULT.web: \newline \href{https://www.digicult-verbund.de/de/digicultweb}{https://www.digicult-verbund.de/de/digicultweb} \newline Aufgerufen am 10.03.2021
+\item Dlology, How to create custom COCO data set for instance segmentation: \newline \href{https://www.dlology.com/blog/how-to-create-custom-coco-data-set-for-instance-segmentation/}{https://www.dlology.com/blog/how-to-create-custom-coco-data-set-for-instance-segmentation/} \newline Aufgerufen am 30.03.2021
+\item GitHub, detectron2: \newline \href{https://github.com/facebookresearch/detectron2}{https://github.com/facebookresearch/detectron2} \newline Aufgerufen am 17.03.2021
+\item GitHub, Labelme: \newline \href{https://github.com/wkentaro/labelme}{https://github.com/wkentaro/labelme} \newline Aufgerufen am 30.03.2021
+\item GitHub, tesseract: \newline \href{https://github.com/tesseract-ocr/tesseract}{https://github.com/tesseract-ocr/tesseract} \newline Aufgerufen am 17.03.2021
+\item Hamburger Note: \newline \href{http://hamburger-note.de/}{http://hamburger-note.de/} \newline Aufgerufen am 11.03.2021
+\item Iconclass: \newline \href{http://www.iconclass.nl/}{http://www.iconclass.nl/} \newline Aufgerufen am 15.03.2021
+\item ImageNet: \newline \href{http://image-net.org/about}{http://image-net.org/about} \newline Aufgerufen am 26.03.2021
+\item Keras: \newline \href{https://keras.io/about/}{https://keras.io/about/} \newline Aufgerufen am 17.03.2021
+\item Klaus Staeck, Plakatshop: \newline \href{https://www.edition-staeck.de/kuenstler/klaus-staeck/?art=plakat}{https://www.edition-staeck.de/kuenstler/klaus-staeck/?art=plakat} \newline Aufgerufen am 28.02.2021
+\item Kunstmuseum Bayreuth, Plakatsammlung: \newline \href{https://www.kunstmuseum-bayreuth.de/sammlungen/2012-plakatmuseum-im-kunstmuseum-bayreuth/}{https://www.kunstmuseum-bayreuth.de/sammlungen/2012-plakatmuseum-im-kunstmuseum-bayreuth/} \newline Aufgerufen am 12.10.2020
+\item Medium, Using Keras' pre-trained models for feature extraction in image clustering: \newline \href{https://franky07724-57962.medium.com/using-keras-pre-trained-models-for-feature-extraction-in-image-clustering-a142c6cdf5b1}{https://franky07724-57962.medium.com/using-keras-pre-trained-models-for-feature-extraction-in-image-clustering-a142c6cdf5b1} \newline Aufgerufen am 20.01.2021
+\item Museum Folkwang, Deutsches Plakat Museum: \newline \href{https://www.museum-folkwang.de/de/ueber-uns/sammlung/deutsches-plakat-museum.html}{https://www.museum-folkwang.de/de/ueber-uns/sammlung/deutsches-plakat-museum.html} \newline Aufgerufen am 07.01.2021
+\item Museum Folkwang, Sammlung online: \newline \href{http://sammlung-online.museum-folkwang.de/eMP/eMuseumPlus?service=RedirectService\&sp=Scollection\&sp=SfieldValue\&sp=0\&sp=3\&sp=3\&sp=SsimpleList\&sp=0\&sp=Sdetail\&sp=1\&sp=F}{http://sammlung-online.museum-folkwang.de/eMP/eMuseumPlus?service=\newline RedirectService\&sp=Scollection\&sp=SfieldValue\&sp=0\&sp=3\&sp=3\&sp=\newline SsimpleList\&sp=0\&sp=Sdetail\&sp=1\&sp=F} \newline Aufgerufen am 09.03.2021
+\item Museum für Kunst und Gewerbe, NEO Collections: \newline \href{https://www.mkg-hamburg.de/de/das-mkg/neo-collections.html}{https://www.mkg-hamburg.de/de/das-mkg/neo-collections.html} \newline Aufgerufen am 10.03.2021
+\item Museum für Kunst und Gewerbe, Personen: \newline \href{https://www.mkg-hamburg.de/de/das-mkg/team-kontakt.html}{https://www.mkg-hamburg.de/de/das-mkg/team-kontakt.html} \newline Aufgerufen am 07.01.2021
+\item Museum für Kunst und Gewerbe, Plakatsammlung: \newline \href{https://www.mkg-hamburg.de/de/sammlung/sammlungen/plakat.html}{https://www.mkg-hamburg.de/de/sammlung/sammlungen/plakat.html} \newline Aufgerufen am 07.01.2021
+\item MS COCO: \newline \href{https://cocodataset.org/\#home}{https://cocodataset.org/\#home} \newline Aufgerufen am 26.03.2021
+\item Scikit learn, A demo of K-Means clustering on the handwritten digits data: \newline \href{https://scikit-learn.org/stable/auto\_examples/cluster/plot\_kmeans\_digits.html\#sphx-glr-auto-examples-cluster-plot-kmeans-digits-py}{https://scikit-learn.org/stable/auto\_examples/cluster/plot\_kmeans\_digits.html\#sphx-glr-auto-examples-cluster-plot-kmeans-digits-py} \newline Aufgerufen am 20.01.2021
+\item Staatliche Museen zu Berlin, Das Erbe Schinkels: \newline \href{http://schinkel.smb.museum/index.php?page_id=25}{http://schinkel.smb.museum/index.php?page\_id=25} \newline Aufgerufen am 09.03.2021
+\item Stackoverflow, How to use custom png image marker with plot?: \newline \href{https://stackoverflow.com/questions/2318288/how-to-use-custom-png-image-marker-with-plot}{https://stackoverflow.com/questions/2318288/how-to-use-custom-png-image-marker-with-plot} \newline Aufgerufen am 20.01.2021
+\item Stackoverflow, Image Clustering by its similarity in python: \newline \href{https://stackoverflow.com/questions/39123421/image-clustering-by-its-similarity-in-python}{https://stackoverflow.com/questions/39123421/image-clustering-by-its-similarity-in-python} \newline Aufgerufen am 20.01.2021
+\item Stackoverflow, PolyArea: \newline \href{https://stackoverflow.com/questions/24467972/calculate-area-of-polygon-given-x-y-coordinates}{https://stackoverflow.com/questions/24467972/calculate-area-of-polygon-given-x-y-coordinates} \newline Aufgerufen am 05.04.2021
+\item Tensorflow: \newline \href{https://www.tensorflow.org/}{https://www.tensorflow.org/} \newline Aufgerufen am 17.03.2021
+\item Towards data science, How to cluster images based on visual similarity: \newline \href{https://towardsdatascience.com/how-to-cluster-images-based-on-visual-similarity-cd6e7209fe34}{https://towardsdatascience.com/how-to-cluster-images-based-on-visual-similarity-cd6e7209fe34} \newline Aufgerufen am 20.01.2021
+\item WordNet: \newline \href{https://wordnet.princeton.edu/}{https://wordnet.princeton.edu/} \newline Aufgerufen am 26.03.2021
 \end{itemize}
 
 \subsection{Literatur}
