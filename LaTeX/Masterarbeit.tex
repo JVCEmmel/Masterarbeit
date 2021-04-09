@@ -601,7 +601,13 @@ Entscheidend im Umgang mit detectron2 ist die Konfigurationsdatei. Sie gibt an, 
     config.MODEL.ROI_HEADS.NUM_CLASSES = 4
 \end{python}
 
-Eine komplette Aufschlüsselung der Konfigurationsdatei ist in der Dokumentation von detectron2 nachzulesen.\footnote{Vgl. detectron2, Dokumentation, Config (08.04.2021).}
+Eine komplette Aufschlüsselung der Konfigurationsdatei ist in der Dokumentation von detectron2 nachzulesen.\footnote{Vgl. detectron2, Dokumentation, Config (08.04.2021).} \\
+
+Durch die Strukturierung des Datensatzes in MS COCO konforme Dateien können die Datensätze über eingebaute Funktionen geladen und registriert werden. Sowohl für das Training, als auch die Evaluation der Modelle werden weitere Standardfunktionen von detectron2 verwendet. Bei einer weiteren Beschäftigung mit dieser Herangehensweise an Plakate sollte zumindest für die Evaluation eine eigene Funktion gebaut werden, damit die Modelle untereinander besser zu vergleichen sind.\footnote{Auf Grund einer ungleichen Verteilung der Kategorien im Datensatz \textit{personData200Modified} musste auf eine abschließende Evaluation verzichtet werden.}
+
+\subsection{Vergleich der Ergebnisse}
+
+
 
 \newpage
 
@@ -1234,10 +1240,10 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=0.49\linewidth]{Abbildung_64a_(acht1_036)_with_detections}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_64b_(acht1_036)_with_detections}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_64c_(acht1_036)_with_detections}
 	\caption{Ausstellungsplakat – Ceské Umení 20. století, Dum Umení Mesta Brna, 19.02.1985-31.03.1985 (acht1\_036); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
 \end{figure}
 \end{landscape}
@@ -1247,10 +1253,10 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.49\linewidth, angle=90]{Abbildung_65a_(acht1_067)_with_detections}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\centering
+	\includegraphics[width=0.49\linewidth, angle=90]{Abbildung_65b_(acht1_067)_with_detections}
+	\centering
+	\includegraphics[width=0.49\linewidth, angle=90]{Abbildung_65c_(acht1_067)_with_detections}
 	\caption{Werbeplakat – Erfolgreich ist die Werbung, die Spaß macht und informiert, Wüstenrot, ohne Datum (acht1\_067); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
 \end{figure}
 \end{landscape}
@@ -1260,10 +1266,10 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=0.49\linewidth]{Abbildung_66a_(acht1_100)_with_detections}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_66b_(acht1_100)_with_detections}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_66c_(acht1_100)_with_detections}
 	\caption{Ausstellungsplakat – Genius I, Weltkulturerbe Völklinger Hütte, 13.05.2007-30.03.2008 (acht1\_100); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
 \end{figure}
 \end{landscape}
@@ -1273,10 +1279,10 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=0.49\linewidth]{Abbildung_67a_(acht1_158)_with_detections}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_67b_(acht1_158)_with_detections}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_67c_(acht1_158)_with_detections}
 	\caption{Werbeplakat – Fascinating Malaysia, ohne Datum (acht1\_158); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
 \end{figure}
 \end{landscape}
@@ -1286,10 +1292,10 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=0.49\linewidth]{Abbildung_68a_(acht2_024)_with_detections}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_68b_(acht2_024)_with_detections}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_68c_(acht2_024)_with_detections}
 	\caption{Werbeplakat – Jules Verne, Diogenes, 24.03.2005 (acht2\_024); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
 \end{figure}
 \end{landscape}
@@ -1299,10 +1305,10 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=0.49\linewidth]{Abbildung_69a_(acht2_085)_with_detections}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_69b_(acht2_085)_with_detections}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_69c_(acht2_085)_with_detections}
 	\caption{Ausstellungsplakat – Even Bottishelli knows, Die Galerie Niebuhr, 01.12.1968-15.12.1968 (acht2\_085); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
 \end{figure}
 \end{landscape}
@@ -1312,10 +1318,10 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=0.49\linewidth]{Abbildung_70a_(acht2_140)_with_detections}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_70b_(acht2_140)_with_detections}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_70c_(acht2_140)_with_detections}
 	\caption{Filmplakat – Brigitta, ohne Datum (acht2\_140); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
 \end{figure}
 \end{landscape}
@@ -1325,10 +1331,10 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=0.49\linewidth]{Abbildung_71a_(acht2_153)_with_detections}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_71b_(acht2_153)_with_detections}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_71c_(acht2_153)_with_detections}
 	\caption{Politisches Plakat – Grün wirkt - Wir machen's gleich!, Bündnis 90 die Grünen, ohne Datum (acht2\_153); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
 \end{figure}
 \end{landscape}
@@ -1338,10 +1344,10 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=0.49\linewidth]{Abbildung_72a_(acht2_242)_with_detections}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_72b_(acht2_242)_with_detections}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_72c_(acht2_242)_with_detections}
 	\caption{Buchplakat – 10 Jahre Bibliothek der Erstausgaben, dtv, ohne Datum (acht2\_242); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
 \end{figure}
 \end{landscape}
@@ -1351,10 +1357,10 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=0.49\linewidth]{Abbildung_73a_(acht5_030)_with_detections}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54b_(acht2_074)}
-	%\centering
-	%\includegraphics[height=0.49\linewidth]{Abbildung_54c_(acht2_074)}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_73b_(acht5_030)_with_detections}
+	\centering
+	\includegraphics[height=0.49\linewidth]{Abbildung_73c_(acht5_030)_with_detections}
 	\caption{Theaterplakat – Die Zauberflöte, Bayerische Staatsoper, 31.10.2004 (acht5\_030); Links: Objekterkennung mit einem untrainierten neuronalen Netz; Mitte: Objekterkennung mit einem trainierten neuronalen Netz (personData200); Rechts: Objekterkennung mit einem trainierten neuronalen Netz (personData200Modified).}
 \end{figure}
 \end{landscape}
