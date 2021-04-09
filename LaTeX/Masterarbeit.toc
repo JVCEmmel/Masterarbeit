@@ -35,6 +35,7 @@
 \contentsline {subsection}{\numberline {3.5}Vergleich der Ergebnisse}{58}{subsection.3.5}%
 \contentsline {section}{\numberline {4}Objekterkennung auf Plakaten}{60}{section.4}%
 \contentsline {subsection}{\numberline {4.1}detectron2 Training}{63}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Vergleich der Ergebnisse}{65}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Abbildungen}{66}{section.5}%
 \contentsline {section}{\numberline {6}Anlagen}{140}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Fragebogen: Fragen bezüglich der Digitalisierung}{140}{subsection.6.1}%
