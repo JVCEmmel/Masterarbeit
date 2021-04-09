@@ -98,7 +98,7 @@ if __name__ == "__main__":
     path = "./1_Datensaetze/first_annotation_dataset/"
 
     ###PATH TO TRAINED MODEL###
-    model_path = None #"./trained_models/detectron2/personData200/06,04,2021-21,27/"
+    model_path = "./trained_models/detectron2/personData200/06,04,2021-21,27/"
 
     ###PATH TO DATASET - which the model is trained on###
     dataset_path = "./1_Datensaetze/personData200/"
@@ -113,7 +113,7 @@ if __name__ == "__main__":
         config.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"))
         config.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
     
-    config.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
+    config.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.7
 
     # registering the trained dataset
     if model_path != None:

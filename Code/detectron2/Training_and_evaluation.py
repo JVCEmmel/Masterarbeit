@@ -53,11 +53,12 @@ def train_and_evaluate(config):
     trainer.train()
 
     # evaluate the model
+    """
     torch.cuda.empty_cache()
     evaluator = COCOEvaluator("test_set", config, distributed=False, output_dir=evaluation_path, use_fast_impl=False)
     test_loader = build_detection_test_loader(config, "test_set")
     inference_on_dataset(trainer.model, test_loader, evaluator)
-
+    """
 
     # export the config
     config_dump = config.dump()
@@ -71,14 +72,14 @@ if __name__ == "__main__":
     os.chdir(work_dir)
 
     ###PATH TO DATASET###
-    path = "./1_Datensaetze/personData200/"
+    path = "./1_Datensaetze/personData200Modified/"
 
     # generate paths for testing and training
     train_set_path = path + "train_split/"
     test_set_path = path + "test_split/"
 
     # split data if it's not the case yet
-    if not os.path.isdir(train_set_path) & os.path.isdir(test_set_path):
+    if not os.path.isdir(train_set_path):
         split_data(path, train_set_path, test_set_path)
 
     # generate paths for outputs and make dirs
@@ -136,7 +137,7 @@ if __name__ == "__main__":
     config.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 128
 
     # set number of classes
-    config.MODEL.RETINANET.NUM_CLASSES = 4
-    config.MODEL.ROI_HEADS.NUM_CLASSES = 4
+    config.MODEL.RETINANET.NUM_CLASSES = 11
+    config.MODEL.ROI_HEADS.NUM_CLASSES = 11
 
     train_and_evaluate(config)
