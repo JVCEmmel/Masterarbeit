@@ -72,7 +72,7 @@ if __name__ == "__main__":
     os.chdir(work_dir)
 
     ###PATH TO DATASET###
-    path = "./1_Datensaetze/personData200Modified/"
+    path = "./1_Datensaetze/personData200/"
 
     # generate paths for testing and training
     train_set_path = path + "train_split/"
@@ -110,8 +110,8 @@ if __name__ == "__main__":
     config.merge_from_file("/home/julius/detectron2/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
     
     # change Datasets for testing and training
-    config.DATASETS.TRAIN = ("train_set",)
-    config.DATASETS.TEST = ("test_set",)
+    config.DATASETS.TRAIN = ("train_set", )
+    config.DATASETS.TEST = ("test_set", )
     
     # config.DATALOADER.NUM_WORKERS = 2
     
