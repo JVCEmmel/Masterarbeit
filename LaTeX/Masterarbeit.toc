@@ -31,14 +31,15 @@
 \contentsline {subsection}{\numberline {3.2}Erstellung von Datensätzen aus der Bayreuther Plakatsammlung}{47}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Labelme}{48}{subsubsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.3}Image Clustering}{53}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Tensorflow Training}{56}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Vergleich der Ergebnisse}{58}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Objekterkennung auf Plakaten}{60}{section.4}%
-\contentsline {subsection}{\numberline {4.1}detectron2 Training}{63}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Vergleich der Ergebnisse}{65}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Abbildungen}{66}{section.5}%
-\contentsline {section}{\numberline {6}Anlagen}{140}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Fragebogen: Fragen bezüglich der Digitalisierung}{140}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Literaturverzeichnis}{142}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Links}{142}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Literatur}{146}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {3.3.1}Tensorflow Training}{56}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Vergleich der Ergebnisse}{58}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}Objekterkennung auf Plakaten}{60}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}detectron2 Training}{63}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Vergleich der Ergebnisse}{67}{subsubsection.3.4.2}%
+\contentsline {section}{\numberline {4}Konklusion}{68}{section.4}%
+\contentsline {section}{\numberline {5}Abbildungen}{69}{section.5}%
+\contentsline {section}{\numberline {6}Anlagen}{146}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Fragebogen: Fragen bezüglich der Digitalisierung}{146}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Literaturverzeichnis}{148}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Links}{148}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Literatur}{152}{subsection.7.2}%
