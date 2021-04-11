@@ -299,11 +299,11 @@ Momentan besteht der MS COCO Datensatz aus über 200.000 gelabelten Bildern mit 
 
 \subsection{Erstellung von Datensätzen aus der Bayreuther Plakatsammlung}
 Auch wenn für diese Arbeit kein neues neurales Netz von Grund auf trainiert wurde, wurde auf die bestehenden Netzwerke das Verfahren des \textit{Fine Tunings}, was in einem späteren Kapitel näher beschrieben werden soll, angewendet. Um ein \textit{Fine Tuning} durchzuführen bedarf es mehrerer Datensätze. Mindestens braucht es einen für das Training und einen für das Testen des Netzes – Im besten Fall wird ebenfalls ein Datensatz für eine Validierung des Netzwerks vorgehalten. \\
-Beide verwendeten \textit{Deep Learning} Technologien benötigen eine andere Art der Struktur ihrer Datensätze. Daher wurden für diese Arbeit insgesamt vier Datensätze erstellt.\footnote{Die Datensätze sind unter dem Dateipfad „/Masterarbeit/1\_Datensaetze/“ zu finden. Ihre Benennung ist „tensorflow“, „data100“, „personData200“ und „personData200Modified“.} \\
+Beide verwendeten \textit{Deep Learning} Technologien benötigen eine andere Art der Struktur ihrer Datensätze. Daher wurden für diese Arbeit insgesamt vier Datensätze erstellt.\footnote{Die Datensätze sind unter dem Dateipfad „/Masterarbeit/1\_Datensaetze/“ zu finden. Ihre Benennung ist „tensorflow“, „data100“, \textit{personData200} und \textit{personData200Modified}.} \\
 Für das Training des Tensorflow Netzes wurde ein Datensatz aus 800 Bildern erstellt. Diese teilen sich auf die acht Kategorien, die im zweiten Kapitel dieser Arbeit definiert worden sind, auf. \\
 Für das Training des detectron2 Netzes wurden insgesamt drei Datensätze erstellt. Der Datensatz „data100“ besteht aus 100 Bildern und ist in einen Test und einen Trainingssatz aus 80 bzw. 20 Bildern unterteilt. Die Testdaten besitzen die Kategorien „poster“, „text“, „logo“, „person“ und „egg“ und für die Trainingsdaten gibt es die Kategorien „poster“, „text“, „logo“, „angel“, „person“, „bird“, „tiger“, „cat“, „clock“, „butterfly“ und „plane“. Die größte Schwäche des Datensatzes ist seine geringe Zahl an Bildern und die diverse Zahl von Labeln. Dies führt dazu, dass nicht alle Label in beiden Datensätzen vorhanden sind und entsprechend zuverlässig getestet werden kann. \\
-Der zweite Datensatz trägt die Bezeichnung „personData200“ und wurde mit dem Ziel erstellt einen größeren Datensatz mit ausgewählten Labels zu erstellen. Innerhalb des Datenstazes gibt es die Kategorien „poster“, „text“, „person“ und „logo“. \\
-Der dritte Datensatz ist eine Abwandlung vom zweiten und heißt entsprechend „personData200Modified“. Die Änderung besteht dahingehend, dass die Kategorie „poster“ durch die entsprechenden Label aus dem tensorflow Datensatz ersetzt worden sind. \\
+Der zweite Datensatz trägt die Bezeichnung \textit{personData200} und wurde mit dem Ziel erstellt einen größeren Datensatz mit ausgewählten Labels zu erstellen. Innerhalb des Datenstazes gibt es die Kategorien „poster“, „text“, „person“ und „logo“. \\
+Der dritte Datensatz ist eine Abwandlung vom zweiten und heißt entsprechend \textit{personData200Modified}. Die Änderung besteht dahingehend, dass die Kategorie „poster“ durch die entsprechenden Label aus dem tensorflow Datensatz ersetzt worden sind. \\
 
 \subsubsection{Labelme}
 Für die Erstellung der detectron2 Datensätze reicht eine einfache Ordnerstruktur nicht aus. Damit der Algorithmus weiß, welche Objekte im Bildraum wo zu verordnen und welche Pixel dafür wichtig sind, müssen diese entsprechend markiert werden. Detectron2 nutzt für die Repräsentation seiner Daten eine Anlehnung an die MS COCO Struktur.\footnote{Detectron2, Dokumentation, Datasets (30.03.2021), MS COCO (26.03.2021).} Diese besteht aus einer json-Datei, die einem bestimmten Schema folgt. \\
@@ -458,7 +458,7 @@ Das Clustern der Bilder ermöglicht es auch abzulesen, welche Bildkategorien in 
 Visualisiert werden diese Cluster am Ende des Programms mit Hilfe von Scatterplots. Diese zeigen welche Bilder auf Grund ihrer räumlichen Nähe eine Ähnlichkeit besitzen (Abb. 58).\footnote{Neben dem gesamten Cluster wurden ebenfalls Darstellungen der einzelnen Cluster und eine reine Punktwolke gespeichert. Sie befinden sich im Hauptverzeichnis der Arbeit im Unterverzeichnis "cluster\_outputs.} Das untrainierte Modell liefert auf den ersten Blick drei größere Cluster, wobei sich eins in zwei Cluster teilt. Auffällig ist, dass sich die Scans abhängig vom Format, der Position und der Farbigkeit des Plakats gliedern. //
 Dies ist nachvollziehbar, da das Modell die benannten Kategorien nicht kennt und nach größeren, allgemeineren Kriterien auswählen muss. Die weiße Scanfläche ist dabei das auffälligste Element, das sich zwischen den einzelnen Bilddateien dadurch verändert, dass verschiedengroße Plakate in verschiedenen Positionen sich von ihr abheben - und durch geringe Farbigkeit auch oft weniger stark. Es ist zu vermuten, dass bei bildfüllenden Scans von Plakaten andere, auf die Plakate selbst bezogene Kriterien entscheidend wären. //
 
-\subsection{Tensorflow Training}
+\subsubsection{Tensorflow Training}
 
 Es ist von Interesse, ob sich die Ergebnisse des Clusterns mit einem anderen, auf den Datensatz angepassten Modell, verändern würden und wodurch sich diese Veränderung bemerkbar macht. Um dies zu ermitteln wird in der Datei \textit{Tensorflow\_training} ein Modell auf den Tensorflow Datensatz trainiert.\footnote{In der Zusammenstellung des Programms wurde auf verschiedene Codebeispiele von der Tensorflow Website zurückgegriffen, vgl. Tensorflow (17.03.2021).} Bedient wird sich hierbei neben der Methode der \textit{Feature Extraction} auch der des \textit{Fine Tuning}. Diese beiden Methoden werden dazu genutzt, um kein neues Modell von Grund auf trainieren zu müssen. So eine Vorgehensweise ist mit dem vorliegenden Datensatz nicht möglich, da es zu wenige kuratierte Bilder gibt und ein solches Training zudem zeitaufwändiger wäre.//
 
@@ -492,16 +492,17 @@ Die durch das Training erzeugten Daten für \textit{Loss} und Genauigkeit zeigen
 Im zweiten Trainingsschritt wird ein Teil des Modells aufgetaut. Dadurch soll erreicht werden, dass auch die an die Klassifizierungsschicht gelieferten \textit{Feature} auf den Datensatz angepasst werden und gemessen an der validierung des Modells sich versuchen anzupassen. Dieser Schritt ist ebenfalls für die Versuchsanordnung dieser Arbeit wichtig, da nach dem Training nur die Gewichte des ursprünglichen Modells gespeichert werden - der im ersten Schritt trainierte Kopf des Modells ist somit unerheblich. Dies macht das \textit{Overfitting} des Kopfes weniger entscheidend. Würden die Gewichte des eigentlichen ResNet50 Modells nicht trainiert werden, würde das Training zu keinem Ergebnis führen. \\
 Nach dem zweiten Training setzt sich der Trend des ersten Trainings weiter fort (Abb. 60). Zwar können Genauigkeit und \textit{Loss} weiter gesteigert, beziehungsweise vermindert werden, aber die beiden Werte stagnieren am Ende des Trainings und verschlechtern sich im Falle der Genauigkeit. Die zweite Evaluation des Modells nach dem Training zeigt, dass das \textit{Loss} auf 2.0255 verringert werden konnte, aber hoch bleibt. Die Genauigkeit steigt auf 23\%. Beide Werte sind im Vergleich zu anderen Modellen und anderen Datensätzen gering - ein Lernerfolg ist dennoch festzustellen. Es ist denkbar, dass mit einem ausgereifteren Datensatz und einem intensiveren Training bessere Ergebnisse zu erzielen sind. Auch ein Vergleich unterschiedlicher Modellarchitekturen könnte zur allgemeinen Verbesserung beitragen. \\
 
-\subsection{Vergleich der Ergebnisse}
+\subsubsection{Vergleich der Ergebnisse}
 
 Das Clustern des Tensorflow Datensatzes mit dem trainierten Modell führt zu einer etwas anderen Verteilung der Kategorien auf die einzelnen Cluster (Abb. 61). Bei acht Clustern scheint das aus 121 Abbildungen bestehende Cluster größtenteils intakt geblieben zu sein. Auch andere Cluster bleiben in ihrer Verteilung größtenteils bestehen, verändern sich aber in ihrer Größe. So zählt das 61er Cluster nach dem Training 64 Abbildungen, die Verhältnisse zwischen den einzelnen Kategorien bleiben intakt. Ebenfalls ist festzustellen, dass Ausstellungsplakate sich nach dem Training aus dem Cluster mit 92 Abbildungen beginnen auf andere Cluster zu verteilen. Bei Filmplakaten bleibt eine große Teilung weiter bestehen. Nach dem Training kann weiterhin keines der Cluster eine absolute Mehrheit der Kategorien auf sich vereinen. \\
 Das gleiche Bild ergibt sich bei einer Zahl von vier Clustern. Die Verteilung von Labeln innerhlab der Cluster bleiben in großen Teilen gleich die Anzahl der Plakate in den Clustern variieren - wenn auch nicht stark. \\
 Der Scatterplot nach dem Training hat sich ebenfalls nur minimal verändert (Abb. 62). Die Cluster sind horizontal gespiegelt, sind aber in ihrer grundlegenden Verteilung gleich geblieben. Die offensichtlichste Veränderung ist die größere Entzerrung der Cluster auf der rechten und unteren Region des Graphen. Die Verteilung der Plakate scheint immernoch stark vom Format und der Position des Plakats abzuhängen. So besteht das alleinstehende Cluster in der oberen, linken Ecke hauptsächlich aus Scans deren Plakate in der oberen rechten Bildhälfte liegen. Von diesen Scans lassen sich auch Exemplare im linken, unteren Cluster entdecken. Die rechten Cluster besitzen wiederum Scans, die größere Plakate zeigen und in denen die Position des Plakats mehr in die Mitte der Bildfäche rückt. \\
+Die Visualisierung in Clustern kann bei zunehmender Datenmenge problematisch werden, da einzelne Elemente bei starker Häufung andere zu überdecken drohen. Eine Methode dieses Problem zu umgehen wird im Projekt Gugelmann Galaxy vorgestellt.\footnote{Bernhard: Gugelmann Galaxy (2016), S. 101.} Hier werden die zweidimensionalen Cluster mit Hilfe des \textit{RasterFairy} Algorithmus in ein Raster umgeformt, wobei die Distanz zwischen den Bildern bestmöglich erhalten bleiben soll. Dies kann zu einer gleichberechtigteren Darstellung der Abbildungen führen, konnte wegen fehlender Zeit nicht in diese Arbeit integriert werden. \\
 \\
 Insgesamt ist festzuhalten, dass das Clustern der Bilddateien wenige bis garkeine Rückschlüsse auf den Plakatinhalt geben. Viel mehr ist das Verhältnis zwischen Plakat und Scanfläche ausschlaggebend für die Positionierung der Plakate im Raum. Hilfreich kann diese Methode im Bereich des Aufspürens von Doubletten sein - hierfür müsste auch kein spezielles Modell trainiert werden. Durch das gleiche Erscheinungsbild von Doubletten wird vermutlich jedes Modell die beiden Bilder in eine enge Verbindung zueinander setzen. Konkret Umgesetzt könnte eine Abstandsmessung zwischen zwei Bildpositionen Ungewöhnlich nah beieinaderliegende Bilder identifizieren und deren Dateien entsprechend erfassen und sortieren. Das es solche Anwendungsfelder im konkreten Museumsalltag gibt konnte von Schultz bestätigt werden. \\
 Es ist zu vermuten, dass ein ausgefeilteres Training, mit mehr Daten und unterschiedlichen Modellarchitekturen bessere Ergebnisse liefern kann. Gerade im Hinblick auf die Scans muss gewährleistet sein, dass auf den zu analysierenden Bilddateien in der Hauptsache die Plakate zu sehen sind. \\
 
-\section{Objekterkennung auf Plakaten}
+\subsection{Objekterkennung auf Plakaten}
 
 Eine große Fragestellung dieser Arbeit ist, ob es möglich ist, mit neuronalen Netzen eine automatische Verschlagwortung von Bilddateien zu generieren. Wichtig ist dabei, dass das neuronale Netz sowohl die Abbildungen, als auch den Text auf den hier behandelten Plakaten erkennen kann. \\
 Wie im ersten Teil dieser Arbeit festgestellt wurde, ist die größere und wichtigere Informationsquelle auf Plakaten der Text. Er enthält konkrete Informationen über die Art und die Verwendung des Plakats, sowie der Sache, die es Vermarktet. Die Bilderkennung spielt in dem Sinne eine kleinere, aber nicht unerhebliche Rolle. So vermittelt das Dargestellte eine unkonkretere Information über das Beworbene, ist aber meist ein wichtiger Anhaltspunkt zur Einordnung von Plakten in Kontexte und bleibt auch eher in Erinnerung. Somit sind beide Elemente für Algorithmen, die Plakate erkennen sollen, wichtig. \\
@@ -541,10 +542,10 @@ Wie im ersten Teil dieser Arbeit festgestellt wurde, ist die größere und wicht
 
 Im Zentrum des Programms steht eine for-Schleife, die über eine Liste aus Dateinamen iteriert. Jedes Bild wird dem Modell vorgelegt. In dieser Arbeit wird das Mask-RCNN R50 aus der in detectron2 ernthaltenen Sammlung von Modellen entnommen. Geladen werden auf ImageNet trainierte Gewichte. Die zu erkennenden Klassen entstammen demm MS COCO Datensatz. Aus den vom Modell ausgegebenen \textit{Outputs} werden die erkannten Kategorien, die Wahrscheinlichkeiten und die \textit{Bounding Boxes} in \textit{Dictionaries} gespeichert. Gegebenenfalls werden auch die Bilder, auf denen die erkannten Objekte eingezeichnet werden, gespeichert. \\
 Die gespeicherten \textit{Dictionaries} geben Aufschluss über die erkannten Bildobjekte. Wie die Balkendiagramme in Abbildung 63 zeigen, erkennt das Netz im gesamten Datensatz der Plakatsammlung des Museum Bayreuth, bei 17540 Bildern, zu einem großen Teil Personen - 16528. Danach folgen Bücher (2963), Vögel (1609) und Krawatten (1103). Bei 6342 Plakaten, gut einem Drittel der Sammlung erkennt das Netz keine Objekte. \\
-Ohne das Wissen, wie viele Objekte im Datensatz konkret vorhanden sind, sind diese Zahlen mit großer Vorsicht zu betrachten. Klar wird durch das gehäufte Aufkommen von Personen, dass diese Kategorie sowohl häufig vorkommen, als auch besonders gut vom verwendeten Modell erkannt werden kann. Zusätzlich zu dieser reinen Datenerhebung wurde auch eine Stichprobe des Datensatzes mit den erkannten Objekten gespeichert (Abb. 64-73).\footnote{Diese Stichprobe ist unter dem Dateipfad \textit{./1\_Datensaetze/first\_annotation\_dataset/} zu finden. Dieser Datensatz diente zu Beginn der Arbeit dem probeweise Annotieren und Klassifizieren von Bildern.} Dies Hilft die erkannten Objektkategorien in einen Kontext zu setzen. Wie Abbildung 65 zeigt werden trotz der hohen Zahl erkannter Personen nicht alle Personen auf Plakaten erkannt. Zudem kann es zu falschen Erkennungen wie der des \textit{Teddy Bärs} oder der \textit{Uhr} auf Abbildung 66 kommen. Abbildung 64 und 68 zeigen, dass die erkennung von gezeichneten Menschen gut gelingen kann, 70 und 72 zeigen das Gegenteil. Der letzte Scan ist auch ein Beispiel dafür, dass die Zahl der Plakate ohne Objekterkennung trügt. Hier wurde die Farbskala vom Algorithmus fälschlicherweise als Uhr erkannt. Somit fällt dieser Scan in der statistischen Auswertung nicht in die Kategorie \textit{no\_detection}. Abbildung 73 zeigt schließlich, dass auch eine eindeutige Darstellung eines Vogels zu einer falschen Erkennung führen kann. Was nicht überrascht ist, dass das Modell mit dem Text auf den Plakaten nichts anzufangen weiß. \\
+Ohne das Wissen, wie viele Objekte im Datensatz konkret vorhanden sind, sind diese Zahlen mit großer Vorsicht zu betrachten. Klar wird durch das gehäufte Aufkommen von Personen, dass diese Kategorie sowohl häufig vorkommen, als auch besonders gut vom verwendeten Modell erkannt werden kann. Zusätzlich zu dieser reinen Datenerhebung wurde auch eine Stichprobe des Datensatzes mit den erkannten Objekten gespeichert (Abb. 64-73).\footnote{Diese Stichprobe ist unter dem Dateipfad \textit{./1\_Datensaetze/first\_annotation\_dataset/} zu finden. Dieser Datensatz diente zu Beginn der Arbeit dem probeweise Annotieren und Klassifizieren von Bildern.} Dies Hilft die erkannten Objektkategorien in einen Kontext zu setzen. Wie Abbildung 65 zeigt werden trotz der hohen Zahl erkannter Personen nicht alle Personen auf Plakaten erkannt. Zudem kann es zu falschen Erkennungen wie der des \textit{Teddy Bärs} oder der \textit{Uhr} auf Abbildung 66 kommen. Abbildung 64 und 68 zeigen, dass die erkennung von gezeichneten Menschen gut gelingen kann, 70 und 72 zeigen das Gegenteil. Der letzte Scan ist auch ein Beispiel dafür, dass die Zahl der Plakate ohne Objekterkennung trügt. Hier wurde die Farbskala vom Algorithmus fälschlicherweise als Uhr erkannt.\footnote{Dies führt ebenfalls zu einer Überrrepräsentanz der Kategorie Uhr bei den erkannten Objekten.} Somit fällt dieser Scan in der statistischen Auswertung nicht in die Kategorie \textit{no\_detection}. Abbildung 73 zeigt schließlich, dass auch eine eindeutige Darstellung eines Vogels zu einer falschen Erkennung führen kann. Was nicht überrascht ist, dass das Modell mit dem Text auf den Plakaten nichts anzufangen weiß. \\
 Um eine Vergleichbarkeit zwischen den verschiedenen Trainingsständen und den statistischen Auswertungen herzustellen, werden insgesamt sechs Runden von Klassifizierungen vorgenommen. Jedem Modell wird einmal der Tensorflow Datensatz und die Stichprobe gezeigt. Bei den Modellen handelt es sich um ein untrainiertes Mask-RCNN R50 mit ImageNet Gewichten und MS COCO Klassen, einem auf den Datensatz \textit{personData200} trainierten Modell und einem auf den Datensatz \textit{personData200Modified} trainierten Modell. \\
 
-\subsection{detectron2 Training}
+\subsubsection{detectron2 Training}
 
 Für das Training mit detectron2 wurde das Programm \textit{Training\_and\_evaluation} geschrieben. Das eigentliche Training wird über die folgenden Codezeilen durchgeführt: \\
 
@@ -603,9 +604,47 @@ Entscheidend im Umgang mit detectron2 ist die Konfigurationsdatei. Sie gibt an, 
 
 Eine komplette Aufschlüsselung der Konfigurationsdatei ist in der Dokumentation von detectron2 nachzulesen.\footnote{Vgl. detectron2, Dokumentation, Config (08.04.2021).} \\
 
-Durch die Strukturierung des Datensatzes in MS COCO konforme Dateien können die Datensätze über eingebaute Funktionen geladen und registriert werden. Sowohl für das Training, als auch die Evaluation der Modelle werden weitere Standardfunktionen von detectron2 verwendet. Bei einer weiteren Beschäftigung mit dieser Herangehensweise an Plakate sollte zumindest für die Evaluation eine eigene Funktion gebaut werden, damit die Modelle untereinander besser zu vergleichen sind.\footnote{Auf Grund einer ungleichen Verteilung der Kategorien im Datensatz \textit{personData200Modified} musste auf eine abschließende Evaluation verzichtet werden.}
+Durch die Strukturierung des Datensatzes in MS COCO konforme Dateien können die Datensätze über eingebaute Funktionen geladen und registriert werden. Sowohl für das Training, als auch die Evaluation der Modelle werden weitere Standardfunktionen von detectron2 verwendet. Bei einer weiteren Beschäftigung mit dieser Herangehensweise an Plakate sollte zumindest für die Evaluation eine eigene Funktion gebaut werden, damit die Modelle untereinander besser zu vergleichen sind.\footnote{Auf Grund einer ungleichen Verteilung der Kategorien im Datensatz \textit{personData200Modified} musste auf eine abschließende Evaluation verzichtet werden.} \\
 
-\subsection{Vergleich der Ergebnisse}
+\begin{tabular}[h]{l|c|c}
+	Metrik & personData200 & personData200Modified \\
+	\hline
+	fast\_rcnn/cls\_accuracy & 0.875 & 0.865234375 \\
+	fast\_rcnn/false\_negative & 0.234375 & 0.3046875 \\
+	fast\_rcnn/fg\_cls\_accuracy & 0.7109375 & 0.609375 \\
+	\hline
+	loss\_box\_reg & 0.48771801590919495 & 0.5000466853380203 \\
+	loss\_cls & 0.3204774856567383 & 0.3841649144887924 \\
+	loss\_mask & 0.24931104481220245 & 0.25711219012737274 \\
+	loss\_rpn\_cls & 0.04853208176791668 & 0.06402270495891571 \\
+	loss\_rpn\_loc & 0.31673797965049744 & 0.32607951760292053 \\
+	\hline
+	mask\_rcnn/accuracy & 0.8899772799744898 & 0.8926074557181363 \\
+	mask\_rcnn/false\_negative & 0.05883976041818299 & 0.06956060209368219 \\
+	mask\_rcnn/false\_positive & 0.20899337569462492 & 0.17889934816983138 \\
+	\hline
+	roi\_head/num\_bg\_samples & 96.0 & 96.0 \\
+	roi\_head/num\_fg\_samples & 32.0 & 32.0 \\
+	\hline
+	rpn/num\_neg\_anchors & 152.75 & 148.0 \\
+	rpn/num\_pos\_anchors & 103.25 & 108.0 \\
+	\hline
+	total\_loss & 1.3744002934545279 & 1.527531212195754
+\end{tabular}
+
+Die Tabelle zeigt die letzten Auswertungen der Modelle während ihrem Training. In vielen Kategorien ähneln sich die Werte. Es fällt auf, dass das Modell auf dem modifizierten Datensatz mehr falsch negative Klassifizierungen im \textit{Fast-RCNN} und im \textit{Mask-RCNN} macht. Dies ist wahrscheinlich darauf zurückzuführen, dass es nicht nur eine Plakatklasse hat, sondern auch Themtisch eine Auswahl treffen muss. Dies wird auch zu dem höheren \textit{loss} führen. \\
+Neben dem Training mit selbsterstellten Datensätzen aus einer Plakatsammlung heraus, könnte es genau so lohnenswert sein, das Modell, das man verwenden möchte, auf einen anderen Datensatz vorzutrainieren. Ein solcher Datensatz könnte der an MS COCO angelehnte COCO Text Datensatz sein.\footnote{COCO Text (11.04.2021).} Dieser verfolgt im Kern die gleichen Ziele wie MS COCO, jedoch allein auf Text spezialisiert. Durch die Konfigurationsdatei von detectron2 ist es möglich mit mehreren Datensätzen parallel zu trainieren. Hierzu müssten die Bilddaten der jeweiligen Datensets vorgehalten werden. \\
+
+\subsubsection{Vergleich der Ergebnisse}
+
+Die beiden relativ kurzen Trainings führen schnell zu guten Ergebnissen (Abb. 74-76). \\
+Da die einzige Kategorie, die von allen drei Modellen erkannt wird die \textit{Person} ist, kann nur diese verglichen werden. Das untrainierte Modell erkennt im Tensorflow Datensatz 924 Personen bei einer durchschnittlichen Wahrscheinlichkeit von 84\%. Trainiert auf \textit{personData200} werden 1.698 Personen mit einer durchschnittlich Wahrscheinlichkeit von 78\% erkannt. Das dritte Modell erkennt 2.546 Personen mit einer Qahrscheinlichkeit von 79\%. Durch die höhere Anzahl erkannter Objekte ist es nachvollziehbar, dass die durchschnittliche Wahrscheinlichkeit sinkt. Die höhere Zahl an erkannten Objekten hat mehrere Gründe, wie die Stichprobe zeigen kann. So werden einzelne Personen nun mehrfach erkannt (Abb. 71) und Gegenstände die keine Personen und vorher gar nicht erkannt worden sind, sowie schon vorher erkannte Objekte, werden nun als Personen bezeichnet (Abb. 67 und 73). Die Abbildungen 65, 68, 70 und 72 zeigen zudem, dass es klare Erfloge gibt, in denen nun Personen richtig oder besser erkannt werden. \\
+Die trainierten Modelle lassen sich in weiteren gemeinesammen Kategorien vergleichen. Auf \textit{personData200} trainiert erkennt das Modell 6.632 Textelemente und 316 Logos. Mit dem anderen Training sind es 9.707 Textelemente und 17 Logos. Diese starke Diskrepanz könnte auf die Mischung zwischen Text und Logo zurückzuführen sein. Möglicherweise erkennt das eine Modell in Logos eher die Symbole und das andere gewichtet den Text stärker. \\
+In der Stichprobe zeigt sich, dass das auf dem modifizierten Datensatz trainierte Modell die einzelnen Textboxen besser erkennen kann und auch mehr Text erkennt als das andere Modell (Abb. 65, 69 und 73). Dafür erkennt es kein einziges Themenplakat. Da der Datensatz dafür nicht gemacht worden ist und daher keine ausgewogene und ausreichende Repräsentation der einzelnen Themenplakate vorhanden ist, ist dies in gewisser Weise nachvollziehbar, jedoch auch verwunderlich, da auch nicht das häufig auftretenste Thema als generelle Klassifizierung vom Algorithmus vorgenommen wird. Die Plakaterkennung funktioniert in seiner generellen Funktion auch nicht perfekt. oft werden zwei Plakate erkannt und die gezeichneten \textit{Bounding Boxes} umfassen die Plakate in den seltensten Fällen komplett. \\
+Wie auch schon im vorherigen Abschnitt angedeutet, würde es sich wahrscheinlich lohnen die Modelle über längere Zeit mit mehreren Datensätzen parallel zu trainieren. Neben MS COCO und COCO Text könnte mit einem weiteren, aus der Sammlung generierten, größeren Datensatz ein noch besseres Ergebnis erlangt werden. \\
+Dieser Ansatz könnte mit der \textit{self-learning noisy student technique} ummgesetzt werden.\footnote{Pham et al. zitieren hierbei eine von Xie et al. im Jahr 2020 entwickelte Technik, vgl. Pham: Road Damage Detection and Classification with Detectron2 and Faster R-CNN (2020), S. 7.} Hierbei wird ein Modell zunächst auf einen kleineren, kuratierten Datensatz trainiert. Mit diesem Modell wird dann ein Teil der Sammlung klassifiziert und diese Klassifikationen wiederum händisch optimiert, um sie dem Datensaz für ein erneutes Training zuzuführen. So könnte in mehreren Schritten ein großer Datensatz aufgebaut werden.
+
+\section{Konklusion}
 
 
 
@@ -1365,6 +1404,28 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \end{figure}
 \end{landscape}
 
+\newpage
+\begin{figure}[ht]
+\includegraphics[width=\linewidth]{Analyse_untrainiert}
+\centering
+\caption{Übersicht der Anzahl der im Tensorflow Datensastz erkannten Objekte und den jeweiligen Wahrscheinlichkeiten. Das Modell ist nicht trainiert.}
+\end{figure}
+
+\newpage
+\begin{figure}[ht]
+\includegraphics[width=\linewidth]{Analyse_trainiert_(PersonData200)}
+\centering
+\caption{Übersicht der Anzahl der im Tensorflow Datensastz erkannten Objekte und den jeweiligen Wahrscheinlichkeiten. Das Modell ist auf den Datensatz \textit{personData200} trainiert.}
+\end{figure}
+
+\newpage
+\begin{figure}[ht]
+\includegraphics[width=\linewidth]{Analyse_trainiert_(PersonData200Modified)}
+\centering
+\caption{Übersicht der Anzahl der im Tensorflow Datensastz erkannten Objekte und den jeweiligen Wahrscheinlichkeiten. Das Modell ist auf den Datensatz \textit{personData200Modified} trainiert.}
+\end{figure}
+
+
 
 
 \newpage
@@ -1418,6 +1479,7 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \item Akademie der Künste, Wittkugel Veröffentlichung: \newline \href{https://www.adk.de/de/news/?we_objectID=56717}{https://www.adk.de/de/news/?we\_objectID=56717} \newline Aufgerufen am 24.03.2021
 \item Akademie der Künste, Plakatsammlung: \newline \href{https://www.adk.de/de/archiv/kunstsammlung/plakatsammlung.htm}{https://www.adk.de/de/archiv/kunstsammlung/plakatsammlung.htm} \newline Aufgerufen am 07.01.2021
 \item AskPython, How to Plot K-Means Clusters with Python: \newline \href{https://www.askpython.com/python/examples/plot-k-means-clusters-python}{https://www.askpython.com/python/examples/plot-k-means-clusters-python} \newline Aufgerufen am 20.01.2021
+\item COCO Text: \newline \href{https://bgshih.github.io/cocotext/}{https://bgshih.github.io/cocotext/} \newline Aufgerufen am 11.04.2021
 \item Detectron2, Dokumentation, Config:\newline \href{https://detectron2.readthedocs.io/en/latest/modules/config.html}{https://detectron2.readthedocs.io/en/latest/modules/config.html} \newline Aufgerufen am 08.04.2021
 \item Detectron2, Dokumentation, Datasets: \newline \href{https://detectron2.readthedocs.io/en/latest/tutorials/datasets.html}{https://detectron2.readthedocs.io/en/latest/tutorials/datasets.html}\newline Aufgerufen am 30.03.2021
 \item DigiCULT, digiCULT.web: \newline \href{https://www.digicult-verbund.de/de/digicultweb}{https://www.digicult-verbund.de/de/digicultweb} \newline Aufgerufen am 10.03.2021
@@ -1451,6 +1513,7 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \subsection{Literatur}
 
 \begin{itemize}
+\item Bernhard, Mathias: Gugelmann Galaxy. An Unexpected Journey through a collection of Schweizer Kleinmeister, in: International Journal for Digital Art History, 2016, Nr. 2., S. 95-112.
 \item Deng, Jia; Dong, Wei; Socher, Richard; Li, Li-Jia; Li, Kai; Fei-Fei, Li: ImageNet. A Large-Scale Hierarchical Image Database, IEEE Computer Vision and Pattern Recognition (CVPR) (2009).
 \item Döring, Jürgen: Historischer Überblick. Anfänge des Plakats, in Ausst. Kat. Das Plakat. 200 Jahre Kunst und Geschichte, Museum für Kunst und Gewerbe (Hamburg), 2020, S. 20-21.
 \item Döring, Jürgen: Historischer Überblick. Plakat im Jugendstil, in Ausst. Kat. Das Plakat. 200 Jahre Kunst und Geschichte, Museum für Kunst und Gewerbe (Hamburg), 2020, S. 64-65.
@@ -1470,6 +1533,7 @@ Die Abbildungen 1 - 54, sowie 64 - 73 in diesem Verzeichnis wurden nach dem Must
 \item Lückerath, Martina: „Galerie der Straße“. Zur Entwicklung der Plakatkunst, in: Galerie der Straße. Höhepunkte der Plakatkunst von ihren Anfängen bis heute, hrsg. Hessisches Landesmuseum Darmstadt, Ausst.-Kat. Darmstadt, Hessisches Landesmuseum, Heidelberg 1998, S. 11-22.
 \item Metzger, Simon: , Mainz (2021).
 \item Müller, Jens (Hrsg.): Best German posters. Eine Geschichte der deutschen Plakatwettbewerbe, Düsseldorf (2016).
+\item Pham, Vung; Pham, Chau;Dang, Tommy: Road Damage Detection and Classification with Detectron2 and Faster R-CNN, Lubbock (2020). 
 \item Purcell, Kerry William: Das Museumsplakat als Designgeschichte, in: Richter, Bettina (Hrsg.): Self-Promotion, Zürich (2018).
 \item Rademacher, Hellmut: Das deutsche Plakat. Von den Anfängen bis zur Gegenwart, Dresden (1965).
 \item Rademacher, Hellmut: Deutsche Plakat Kunst und ihre Meister, Hanau (1965).
