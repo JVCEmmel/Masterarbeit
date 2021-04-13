@@ -10,37 +10,37 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Das Programmplakat}{18}{subsubsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Das Veranstaltungsplakat}{19}{subsubsection.2.2.3}%
 \contentsline {subsubsection}{\numberline {2.2.4}Das politische Plakat}{19}{subsubsection.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}Das Filmplakat}{20}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.5}Das Filmplakat}{21}{subsubsection.2.2.5}%
 \contentsline {subsubsection}{\numberline {2.2.6}Das Theaterplakat}{21}{subsubsection.2.2.6}%
-\contentsline {subsubsection}{\numberline {2.2.7}Das Produktplakat}{21}{subsubsection.2.2.7}%
+\contentsline {subsubsection}{\numberline {2.2.7}Das Produktplakat}{22}{subsubsection.2.2.7}%
 \contentsline {subsubsection}{\numberline {2.2.8}Das Buchplakat}{22}{subsubsection.2.2.8}%
-\contentsline {subsubsection}{\numberline {2.2.9}Schrift}{23}{subsubsection.2.2.9}%
-\contentsline {subsubsection}{\numberline {2.2.10}Grafik}{26}{subsubsection.2.2.10}%
-\contentsline {subsubsection}{\numberline {2.2.11}Schrift-Grafik-Verschränkungen}{31}{subsubsection.2.2.11}%
-\contentsline {subsubsection}{\numberline {2.2.12}Scans}{34}{subsubsection.2.2.12}%
-\contentsline {subsection}{\numberline {2.3}Digitale Plakatsammlungen in drei Museen}{36}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}René Grohnert – Deutsches Plakat Museum}{36}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Anna Schultz – Akademie der Künste}{38}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Insa Brinkmann und Dr. Antje Schmidt – Museum für Kunst und Gewerbe}{40}{subsubsection.2.3.3}%
-\contentsline {section}{\numberline {3}Computergestützte Erschließung der Plakatsammlung}{43}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Computer Vision und Machine Learning}{44}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Die technischen Grundlagen}{45}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Tensorflow}{45}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Detectron2}{46}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Tesseract}{47}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Datensätze}{48}{subsubsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.3}Erstellung von Datensätzen aus der Bayreuther Plakatsammlung}{49}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Labelme}{50}{subsubsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.4}Image Clustering}{54}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Tensorflow Training}{57}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Vergleich der Ergebnisse}{59}{subsubsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.5}Objekterkennung auf Plakaten}{61}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}detectron2 Training}{64}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Vergleich der Ergebnisse}{68}{subsubsection.3.5.2}%
-\contentsline {section}{\numberline {4}Konklusion}{69}{section.4}%
-\contentsline {section}{\numberline {5}Abbildungen}{70}{section.5}%
-\contentsline {section}{\numberline {6}Anlagen}{147}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Fragebogen: Fragen bezüglich der Digitalisierung}{147}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Literaturverzeichnis}{149}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Links}{149}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Literatur}{153}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {2.2.9}Schrift}{24}{subsubsection.2.2.9}%
+\contentsline {subsubsection}{\numberline {2.2.10}Grafik}{27}{subsubsection.2.2.10}%
+\contentsline {subsubsection}{\numberline {2.2.11}Schrift-Grafik-Verschränkungen}{32}{subsubsection.2.2.11}%
+\contentsline {subsubsection}{\numberline {2.2.12}Scans}{35}{subsubsection.2.2.12}%
+\contentsline {subsection}{\numberline {2.3}Digitale Plakatsammlungen in drei Museen}{37}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}René Grohnert – Deutsches Plakat Museum}{38}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Anna Schultz – Akademie der Künste}{40}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Insa Brinkmann und Dr. Antje Schmidt – Museum für Kunst und Gewerbe}{42}{subsubsection.2.3.3}%
+\contentsline {section}{\numberline {3}Computergestützte Erschließung der Plakatsammlung}{46}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Computer Vision und Machine Learning}{46}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Die technischen Grundlagen}{48}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Tensorflow}{48}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Detectron2}{49}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Tesseract}{50}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Datensätze}{50}{subsubsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3}Erstellung von Datensätzen aus der Bayreuther Plakatsammlung}{52}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Labelme}{53}{subsubsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.4}Image Clustering}{57}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Tensorflow Training}{60}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Vergleich der Ergebnisse}{63}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Objekterkennung auf Plakaten}{65}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}detectron2 Training}{68}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Vergleich der Ergebnisse}{72}{subsubsection.3.5.2}%
+\contentsline {section}{\numberline {4}Konklusion}{74}{section.4}%
+\contentsline {section}{\numberline {5}Abbildungen}{79}{section.5}%
+\contentsline {section}{\numberline {6}Anlagen}{156}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Fragebogen: Fragen bezüglich der Digitalisierung}{156}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Literaturverzeichnis}{158}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Links}{158}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Literatur}{162}{subsection.7.2}%
