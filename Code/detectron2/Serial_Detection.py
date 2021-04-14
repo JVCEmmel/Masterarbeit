@@ -58,10 +58,11 @@ def serial_Predictor(config, path, save_images = False):
         # extract esssential informations
         predicted_classes = list(np.asarray(outputs["instances"].pred_classes.to("cpu")))
         prediction_scores = list(np.asarray(outputs["instances"].scores.to("cpu")))
-        prediction_boxes = outputs["instances"].pred_boxes.to("cpu")
-        prediction_boxes = [[float(value) for value in list(np.asarray(element))] for element in prediction_boxes]
-
         prediction_scores = [float(element) for element in prediction_scores]
+        prediction_boxes = outputs["instances"].pred_boxes.to("cpu")
+        prediction_boxes = [[int(value) for value in list(np.asarray(element))] for element in prediction_boxes]
+
+        
         thing_classes = MetadataCatalog.get(config.DATASETS.TRAIN[0]).thing_classes
         predicted_classes_names = [thing_classes[element] for element in predicted_classes]
         
@@ -73,7 +74,7 @@ def serial_Predictor(config, path, save_images = False):
 
         # Save images if it's wanted
         if save_images:
-            v = Visualizer(picture[:,:, ::-1], MetadataCatalog.get(config.DATASETS.TRAIN[0]), scale=1.2)
+            v = Visualizer(picture[:,:, ::-1], MetadataCatalog.get(config.DATASETS.TRAIN[0]), scale=1)
             out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
 
             cv2.imwrite(output_path + element[:-4] + "_with_detections.jpg", out.get_image()[:, :, ::-1])
