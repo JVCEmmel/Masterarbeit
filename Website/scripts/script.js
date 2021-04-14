@@ -48,7 +48,7 @@ function initComparisons() {
         /* If the slider is no longer clicked, exit this function: */
         if (clicked == 0) return false;
         /* Get the cursor's x position: */
-        pos = getCursorPos(e)
+        pos = getCursorPos(e);
         /* Prevent the slider from being positioned outside the image: */
         if (pos < 0) pos = 0;
         if (pos > w) pos = w;
