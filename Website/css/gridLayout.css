@@ -7,6 +7,8 @@
     grid-template-areas: 
         "header header"
         "content content"
+        "content content"
+        "content content"
         "footer footer";
 }
 
@@ -26,16 +28,30 @@
 
 .item-image {
     grid-area: content;
-    grid-column-start: 2;
-    grid-column-end: end;
     padding: 5px;
+    margin: 10px;
     border: 1px solid;
     border-width: 1px;
     border-color: white;
-    margin: 10px;
+    grid-column-start: 2;
+    grid-column-end: end;
 }
 
 .item-footer {
     grid-area: footer;
 }
 
+#imageOne, #contentOne {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#imageTwo, #contentTwo {
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#imageThree, #contentThree {
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
