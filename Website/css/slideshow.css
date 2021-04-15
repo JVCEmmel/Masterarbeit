@@ -1,0 +1,10 @@
+.mySlides {
+    display: none;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 5s;
+    animation-name: fade;
+    animation-duration: 5s;
+}
