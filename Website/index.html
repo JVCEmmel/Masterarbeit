@@ -6,28 +6,57 @@
         <meta name="description" content="Dies ist die begleitende Webseite zur Masterarbeit 'Der Algorithmus als Betrachter - Computergestützte Erschließung der Plakatsammlung des Kunstmuseums Bayreuth' verfasst von Julius Emmel.">
     
         <title>Masterarbeit - Der Algorithmus als Betrachter</title>
-    
+        
+        <!-- importing all relevant stylesheets -->
         <link rel="stylesheet" href="./css/generalStyle.css">
         <link rel="stylesheet" href="./css/gridLayout.css">
+        <link rel="stylesheet" href="./css/slideshow.css">
     </head>
     <body class="container">
+        <!-- Headline -->
         <div class="item-header">
             <h1><strong>Der Algorithmus als Betrachter</strong></h1>
             <h2>Computergestützte Erschließung der Plakatsammlung des Kunstmuseums Bayreuth</h2>
         </div>
-        <div class="item-content">
+        <!-- first row -->
+        <div id="contentOne", class="item-content">
             <h4>Erläuterung</h4>
-            <p>Diese Website ist begleitend zur titelgebenden Masterarbeit erstellt worden.
-            Sie fasst in einer kurzen Übersicht zusammen, was die Überlegungen und Ergebnisse
-            diese Arbeit sind. Wie der Titel andeutet befasst sich diese Arbeit mit der
-            Plakatsammlung des Kunstmuseums Bayreuth. Diese liegt digital in der Form von
-            17.540 .jpg-Dateien vor. Namentlich sind die Dateien in sechzehn Hauptgruppen und
-            diese jeweils in mehrere Untergruppen eingeteilt und durchnummeriert - weitere
-            Metadaten sind nicht vorhanden.</p>
+            <p>Diese Website ist begleitend zur titelgebenden Masterarbeit erstellt worden. Sie fasst in einer kurzen Übersicht zusammen, was die Überlegungen und Ergebnisse diese Arbeit sind. Wie der Titel andeutet befasst sich diese Arbeit mit der Plakatsammlung des Kunstmuseums Bayreuth. Diese liegt digital in der Form von 17.540 .jpg-Dateien vor. Namentlich sind die Dateien in sechzehn Hauptgruppen und diese jeweils in mehrere Untergruppen eingeteilt und durchnummeriert - weitere Metadaten sind nicht vorhanden.</p>
         </div>
-        <div class="item-image">
-            <img src="./../LaTeX/Abbildungen/Abbildung_17_(acht1_006).jpg" alt="">
+        <div id="imageOne", class="item-image">
+            <div class="mySlides fade">
+                <img src="./../LaTeX/Abbildungen/Abbildung_17_(acht1_006).jpg" alt="">
+            </div>
+            <div class="mySlides fade">
+                <img src="./../LaTeX/Abbildungen/Abbildung_2_(acht1_066).jpg" alt="">
+            </div>
+            <div class="mySlides fade">
+                <img src="./../LaTeX/Abbildungen/Abbildung_3_(acht2_043).jpg" alt="">
+            </div>
         </div>
+        <!-- second row -->
+        <div id="contentTwo", class="item-content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi officiis illum ipsa maxime illo inventore vitae eius repellendus, placeat sint quia dignissimos autem fuga dolorum laborum asperiores ut sit error!</p>
+        </div>
+        <div id="imageTwo", class="item-image">
+            <div>
+                <img src="./../LaTeX/Abbildungen/graphs/image_cluster_untrained.jpg" alt="">
+            </div>
+            <div>
+                <img src="./../LaTeX/Abbildungen/graphs/image_cluster_trained.jpg" alt="">
+            </div>
+            
+        </div>
+        <!-- third row-->
+        <div id="contentThree", class="item-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam dignissimos inventore magnam modi vel. Soluta doloremque asperiores et laudantium maxime explicabo non cum. Praesentium accusamus recusandae sequi id at.</p>
+        </div>
+        <div id="imageThree", class="item-image">
+            <img src="./../LaTeX/Abbildungen/detections/05,04,2021-15,39,10/Abbildung_12_(acht3_020)_with_detections.jpg" alt="">
+        </div>
+        <!-- Last Words -->
         <div class="item-footer"><p>Diese Website wurde am 05.05.2021 fertiggestellt.</p></div>
+        <!-- Script imports -->
+        <script src="./scripts/slideshow.js"></script>
     </body>
 </html>
