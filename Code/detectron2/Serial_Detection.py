@@ -96,7 +96,7 @@ if __name__ == "__main__":
     os.chdir(work_dir)
 
     ###PATH TO IMAGES###
-    path = "./1_Datensaetze/first_annotation_dataset/"
+    path = "./1_Datensaetze/data100/"
 
     ###PATH TO TRAINED MODEL###
     model_path = "./trained_models/detectron2/personData200/06,04,2021-21,27/"
@@ -123,4 +123,4 @@ if __name__ == "__main__":
         train_set_metadata = MetadataCatalog.get("train_set")
 
     ###START###
-    serial_Predictor(config, path, save_images=True)
+    serial_Predictor(config, path, save_images=False)
