@@ -7,10 +7,14 @@
     
         <title>Masterarbeit - Der Algorithmus als Betrachter</title>
         
+        <!-- JQuery import-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
         <!-- importing all relevant stylesheets -->
         <link rel="stylesheet" href="./css/generalStyle.css">
         <link rel="stylesheet" href="./css/gridLayout.css">
         <link rel="stylesheet" href="./css/slideshow.css">
+        <link rel="stylesheet" href="./css/slider.css">
     </head>
     <body class="container">
         <!-- Headline -->
@@ -21,11 +25,11 @@
         <!-- first row -->
         <div id="contentOne", class="item-content">
             <h4>Erläuterung</h4>
-            <p>Diese Website ist begleitend zur titelgebenden Masterarbeit erstellt worden. Sie fasst in einer kurzen Übersicht zusammen, was die Überlegungen und Ergebnisse diese Arbeit sind. Wie der Titel andeutet befasst sich diese Arbeit mit der Plakatsammlung des Kunstmuseums Bayreuth. Diese liegt digital in der Form von 17.540 .jpg-Dateien vor. Namentlich sind die Dateien in sechzehn Hauptgruppen und diese jeweils in mehrere Untergruppen eingeteilt und durchnummeriert - weitere Metadaten sind nicht vorhanden.</p>
+            <p>Diese Website ist begleitend zur titelgebenden Masterarbeit erstellt worden. Sie fasst in einer kurzen Übersicht zusammen, was die Überlegungen und Ergebnisse dieser Arbeit sind. <br> Wie der Titel andeutet befasst sich diese Arbeit mit der Plakatsammlung des Kunstmuseums Bayreuth. Diese liegt digital in der Form von 17.540 JPG-Dateien vor. Namentlich sind die Dateien in sechzehn Hauptgruppen und diese jeweils in mehrere Untergruppen eingeteilt und durchnummeriert - weitere Metadaten sind nicht vorhanden.</p>
         </div>
         <div id="imageOne", class="item-image">
             <div class="mySlides fade">
-                <img src="./../LaTeX/Abbildungen/Abbildung_17_(acht1_006).jpg" alt="">
+                <img src="./../LaTeX/Abbildungen/Abbildung_1_(acht1_028).jpg" alt="">
             </div>
             <div class="mySlides fade">
                 <img src="./../LaTeX/Abbildungen/Abbildung_2_(acht1_066).jpg" alt="">
@@ -33,19 +37,40 @@
             <div class="mySlides fade">
                 <img src="./../LaTeX/Abbildungen/Abbildung_3_(acht2_043).jpg" alt="">
             </div>
+            <div class="mySlides fade">
+                <img src="./../LaTeX/Abbildungen/Abbildung_5_(acht2_189).jpg" alt="">
+            </div>
+            <div class="mySlides fade">
+                <img src="./../LaTeX/Abbildungen/Abbildung_6_(acht2_208).jpg" alt="">
+            </div>
+            <div class="mySlides fade">
+                <img src="./../LaTeX/Abbildungen/Abbildung_7_(fünfzehn5_070).jpg" alt="">
+            </div>
+            <div class="mySlides fade">
+                <img src="./../LaTeX/Abbildungen/Abbildung_9_(zehn4_209).JPG" alt="">
+            </div>
+            <div class="mySlides fade">
+                <img src="./../LaTeX/Abbildungen/Abbildung_10_(acht3_299).jpg" alt="">
+            </div>
+            <div class="mySlides fade">
+                <img src="./../LaTeX/Abbildungen/Abbildung_11_(sechzehn7_002).jpg" alt="">
+            </div>
+            <div class="mySlides fade">
+                <img src="./../LaTeX/Abbildungen/Abbildung_12_(acht3_020).jpg" alt="">
+            </div>
         </div>
         <!-- second row -->
         <div id="contentTwo", class="item-content">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi officiis illum ipsa maxime illo inventore vitae eius repellendus, placeat sint quia dignissimos autem fuga dolorum laborum asperiores ut sit error!</p>
         </div>
         <div id="imageTwo", class="item-image">
-            <div>
+            <div class="ba-slider">
                 <img src="./../LaTeX/Abbildungen/graphs/image_cluster_untrained.jpg" alt="">
+                <div class="resize">
+                    <img src="./../LaTeX/Abbildungen/graphs/image_cluster_trained.jpg" alt="">
+                </div>
+                <span class="handle"></span>
             </div>
-            <div>
-                <img src="./../LaTeX/Abbildungen/graphs/image_cluster_trained.jpg" alt="">
-            </div>
-            
         </div>
         <!-- third row-->
         <div id="contentThree", class="item-content">
@@ -58,5 +83,6 @@
         <div class="item-footer"><p>Diese Website wurde am 05.05.2021 fertiggestellt.</p></div>
         <!-- Script imports -->
         <script src="./scripts/slideshow.js"></script>
+        <script src="./scripts/slider.js"></script>
     </body>
 </html>
