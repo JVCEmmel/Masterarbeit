@@ -28,38 +28,20 @@ bottom:0;
 width:4px;
 margin-left:-2px;
 
-background: rgba(0,0,0,.5);
-cursor: ew-resize;
+background: rgba(0, 0, 0, 0.5);
 }
 
-.handle:after {  /* Big orange knob  */
+.handle:after {
     position: absolute;
-    top: 10%;
-    width: 64px;
-    height: 40px;
-    margin: -32px 0 0 -32px;
+    top: 93%;
+    width: 34px;
+    height: 45px;
+    margin: -15px 0 0 -15px;
 
     content:'\21d4';
     color:white;
-    font-weight:bold;
-    font-size:36px;
+    font-size:30px;
     text-align:center;
     line-height:40px;
-
-    background: #ffb800; /* @orange */
-    border:1px solid #e6a600; /* darken(@orange, 5%) */
-    border-radius: 50%;
-    transition:all 0.3s ease;
-    box-shadow:
-    0 2px 6px rgba(0,0,0,.3), 
-    inset 0 2px 0 rgba(255,255,255,.5),
-    inset 0 60px 50px -30px #ffd466; /* lighten(@orange, 20%)*/ 
-}
-
-.draggable:after {
-    width: 48px;
-    height: 48px;
-    margin: -24px 0 0 -24px;
-    line-height:48px;
-    font-size:30px;
+    background: rgba(0, 0, 0);
 }
