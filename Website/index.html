@@ -25,7 +25,7 @@
         <!-- first row -->
         <div id="contentOne", class="item-content">
             <h4>Erläuterung</h4>
-            <p>Diese Website ist begleitend zur titelgebenden Masterarbeit erstellt worden. Sie fasst in einer kurzen Übersicht zusammen, was die Überlegungen und Ergebnisse dieser Arbeit sind. <br> Wie der Titel andeutet befasst sich diese Arbeit mit der Plakatsammlung des Kunstmuseums Bayreuth. Diese liegt digital in der Form von 17.540 JPG-Dateien vor. Namentlich sind die Dateien in sechzehn Hauptgruppen und diese jeweils in mehrere Untergruppen eingeteilt und durchnummeriert - weitere Metadaten sind nicht vorhanden.</p>
+            <p>Diese Website ist begleitend zur titelgebenden Masterarbeit erstellt worden. Sie fasst in einer kurzen Übersicht zusammen, was die Überlegungen und Ergebnisse dieser Arbeit sind. <br> Wie der Titel andeutet befasst sich diese Arbeit mit der Plakatsammlung des Kunstmuseums Bayreuth. Diese liegt digital in der Form von 17.540 JPG-Dateien vor. Namentlich sind die Dateien in sechzehn Hauptgruppen und diese jeweils in mehrere Untergruppen eingeteilt und durchnummeriert - weitere Metadaten sind nicht vorhanden. Einige Beispiele aus der Sammlung sind hier stellvertretend zu sehen. <br> Ziel der Arbeit ist es den Plakaten passende Stichworte basierend auf ihrem Inhalt zuzuschreiben. Hierzu werden die Plakate von einem neuronalen Netz analysiert und die Bereiche mit relavanten Informationen markiert. </p>
         </div>
         <div id="imageOne", class="item-image">
             <div class="mySlides fade">
@@ -61,23 +61,101 @@
         </div>
         <!-- second row -->
         <div id="contentTwo", class="item-content">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi officiis illum ipsa maxime illo inventore vitae eius repellendus, placeat sint quia dignissimos autem fuga dolorum laborum asperiores ut sit error!</p>
+            <h4>Clustering</h4>
+            <p>Eine Nebenerkenntnis der Arbeit ist das Clustern von ausgewählten Plakaten. Hierfür werden die Plakate durch ein neuronales Netz geleitet. Das Netz besitzt keine Erfahrung mit Plakaten. Über das Verfahren der <i>Feature Extraction</i> wird jedem Plakat eine zweidimensionale Koordinate  zugeordnet. Die Position eines Plakats spiegelt dabei die Einschätzung des neuronalen Netzes, basierend auf den Farbwerten der Plakate, wieder. <br>Um zu ermitteln, ob ein Netz eine andere Verortung der Plakate vornehmen würde, wenn es auf Plakate vortrainiert ist, ist aus der Plakatsammlung ein Trainingsdatensatz erstellt worden. Das so trainierte neuronale Netz zeigt zwar eine andere Verteilung der Plakate, jedoch bleibt die generelle Struktur erhalten. <br>Auf der nebenstehenden Grafik kann vergleichend die Visualisierung des Trainingsdatensatzes vor dem Training (links) und nach dem Training (rechts) nachvollzogen werden. Für eine genaue Betrachtung der Cluster lassen sich diese durch einaches Klicken in einem neuen Tab öffnen.</p>
         </div>
         <div id="imageTwo", class="item-image">
             <div class="ba-slider">
-                <img src="./../LaTeX/Abbildungen/graphs/image_cluster_untrained.jpg" alt="">
-                <div class="resize">
+                <a href="./../LaTeX/Abbildungen/graphs/image_cluster_trained.jpg", target="_blank">
                     <img src="./../LaTeX/Abbildungen/graphs/image_cluster_trained.jpg" alt="">
+                </a>
+                <div class="resize">
+                    <a href="./../LaTeX/Abbildungen/graphs/image_cluster_untrained.jpg", target="_blank">
+                        <img src="./../LaTeX/Abbildungen/graphs/image_cluster_untrained.jpg" alt="">
+                    </a>
                 </div>
                 <span class="handle"></span>
             </div>
         </div>
         <!-- third row-->
         <div id="contentThree", class="item-content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam dignissimos inventore magnam modi vel. Soluta doloremque asperiores et laudantium maxime explicabo non cum. Praesentium accusamus recusandae sequi id at.</p>
+            <h4>Objekterkennung</h4>
+            <p>Auch für die Erkennung von relevantem Inhalt in Bezug auf Plakate ist das Training eines neuronalen Netzes erforderlich. Zwar erkennt auch ein untrainiertes Netz verschiedene Objekte. Bei diesen handelt es sich jedoch meist um Gegenstände des alltäglichen Lebens und Kategorien, die nicht spezifisch auf Plakate zugeschnitten sind. Die Erkennung von Textblöcken ist durch ein neuronales Netz, welches beispielsweise auf den <a href="https://cocodataset.org/#explore" target="blank">COCO Datensatz</a> trainiert worden ist, nicht möglich. <br>Nach einem kurzen Training ist es möglich die Textblöcke auf Plakaten zu erkennen und entsprechend zu markieren. Auch andere Kategorien können zusätzlich erlernt werden. Für eine Verbesserung der Ergebnisse ist ein längeres Training mit mehr Daten nötig.</p>
         </div>
         <div id="imageThree", class="item-image">
-            <img src="./../LaTeX/Abbildungen/detections/05,04,2021-15,39,10/Abbildung_12_(acht3_020)_with_detections.jpg" alt="">
+            <img src="./../LaTeX/Abbildungen/Abbildung_64b_(acht1_036)_with_detections.jpg" alt="">
+        </div>
+        <!-- Fourth Row-->
+        <div id="contentFour", class="item-content">
+            <h4>Mögliche Stichworte</h4>
+            <p>Die Erkennung von Bereichen in denen Textinformationen vorhanden sind ist in dem Sinne nützlich, da diese Bereiche gezielt ausgeschnitten und mit einer <i>Optical Character Recorgnition</i> Software bearbeitet werden können.</p>
+            <table>
+                <tr>
+                    <td>Komplettes Plakat</td>
+                    <td>Farbige Boxen</td>
+                    <td>Graue Boxen</td>
+                    <td>Roter Farbkanal</td>
+                    <td>Blauer Farbkanal</td>
+                    <td>Grüner Farbkanal</td>
+                </tr>
+                <tr>
+                    <td>"OTAKAR KUBIN-COUBINE: PODZIM V PROVENCE, 1921"</td>
+                    <td>"Z PRIRÜSTKÜ MORAVSKE GALERIE V BRNE"</td>
+                    <td>"Z PRIRÜSTKÜ MORAVSKE GALERIE V BRNE"</td>
+                    <td>"Z PRIRÜSTKÜ MORAVSKE GALERIE V BRNE"</td>
+                    <td>" "</td>
+                    <td>"Z PRIRÜSTKÜ MORAVSKE GALERIE V BRNE"</td>
+                </tr>
+                <tr>
+                    <td>"UMENI"<br></td>
+                    <td>"DÜM UMENi MESTA BRNA, 19.2.- 31.3. 1985"</td>
+                    <td>"DÜM UMENi MESTA BRNA, 19.2.- 31.3. 1985"</td>
+                    <td>"DÜM UMENi MESTA BRNA, 19.2.- 31.3. 1985"</td>
+                    <td>" ", "DÜM UMENI MESTA BRNA, 19."</td>
+                    <td>"DÜM UMENi MESTA BRNA, 19.2.- 31.3. 1985"</td>
+                </tr>
+                <tr>
+                    <td>"E"</td>
+                    <td>"mN Ok 2208/4-TEk HAa"</td>
+                    <td>"ImKNV OK 2286/B4-TISK 6-602634/"</td>
+                    <td>"ImKNV OK 2286/B4-TISK 6-602634/"</td>
+                    <td>"mN", " "</td>
+                    <td>"ImKNV OK 2286/B4-TISK 6-602634/"</td>
+                </tr>
+                <tr>
+                    <td>"   "</td>
+                    <td>"OTAKAR KUBIN-COUBINE: PODZIM V PROVENCE, 1921"</td>
+                    <td>"OTAKAR KUBIN-COUBINE : PODZIM V PROVENCE, 1921"</td>
+                    <td>"OTAKAR KUBIN-COUBINE: PODZIM V PROVENCE, 1921"</td>
+                    <td>"OTAKAR KUBIN -COUBINE : PODZIM V PROVENCE, 1921"</td>
+                    <td>"OTAKAR KUBIN-COUBINE : PODZIM V PROVENCE, 1921"</td>
+                </tr>
+                <tr>
+                    <td>" "</td>
+                    <td>"20 ä%EENT{"</td>
+                    <td>"CESKE", "UMENI"</td>
+                    <td>"CESKE", "UMENI"</td>
+                    <td>"20 STOLETI"</td>
+                    <td>"CESKE", "UMENI"</td>
+                </tr>
+                <tr>
+                    <td>"XE @‚ . ä E S]"</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>"CESKE"</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <p></p>
         </div>
         <!-- Last Words -->
         <div class="item-footer"><p>Diese Website wurde am 05.05.2021 fertiggestellt.</p></div>
