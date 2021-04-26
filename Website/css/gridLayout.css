@@ -9,12 +9,14 @@
         "content content"
         "content content"
         "content content"
+        "content content"
         "footer footer";
 }
 
 .item-header {
     grid-area: header;
     text-align: center;
+    border-bottom: 1px solid;
 }
 
 .item-content {
@@ -39,6 +41,7 @@
 
 .item-footer {
     grid-area: footer;
+    border-top: 1px solid;
 }
 
 #imageOne, #contentOne {
@@ -54,4 +57,11 @@
 #imageThree, #contentThree {
     grid-row-start: 4;
     grid-row-end: 5;
+}
+
+#contentFour {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: end;
 }
