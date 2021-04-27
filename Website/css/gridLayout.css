@@ -2,6 +2,7 @@
 
 .container {
     display: grid;
+    grid-gap: 5px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
@@ -11,6 +12,8 @@
         "content content"
         "content content"
         "footer footer";
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .item-header {
@@ -30,6 +33,7 @@
 
 .item-image {
     grid-area: content;
+    align-self: center;
     padding: 5px;
     margin: 10px;
     border: 1px solid;
