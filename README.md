@@ -2,8 +2,9 @@
 
 ## Einführung
 
-Dieses Repository beinhaltet den Code zur Masterarbeit  "Der Algorithmus als Betrachter - Computergestützte Erschließung der Plakatsammlung des Kunstmuseum Bayreuth"
+Dieses Repository beinhaltet den Code zur Masterarbeit  "Der Algorithmus als Betrachter - Computergestützte Erschließung der Plakatsammlung des Kunstmuseum Bayreuth".  
+Grundlage der Arbeit sind die Digitalisate der Plakatsammlung des Kunstmusem Bayreuths. Mit diesen Scans wurde ein detectron2 und ein tensorflow basiertes neuronales Netz trainiert.  
+Für weitere Informationen zum Ziel und der Umsetzung dieser Arbeit sei auf die Website und das Plakat verwiesen. Diese befinden sich in den entsprechenden Ordnern dieses Repositories.  
+Die Masterarbeit selbst befindet sich im Ordner _LaTeX_ in PDF Form.  
 
-Grundlage der Arbeit waren die Digitalisate der Plakatsammlung des Kunstmusem Bayreuths. Auf diesen Bildern wurde ein detectron2 basiertes neuronales Netz trainiert.
-
-Ziel der Arbeit ist das erkennen von Plakatelementen und die Übersetzung des Gefundenen in Tags bzw. semantische, beschreibende Texte zu den Plakaten.
+Der Ordner _Code_ gliedert sich in die Ordner _detectron2_ und _clustering_.
