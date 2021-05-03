@@ -12,27 +12,20 @@ import numpy as np
 from PIL import Image, ImageDraw
 import os
 import time
-from os.path import isfile, isdir
+from os.DATASET_PATH import isfile, isdir
 
 from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
 import tensorflow as tf
 
-"""
-# Configurations to ensure, that the GPU is implemented
-config = ConfigProto()
-config.gpu_options.allow_growth = True
-session = InteractiveSession(config=config)
+""" FUNCTION
 
-physical_devices = tf.config.list_physical_devices('GPU')
-tf.config.experimental.set_memory_growth(physical_devices[0], True)
-"""
+Purpose: Extracting all '.jpg' files
 
-print("[INFO]\tProgramm started! Imports completed")
+Takes: The DATASET_PATH to the directory in which the files are located; a set with all collected file names
 
-"""
-FUNCTION - This function gets all ".jpg" and ".JPG" files in a directory and all of its subdirectories.
-            A path to the directory and a set or list is required, to store the data - it's returning a sorted list
+Returns: A sorted list of all '.jpg' file names
+
 """
 
 def get_images(base_path, all_image_names):
@@ -40,7 +33,7 @@ def get_images(base_path, all_image_names):
     
     for element in file_name_list:
         if isfile(base_path + element) & (element.lower().endswith(".jpg")):
-            all_image_names.add((base_path + element).replace(path, ''))
+            all_image_names.add((base_path + element).replace(DATASET_PATH, ''))
         elif isdir(base_path + element):
             get_images(base_path + element + "/", all_image_names)
 
@@ -48,12 +41,17 @@ def get_images(base_path, all_image_names):
     all_image_names.sort()
     return all_image_names
 
-"""
-FUNCTION - This function places images in contentboxes and draws them on the position of their corresponding data point.
-            The position and name of the actual Image, it's X and Y coordinates and the label are required - nothin will be returned. 
+""" FUNCTION
+
+Purpose: places images according to their coordinates in a grid
+
+Takes: Image name, X and Y coordinates and the current label
+
+Returns: Nothing
+
 """
 
-def image_in_plot(i, name, X, Y, label):
+def image_in_plot(name, X, Y, label):
     label_colors = {
         0 : "red",
         1 : "green",
@@ -85,20 +83,26 @@ def image_in_plot(i, name, X, Y, label):
     ax.add_artist(ab)
 
 
+###SET BASIC VARIABLES###
+WORK_DIR = "/home/julius/PowerFolders/Masterarbeit/"
+os.chdir(WORK_DIR)
+
+DATASET_PATH = './1_Datensaetze/personData200/'
+OUTPUT_PATH = './cluster_outputs/'
+CLUSTERS = 17
+
+# load model
 model = ResNet50(weights='imagenet', include_top=False)
-# model.summary()
 
-path = '/home/julius/PowerFolders/Masterarbeit/1_Datensaetze/personData200/'
-output_path = '/home/julius/PowerFolders/Masterarbeit/cluster_outputs/'
-clusters = 17
 
+# gather all images
 all_image_names = set()
-all_image_names = get_images(path, all_image_names)
+all_image_names = get_images(DATASET_PATH, all_image_names)
 
 print("[INFO] {} Images were collected!".format(len(all_image_names)))
 
+# extract the features of all images
 resnet_feature_dict = {}
-
 for i, image_file in enumerate(all_image_names):
     img = image.load_img(base_path + image_file, target_size=(224, 224))
 
@@ -114,22 +118,20 @@ for i, image_file in enumerate(all_image_names):
 
 print("[INFO]\tFeatures Extracted! {0} Features in the format {1} were collected.".format(len(resnet_feature_dict), resnet_feature_dict[all_image_names[0]].shape))
 
+# transform features
 features = np.array(list(resnet_feature_dict.values()))
-
-print(features.shape)
 
 pca = PCA(n_components=2, random_state=22)
 pca.fit(features)
-
 pca_features = pca.transform(features)
 
-print(pca_features.shape)
-
-kmeans = KMeans(n_clusters=clusters, random_state=22)
+# cluster images
+kmeans = KMeans(n_clusters=CLUSTERS, random_state=22)
 label_list = kmeans.fit_predict(pca_features)
 
 print("[INFO]\tFinished clustering!")
 
+# resort data
 labels_and_names = {}
 for i, label in enumerate(label_list):
     if label not in labels_and_names:
@@ -141,40 +143,40 @@ for i, label in enumerate(label_list):
 
 scatter_fig = plt.figure(figsize=(20,20))
 
-for label in range(clusters):
+for label in range(CLUSTERS):
     filtered_label = pca_features[label_list == label]
     
     plt.scatter(filtered_label[:, 0], filtered_label[:, 1])
     for i, name in enumerate(labels_and_names[label]):
         plt.text(filtered_label[:, 0][i], filtered_label[:, 1][i], name)
     
-plt.savefig(output_path + time.strftime("%d,%m,%Y-%H,%M,%S") + "_scatter.png")
+plt.savefig(OUTPUT_PATH + time.strftime("%d,%m,%Y-%H,%M,%S") + "_scatter.png")
 
 # save the plot with all images combined
 
 image_fig = plt.figure(figsize=(20, 20))
 
-for label in range(clusters):
+for label in range(CLUSTERS):
     ax = plt.subplot(5, 5, label+1)
     filtered_label = pca_features[label_list == label]
     plt.scatter(filtered_label[:, 0], filtered_label[:, 1])
     plt.axis("off")
     for j, name in enumerate(labels_and_names[label]):
-        image_in_plot(j, name, filtered_label[:, 0][j], filtered_label[:, 1][j], label)
+        image_in_plot(name, filtered_label[:, 0][j], filtered_label[:, 1][j], label)
 
-plt.savefig(output_path + time.strftime("%d,%m,%Y-%H,%M,%S") + "_image.png")
+plt.savefig(OUTPUT_PATH + time.strftime("%d,%m,%Y-%H,%M,%S") + "_image.png")
 
 # Save all cluster figures seprately
 
 sub_fig = plt.figure(figsize=(20, 20))
 
-for label in range(clusters):
+for label in range(CLUSTERS):
     ax = plt.subplot(5, 5, label+1)
     filtered_label = pca_features[label_list == label]
     plt.scatter(filtered_label[:, 0], filtered_label[:, 1])
     plt.axis("off")
     for j, name in enumerate(labels_and_names[label]):
-        image_in_plot(j, name, filtered_label[:, 0][j], filtered_label[:, 1][j], label)
+        image_in_plot(name, filtered_label[:, 0][j], filtered_label[:, 1][j], label)
     
     cut_out = ax.get_window_extent().transformed(sub_fig.dpi_scale_trans.inverted())
-    plt.savefig(output_path + time.strftime("%d,%m,%Y-%H,%M,%S") + "_{}_image.png".format(label), bbox_inches=cut_out)
+    plt.savefig(OUTPUT_PATH + time.strftime("%d,%m,%Y-%H,%M,%S") + "_{}_image.png".format(label), bbox_inches=cut_out)

@@ -4,18 +4,38 @@ from os.path import isfile, isdir
 import pytesseract, json, os, cv2
 import numpy as np
 
+""" FUNCTION
+
+Purpose: Extracting all '.jpg' files
+
+Takes: The path to the directory in which the files are located; a set with all collected file names
+
+Returns: A sorted list of all '.jpg' file names
+
+"""
+
 def get_images(base_path, all_image_names):
     file_name_list = os.listdir(base_path)
     
     for element in file_name_list:
         if isfile(base_path + element) & (element.lower().endswith(".jpg")):
-            all_image_names.add((base_path + element).replace(dataset_path, ''))
+            all_image_names.add((base_path + element).replace(DATASET_PATH, ''))
         elif isdir(base_path + element):
             get_images(base_path + element + "/", all_image_names)
 
     all_image_names = list(all_image_names)
     all_image_names.sort()
     return all_image_names
+
+""" FUNCTION
+
+Purpose: Splitting an image in its three color channels
+
+Takes: An image
+
+Returns: Three images for each color channel
+
+"""
 
 def pic_split(img):
 
@@ -42,25 +62,24 @@ def pic_split(img):
 print("[INFO] Programm started!")
 
 ###SET BASIC VIRABLES###
-os.chdir("/home/julius/PowerFolders/Masterarbeit/")
+WORK_DIR = "/home/julius/PowerFolders/Masterarbeit/"
+os.chdir(WORK_DIR)
 
-dataset_path = "./1_Datensaetze/data100/"
-json_path = "./detections/data100/16,04,2021-12,43/"
-output_path = json_path
+DATASET_PATH = "./1_Datensaetze/data100/"
+JSON_PATH = "./detections/data100/16,04,2021-12,43/"
 
 ###CONSOLE OUTPUT###
-print("[INFO] Collecting images in '{}'.".format(dataset_path))
+print("[INFO] Collecting images in '{}'.".format(DATASET_PATH))
 
 # gather images
-#images = sorted([element for element in os.listdir(dataset_path) if element.lower().endswith(".jpg")])
 images = set()
-images = get_images(dataset_path, images)
+images = get_images(DATASET_PATH, images)
 
 ###CONSOLE OUTPUT###
 print("[INFO] Reading bounding box export.")
 
 # read bounding boxes
-with open(json_path + "bounding_boxes.json", "r+") as inputfile:
+with open(JSON_PATH + "bounding_boxes.json", "r+") as inputfile:
     bounding_boxes = json.load(inputfile)
 
 ###CONSOLE OUTPUT###
@@ -89,7 +108,7 @@ print("[INFO] Beginning OCR!")
 for element in range(len(images)):
     # load image
     image_dict = {}
-    image_dict["complete_image"] = cv2.imread(dataset_path + images[element])
+    image_dict["complete_image"] = cv2.imread(DATASET_PATH + images[element])
     dump_dict = {}
 
     ###CONSOLE OUTPUT###
@@ -97,7 +116,7 @@ for element in range(len(images)):
 
     # go over every box in the image
     for box in range(len(boxes_per_image[images[element]])):
-        #get box cords, length and with and cut text out
+        # get box cords, length and with and cut text out
         x_one = boxes_per_image[images[element]][box][0]
         x_two = boxes_per_image[images[element]][box][1]
         y_one = boxes_per_image[images[element]][box][2]
@@ -110,6 +129,7 @@ for element in range(len(images)):
         image_dict["blue_box"], image_dict["green_box"], image_dict["red_box"] = pic_split(image_dict["colored_box"])
         image_dict["gray_box"] = cv2.cvtColor(image_dict["colored_box"], cv2.COLOR_BGR2GRAY)
 
+        # OCR on every variant
         for variant in image_dict:
             text_dump = set()
 
@@ -130,13 +150,15 @@ for element in range(len(images)):
         ###CONSOLE OUTPUT###
         print("[INFO] Finished Detection for box {}/{} of image {}".format(box+1, len(boxes_per_image[images[element]]), images[element]))
 
+    # OCR on the whole image
     image_text = "{}".format(pytesseract.image_to_string(image_dict["complete_image"], lang="deu"))
     image_text = image_text.replace("\x0c", "").split("\n")
     if len(image_text) > 0:
         [text_dump.add(text) for text in image_text if len(text) > 0]
     dump_dict["complete_image"] = list(text_dump)
 
-    with open(output_path + "{}.json".format(images[element].split("/")[-1][:-4]), "w+", encoding="utf8") as output_file:
+    # dump results
+    with open(JSON_PATH + "{}.json".format(images[element].split("/")[-1][:-4]), "w+", encoding="utf8") as output_file:
         json.dump(dump_dict, output_file, indent=4, ensure_ascii=False)
     
     ###CONSOLE OUTPUT###

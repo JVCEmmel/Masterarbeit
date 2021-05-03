@@ -12,8 +12,16 @@ import random, cv2, time, os, shutil, ownlabelme2COCO, torch
 
 print(torch.__version__)
 
-# split the data if its not the case
-def split_data (path, train_set_path, test_set_path, split=5):
+""" FUNCTION
+
+Purpose: Generate a train and a test dataset. The default is 80/20
+
+Takes: Path to the images, the test and the train dataset directories. Split defines the ratio between test size and train size
+
+Returns: Nothing
+
+"""
+def split_data (DATASET_PATH, train_set_path, test_set_path, split=5):
 
     class uneven_list_error(Exception):
         # raised, when the two lists which are needed to seperate the data are uneven.
@@ -23,27 +31,41 @@ def split_data (path, train_set_path, test_set_path, split=5):
         os.mkdir(train_set_path)
         os.mkdir(test_set_path)
     
-        images = sorted([element for element in os.listdir(path) if element.lower().endswith(".jpg")])
-        jsons = sorted([element for element in os.listdir(path) if element.endswith(".json")])
+        # gather '.json' and '.jpg' files
+        images = sorted([element for element in os.listdir(DATASET_PATH) if element.lower().endswith(".jpg")])
+        jsons = sorted([element for element in os.listdir(DATASET_PATH) if element.endswith(".json")])
 
+        # check, if they are even
         if len(images) != len(jsons):
             raise uneven_list_error
 
+        # split
         for count in range(len(images)):
             if count % split == 0:
-                shutil.move(path + images[count], test_set_path + images[count])
-                shutil.move(path + jsons[count], test_set_path + jsons[count])
+                shutil.move(DATASET_PATH + images[count], test_set_path + images[count])
+                shutil.move(DATASET_PATH + jsons[count], test_set_path + jsons[count])
             else:
-                shutil.move(path + images[count], train_set_path + images[count])
-                shutil.move(path + jsons[count], train_set_path + jsons[count])
+                shutil.move(DATASET_PATH + images[count], train_set_path + images[count])
+                shutil.move(DATASET_PATH + jsons[count], train_set_path + jsons[count])
         
+        # generate the COCO.json for detectron2
         ownlabelme2COCO.main(test_set_path)
         ownlabelme2COCO.main(train_set_path)
 
     except uneven_list_error:
         print("[ERROR] List lengths don't match! There are {} Images and {} json-Files. Please check directory!".format(len(images), len(jsons)))
 
-# train the model
+
+""" MAIN FUNCTION
+
+Purpose: Train and test a detectron2 model
+
+Takes: A detectron2 config
+
+Returns: Nothing
+
+"""
+
 def train_and_evaluate(config):
     
     # train the model
@@ -53,39 +75,40 @@ def train_and_evaluate(config):
     trainer.train()
 
     # evaluate the model
-    """
+
     torch.cuda.empty_cache()
     evaluator = COCOEvaluator("test_set", config, distributed=False, output_dir=evaluation_path, use_fast_impl=False)
     test_loader = build_detection_test_loader(config, "test_set")
     inference_on_dataset(trainer.model, test_loader, evaluator)
-    """
+
 
     # export the config
     config_dump = config.dump()
     with open(config.OUTPUT_DIR + "config.yaml", "w+") as output_file:
         output_file.write(config_dump)
 
+
 if __name__ == "__main__":
 
     ###SET WORK ENVIROMENT###
-    work_dir = "/home/julius/PowerFolders/Masterarbeit/"
-    os.chdir(work_dir)
+    WORK_DIR = "/home/julius/PowerFolders/Masterarbeit/"
+    os.chdir(WORK_DIR)
 
     ###PATH TO DATASET###
-    path = "./1_Datensaetze/personData200/"
+    DATASET_PATH = "./1_Datensaetze/personData200/"
 
     # generate paths for testing and training
-    train_set_path = path + "train_split/"
-    test_set_path = path + "test_split/"
+    train_set_path = DATASET_PATH + "train_split/"
+    test_set_path = DATASET_PATH + "test_split/"
 
     # split data if it's not the case yet
     if not os.path.isdir(train_set_path):
-        split_data(path, train_set_path, test_set_path)
+        split_data(DATASET_PATH, train_set_path, test_set_path)
 
     # generate paths for outputs and make dirs
     starttime = time.strftime("%d,%m,%Y-%H,%M")
-    model_path = "./trained_models/detectron2/{}/{}/".format(path.split("/")[-2], starttime)
-    evaluation_path = "./model_evaluation/detectron2/{}/{}/".format(path.split("/")[-2], starttime)
+    model_path = "./trained_models/detectron2/{}/{}/".format(DATASET_PATH.split("/")[-2], starttime)
+    evaluation_path = "./model_evaluation/detectron2/{}/{}/".format(DATASET_PATH.split("/")[-2], starttime)
 
     if not os.path.isdir(evaluation_path):
         os.makedirs(evaluation_path)
@@ -113,7 +136,7 @@ if __name__ == "__main__":
     config.DATASETS.TRAIN = ("train_set", )
     config.DATASETS.TEST = ("test_set", )
     
-    # config.DATALOADER.NUM_WORKERS = 2
+    #config.DATALOADER.NUM_WORKERS = 2
     
     # load COCO trained weights 
     config.MODEL.WEIGHTS = "detectron2://COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x/137849600/model_final_f10217.pkl"
@@ -140,4 +163,5 @@ if __name__ == "__main__":
     config.MODEL.RETINANET.NUM_CLASSES = 11
     config.MODEL.ROI_HEADS.NUM_CLASSES = 11
 
+    #####START#####
     train_and_evaluate(config)

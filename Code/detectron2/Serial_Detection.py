@@ -6,20 +6,26 @@ from detectron2.data.datasets import register_coco_instances, load_coco_json
 from detectron2.data import MetadataCatalog
 
 import numpy as np
-from os.path import isfile, isdir
+from os.IMAGE_PATH import isfile, isdir
 from Prediction_analysis import prediction_analysis
 import os, json, cv2, time, torch
 
-###FUNCTION########################################################
-# Yields every jpg-File in given directory and all subdirectories #
-###################################################################
+""" FUNCTION
+
+Purpose: Extracting all '.jpg' files
+
+Takes: The IMAGE_PATH to the directory in which the files are located; a set with all collected file names
+
+Returns: A sorted list of all '.jpg' file names
+
+"""
 
 def get_images(base_path, all_image_names):
     file_name_list = os.listdir(base_path)
     
     for element in file_name_list:
         if isfile(base_path + element) & (element.lower().endswith(".jpg")):
-            all_image_names.add((base_path + element).replace(path, ''))
+            all_image_names.add((base_path + element).replace(IMAGE_PATH, ''))
         elif isdir(base_path + element):
             get_images(base_path + element + "/", all_image_names)
 
@@ -27,21 +33,27 @@ def get_images(base_path, all_image_names):
     all_image_names.sort()
     return all_image_names
 
-###MAIN FUNCTION#############
-# Predicts a list of images #
-############################# 
+""" MAIN FUNCTION
 
-def serial_Predictor(config, path, save_images = False):
-    # Generate path and variables for output 
+Purpose: Object detection for a list of images
+
+Takes: detectron2 config and the IMAGE_PATH to the images. Parameter if the images should be saved
+
+Returns: Nothing
+
+"""
+
+def serial_Predictor(config, IMAGE_PATH, save_images = False):
+    # Generate IMAGE_PATH and variables for output 
     output_dict = {}
     boxes_dict = {}
-    output_path = "./detections/{}/{}/".format(path.split("/")[-2], time.strftime("%d,%m,%Y-%H,%M"))
+    output_path = "./detections/{}/{}/".format(IMAGE_PATH.split("/")[-2], time.strftime("%d,%m,%Y-%H,%M"))
     if not isdir(output_path):
         os.makedirs(output_path)
 
     # Get all images
     image_list = set()
-    image_list = get_images(path, image_list)
+    image_list = get_images(IMAGE_PATH, image_list)
 
     ###CONSOLE OUTPUT###
     print("[INFO] {} Images were collected".format(len(image_list)))
@@ -51,7 +63,7 @@ def serial_Predictor(config, path, save_images = False):
 
         # load image and get prediction
         torch.cuda.empty_cache()
-        picture = cv2.imread(path + element)
+        picture = cv2.imread(IMAGE_PATH + element)
         predictor = DefaultPredictor(config)
         outputs = predictor(picture)
 
@@ -92,24 +104,25 @@ def serial_Predictor(config, path, save_images = False):
 if __name__ == "__main__":
 
     ###SET WORK ENVIROMENT###
-    work_dir = "/home/julius/PowerFolders/Masterarbeit/"
-    os.chdir(work_dir)
+    WORK_DIR = "/home/julius/PowerFolders/Masterarbeit/"
+    os.chdir(WORK_DIR)
 
     ###PATH TO IMAGES###
-    path = "./1_Datensaetze/data100/"
+    IMAGE_PATH = "./1_Datensaetze/data100/"
 
     ###PATH TO TRAINED MODEL###
-    model_path = "./trained_models/detectron2/personData200/06,04,2021-21,27/"
+    MODEL_PATH = "./trained_models/detectron2/personData200/06,04,2021-21,27/"
 
     ###PATH TO DATASET - which the model is trained on###
-    dataset_path = "./1_Datensaetze/personData200/"
-    train_set_path = dataset_path + "train_split/"
+    DATASET_PATH = "./1_Datensaetze/personData200/"
+    TRAIN_SET_PATH = DATASET_PATH + "train_split/"
 
     ###CONFIG FOR MODEL###
     config = get_cfg()
-    if model_path != None:
-        config.merge_from_file(model_path + "config.yaml")
-        config.MODEL.WEIGHTS = model_path + "model_final.pth"
+    
+    if MODEL_PATH != None:
+        config.merge_from_file(MODEL_PATH + "config.yaml")
+        config.MODEL.WEIGHTS = MODEL_PATH + "model_final.pth"
     else:
         config.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"))
         config.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
@@ -117,10 +130,10 @@ if __name__ == "__main__":
     config.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.7
 
     # registering the trained dataset
-    if model_path != None:
-        load_coco_json(train_set_path + "COCO_json/output.json", train_set_path, "train_set")
-        register_coco_instances("train_set", {}, train_set_path + "COCO_json/output.json", train_set_path)
+    if MODEL_PATH != None:
+        load_coco_json(TRAIN_SET_PATH + "COCO_json/output.json", TRAIN_SET_PATH, "train_set")
+        register_coco_instances("train_set", {}, TRAIN_SET_PATH + "COCO_json/output.json", TRAIN_SET_PATH)
         train_set_metadata = MetadataCatalog.get("train_set")
 
     ###START###
-    serial_Predictor(config, path, save_images=False)
+    serial_Predictor(config, IMAGE_PATH, save_images=False)

@@ -2,9 +2,18 @@ import os
 import json
 import numpy as np
 
-class Image:
+""" CLASS
 
-    __doc__ = "The class, representing the image Data for the COCO Dataset"
+Represents the COCO image data
+
+Attributes: id (int), name (string), height (int), width (int)
+
+Functions: print all attributes; return a dictionary with all attributes
+
+"""
+
+
+class Image:
 
     def __init__(self, id, name, height, width):
         self.id = id
@@ -28,6 +37,15 @@ class Image:
 
         return imagedict
 
+""" CLASS
+
+Represents the COCO category data
+
+Attributes: id (int), supercategory (string), category (string)
+
+Functions: print all attributes; return a dictionary with all attributes
+
+"""
 
 class Category:
 
@@ -51,6 +69,17 @@ class Category:
         categorydict["name"] = self.name
 
         return categorydict
+
+
+""" CLASS
+
+Represents the COCO polygon data
+
+Attributes: id (int), category_id (int), image_id (int), iscrowd (bool), segmentation (list), bbox (list), area (float)
+
+Functions: print all attributes; return a dictionary with all attributes
+
+"""
 
 
 class Polygon:
@@ -88,17 +117,31 @@ class Polygon:
 
         return polygondict
 
+""" FUNCTION
+
+Purpose: calculate the area of the polygon
+
+Takes: A list with all x-coordinates and a list with all y-coordinates
+
+Returns: The area of the given polygon
+
+"""
 
 def PolyArea(x, y):
     return 0.5*np.abs(np.dot(x, np.roll(y, 1))-np.dot(y, np.roll(x, 1)))
 
+""" FUNCTION
 
-def main(path):
-    # helper variables -
-    # 
-    # path gives the directory with images and .json,
-    # images, categories and polygons store the classes created,
-    # label_list and polygon_list keep track over the gathered labels and polygonids
+Purpose: Extraction of the labelme data and restructuring for detectron2 COCO
+
+Takes: Path to the '.json' and '.jpg' files
+
+Returns: Nothing
+
+"""
+
+def main(DATASET_PATH):
+    # helper variables
     json_dump = {}
     images = []
     categories = []
@@ -106,16 +149,16 @@ def main(path):
     label_list = {}
     polygon_list = []
 
-    # get all json files in directory
-    json_list = sorted([f for f in os.listdir(path) if f.endswith(".json")])
+    # get all '.json' files in directory
+    json_list = sorted([f for f in os.listdir(DATASET_PATH) if f.endswith(".json")])
 
-    # looping through the .json files
+    # looping through the '.json' files
     # 
     # the first loop saves the general image data
     # the first enclosed loop saves the label data
     # the second enclosed loop saves the coordinates of the poligons
     for id_count, json_file in enumerate(json_list):
-        with open(path + json_file, "r") as content:
+        with open(DATASET_PATH + json_file, "r") as content:
             data = json.load(content)
             
             image = Image(id_count, data["imagePath"].replace("../", ""), data["imageHeight"], data["imageWidth"])
@@ -166,8 +209,8 @@ def main(path):
     json_dump["categories"] = categories
     json_dump["annotations"] = polygons
 
-    output_path = path + "COCO_json/"
-    if not os.path.isdir(output_path):
+    output_path = DATASET_PATH + "COCO_json/"
+    if not os.DATASET_PATH.isdir(output_path):
         os.mkdir(output_path)
 
     with open(output_path + "output.json", "w") as output_file:
@@ -175,5 +218,5 @@ def main(path):
 
 
 if __name__ == "__main__":
-    path = "/home/julius/PowerFolders/Masterarbeit/1_Datensaetze/first_annotation_dataset/"
-    main(path)
+    DATASET_PATH = "/home/julius/PowerFolders/Masterarbeit/1_Datensaetze/first_annotation_dataset/"
+    main(DATASET_PATH)

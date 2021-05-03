@@ -1,10 +1,19 @@
 import matplotlib.pyplot as plt
 import json, os
 
+""" FUNCTION
 
-def prediction_analysis(path):
+Purpose: Reading the detections.json file and counting the detected labels and their probabilities
+
+Takes: Path to the '.json' file
+
+Returns: Nothing
+
+"""
+
+def prediction_analysis(PREDICTION_PATH):
     # read the file
-    with open(path + "detections.json", "r+") as input_file:
+    with open(PREDICTION_PATH + "detections.json", "r+") as input_file:
         evaluation = json.load(input_file)
 
     # counting for each label its apparence and the probabilities
@@ -29,7 +38,7 @@ def prediction_analysis(path):
         if label != "no_detection":
             label_statistics[label]["mean_probability"] = label_statistics[label]["mean_probability"]/label_statistics[label]["num"]
 
-    # Plotting each statistic category
+    # Plotting each statistic category and save
     fig = plt.figure(figsize=(20, 20))
     for count, category in enumerate(list(label_statistics[list(label_statistics.keys())[0]].keys())): #iterating over the keys of the first dictionary in the statistics
         ax = plt.subplot(2, 2, 1+count)
@@ -43,14 +52,15 @@ def prediction_analysis(path):
                 ax.bar_label(hbar)
             ax.set_xlabel(category)
         plt.tight_layout()
-        plt.savefig(path + "analysis.jpg")
+        plt.savefig(PREDICTION_PATH + "analysis.jpg")
+
 
 if __name__ == "__main__":
     ###SET WORK ENVIROMENT###
-    work_dir = "/home/julius/PowerFolders/Masterarbeit/"
-    os.chdir(work_dir)
+    WORK_DIR = "/home/julius/PowerFolders/Masterarbeit/"
+    os.chdir(WORK_DIR)
 
     ###PATH TO PREDICTION OUTPUT###
-    path = "./detections/data100/06,04,2021-22,26/"
+    PREDICTION_PATH = "./detections/data100/06,04,2021-22,26/"
 
-    prediction_analysis(path)
+    prediction_analysis(PREDICTION_PATH)
