@@ -1,7 +1,7 @@
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 
-from keras.preprocessing import image
+from keras.preprocessing import image as keras_img
 
 from keras.applications.vgg16 import VGG16, preprocess_input
 from keras.applications.resnet50 import ResNet50, preprocess_input
@@ -72,7 +72,7 @@ def image_in_plot(name, X, Y, label):
         16: "khaki",
         17: "lightgray"
         }
-    image = Image.open(base_path + name)
+    image = Image.open(DATASET_PATH + name)
     frame = ImageDraw.Draw(image)
     frame.rectangle([(image.width, image.height), (5, 0)], outline=label_colors[label], width=50)
     image = image.resize((50, 75))
@@ -88,12 +88,18 @@ WORK_DIR = "/home/julius/PowerFolders/Masterarbeit/"
 os.chdir(WORK_DIR)
 
 DATASET_PATH = './1_Datensaetze/personData200/'
-OUTPUT_PATH = './cluster_outputs/'
+OUTPUT_PATH = './cluster_outputs/{}/'.format(time.strftime("%d,%m,%Y-%H,%M,%S"))
+os.mkdir(OUTPUT_PATH)
 CLUSTERS = 17
 
 # load model
 model = ResNet50(weights='imagenet', include_top=False)
 
+# load trained model
+"""
+model = ResNet50(include_top=False)
+model.load_weights("./trained_models/tensorflow/Checkpoint-29,03,2021-21,50,10")
+"""
 
 # gather all images
 all_image_names = set()
@@ -104,9 +110,9 @@ print("[INFO] {} Images were collected!".format(len(all_image_names)))
 # extract the features of all images
 resnet_feature_dict = {}
 for i, image_file in enumerate(all_image_names):
-    img = image.load_img(base_path + image_file, target_size=(224, 224))
+    img = keras_img.load_img(DATASET_PATH + image_file, target_size=(224, 224))
 
-    img_data = image.img_to_array(img)
+    img_data = keras_img.img_to_array(img)
     img_data = np.expand_dims(img_data, axis=0)
     img_data = preprocess_input(img_data)
 
@@ -121,9 +127,13 @@ print("[INFO]\tFeatures Extracted! {0} Features in the format {1} were collected
 # transform features
 features = np.array(list(resnet_feature_dict.values()))
 
+print("[INFO]\tFeatures were brought to shape {}".format(features.shape))
+
 pca = PCA(n_components=2, random_state=22)
 pca.fit(features)
 pca_features = pca.transform(features)
+
+print("[INFO]\tFeatures were transformed into the shape of {}".format(pca_features.shape))
 
 # cluster images
 kmeans = KMeans(n_clusters=CLUSTERS, random_state=22)
@@ -150,21 +160,20 @@ for label in range(CLUSTERS):
     for i, name in enumerate(labels_and_names[label]):
         plt.text(filtered_label[:, 0][i], filtered_label[:, 1][i], name)
     
-plt.savefig(OUTPUT_PATH + time.strftime("%d,%m,%Y-%H,%M,%S") + "_scatter.png")
+plt.savefig(OUTPUT_PATH + "_scatter.png")
 
 # save the plot with all images combined
 
 image_fig = plt.figure(figsize=(20, 20))
 
 for label in range(CLUSTERS):
-    ax = plt.subplot(5, 5, label+1)
     filtered_label = pca_features[label_list == label]
     plt.scatter(filtered_label[:, 0], filtered_label[:, 1])
     plt.axis("off")
     for j, name in enumerate(labels_and_names[label]):
         image_in_plot(name, filtered_label[:, 0][j], filtered_label[:, 1][j], label)
 
-plt.savefig(OUTPUT_PATH + time.strftime("%d,%m,%Y-%H,%M,%S") + "_image.png")
+plt.savefig(OUTPUT_PATH + "_image.png")
 
 # Save all cluster figures seprately
 
@@ -179,4 +188,8 @@ for label in range(CLUSTERS):
         image_in_plot(name, filtered_label[:, 0][j], filtered_label[:, 1][j], label)
     
     cut_out = ax.get_window_extent().transformed(sub_fig.dpi_scale_trans.inverted())
-    plt.savefig(OUTPUT_PATH + time.strftime("%d,%m,%Y-%H,%M,%S") + "_{}_image.png".format(label), bbox_inches=cut_out)
+    plt.savefig(OUTPUT_PATH + "label_{}_cluster.png".format(label), bbox_inches=cut_out)
+
+# save labels and names
+with open(output_path + "labels_and_names.json", "w") as output_file:
+    json.dump(labels_and_names, output_file, indent=4)
