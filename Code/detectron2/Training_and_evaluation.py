@@ -14,7 +14,7 @@ print(torch.__version__)
 
 """ FUNCTION
 
-Purpose: Generate a train and a test dataset. The default is 80/20
+Purpose: Generate a train and a test dataset. The default is 5/1
 
 Takes: Path to the images, the test and the train dataset directories. Split defines the ratio between test size and train size
 
@@ -22,38 +22,29 @@ Returns: Nothing
 
 """
 def split_data (DATASET_PATH, train_set_path, test_set_path, split=5):
+    os.mkdir(train_set_path)
+    os.mkdir(test_set_path)
 
-    class uneven_list_error(Exception):
-        # raised, when the two lists which are needed to seperate the data are uneven.
-        pass
+    # gather '.json' and '.jpg' files
+    images = sorted([element for element in os.listdir(DATASET_PATH) if element.lower().endswith(".jpg")])
+    jsons = sorted([element for element in os.listdir(DATASET_PATH) if element.endswith(".json")])
 
-    try:
-        os.mkdir(train_set_path)
-        os.mkdir(test_set_path)
+    # check, if they are even
+    if len(images) != len(jsons):
+        break
+
+    # split
+    for count in range(len(images)):
+        if count % split == 0:
+            shutil.move(DATASET_PATH + images[count], test_set_path + images[count])
+            shutil.move(DATASET_PATH + jsons[count], test_set_path + jsons[count])
+        else:
+            shutil.move(DATASET_PATH + images[count], train_set_path + images[count])
+            shutil.move(DATASET_PATH + jsons[count], train_set_path + jsons[count])
     
-        # gather '.json' and '.jpg' files
-        images = sorted([element for element in os.listdir(DATASET_PATH) if element.lower().endswith(".jpg")])
-        jsons = sorted([element for element in os.listdir(DATASET_PATH) if element.endswith(".json")])
-
-        # check, if they are even
-        if len(images) != len(jsons):
-            raise uneven_list_error
-
-        # split
-        for count in range(len(images)):
-            if count % split == 0:
-                shutil.move(DATASET_PATH + images[count], test_set_path + images[count])
-                shutil.move(DATASET_PATH + jsons[count], test_set_path + jsons[count])
-            else:
-                shutil.move(DATASET_PATH + images[count], train_set_path + images[count])
-                shutil.move(DATASET_PATH + jsons[count], train_set_path + jsons[count])
-        
-        # generate the COCO.json for detectron2
-        ownlabelme2COCO.main(test_set_path)
-        ownlabelme2COCO.main(train_set_path)
-
-    except uneven_list_error:
-        print("[ERROR] List lengths don't match! There are {} Images and {} json-Files. Please check directory!".format(len(images), len(jsons)))
+    # generate the COCO.json for detectron2
+    ownlabelme2COCO.main(test_set_path)
+    ownlabelme2COCO.main(train_set_path)
 
 
 """ MAIN FUNCTION
