@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.7)  5 MAY 2021 01:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.31)  5 MAY 2021 13:36
 entering extended mode
-**/home/julius/Repos/Masterarbeit/LaTeX/Masterarbeit.tex
-(/home/julius/Repos/Masterarbeit/LaTeX/Masterarbeit.tex
+**e:/Repositories/Masterarbeit/LaTeX/Masterarbeit.tex
+(e:/Repositories/Masterarbeit/LaTeX/Masterarbeit.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18> (/home/julius/.miktex/texmfs/install/tex/latex/base/article.cls
+L3 programming layer <2021-02-18> xparse <2020-03-03> (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(/home/julius/.miktex/texmfs/install/tex/latex/base/size12.clo
+(C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count179
@@ -19,7 +19,7 @@ File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-) (/home/julius/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip49
 \f@nch@O@elh=\skip50
@@ -30,18 +30,18 @@ Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footer
 \f@nch@O@erf=\skip55
 \f@nch@O@olf=\skip56
 \f@nch@O@orf=\skip57
-) (/home/julius/.miktex/texmfs/install/tex/latex/base/inputenc.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
-) (/home/julius/.miktex/texmfs/install/tex/generic/babel/babel.sty
-Package: babel 2021/03/24 3.56 The Babel package
- (/home/julius/.miktex/texmfs/install/tex/generic/babel/babel.def
-File: babel.def 2021/03/24 3.56 Babel common definitions
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2021/01/26 3.53 The Babel package
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
+File: babel.def 2021/01/26 3.53 Babel common definitions
 \babel@savecnt=\count187
 \U@D=\dimen139
-\l@babelnohyphens=\language1
- (/home/julius/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
+\l@babelnohyphens=\language79
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 )
 \bbl@dirlevel=\count188
@@ -49,42 +49,34 @@ File: babel.def 2021/03/24 3.56 Babel common definitions
 *************************************
 * Local config file bblopts.cfg used
 *
-(/home/julius/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
+(C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
-) (/home/julius/.miktex/texmfs/install/tex/latex/babel-german/ngerman.ldf
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngerman.ldf
 Language: ngerman 2021/02/27 v2.13 German support for babel (post-1996 orthography)
- (/home/julius/.miktex/texmfs/install/tex/latex/babel-german/ngermanb.ldf
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngermanb.ldf
 Language: ngermanb 2021/02/27 v2.13 German support for babel (post-1996 orthography)
-
-
-Package babel Warning: No hyphenation patterns were preloaded for
-(babel)                the language `German (new orthography)' into the format.
-(babel)                Please, configure your TeX system to add them and
-(babel)                rebuild the format. Now I will use the patterns
-(babel)                preloaded for \language=0 instead on input line 48.
-
 Package babel Info: Making " an active character on input line 122.
-))) (/home/julius/.miktex/texmfs/install/tex/latex/psnfss/helvet.sty
+))) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
- (/home/julius/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-)) (/home/julius/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+)) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
- (/home/julius/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
- (/home/julius/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/home/julius/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
- (/home/julius/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen140
 \Gin@req@width=\dimen141
-) (/home/julius/.miktex/texmfs/install/tex/generic/german/ngerman.sty v2.5e 1998-07-08
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/german\ngerman.sty v2.5e 1998-07-08
 Package: ngerman 1998/07/08 v2.5e Support for writing german texts (br)
 \grmnU@D=\dimen142
 LaTeX Info: Redefining \glqq on input line 255.
@@ -93,12 +85,10 @@ LaTeX Info: Redefining \flqq on input line 281.
 LaTeX Info: Redefining \frqq on input line 289.
 LaTeX Info: Redefining \flq on input line 297.
 LaTeX Info: Redefining \frq on input line 304.
-ngerman -- \language number for USenglish undefined, default 0 used.
-ngerman -- \language number for naustrian undefined, default 0 used.
-ngerman -- \language number for French undefined, default 255 used.
-) (/home/julius/.miktex/texmfs/install/tex/latex/csquotes/csquotes.sty
+ngerman -- \language number for naustrian undefined, default 48 used.
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
- (/home/julius/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count189
 )
@@ -109,18 +99,18 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \csq@maxlvl=\count194
 \csq@tshold=\count195
 \csq@ltx@everypar=\toks18
- (/home/julius/.miktex/texmfs/install/tex/latex/csquotes/csquotes.def
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
- (/home/julius/.miktex/texmfs/install/tex/latex/csquotes/csquotes.cfg
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
 File: csquotes.cfg 
-)) (/home/julius/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
+)) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (/home/julius/.miktex/texmfs/install/tex/generic/iftex/ifvtex.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (/home/julius/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
 \Gm@cnth=\count196
@@ -135,13 +125,13 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layouthoffset=\dimen149
 \Gm@layoutvoffset=\dimen150
 \Gm@dimlist=\toks19
- (/home/julius/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg)) (/home/julius/.miktex/texmfs/install/tex/latex/graphics/lscape.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-) (/home/julius/.miktex/texmfs/install/tex/latex/caption/subcaption.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
- (/home/julius/.miktex/texmfs/install/tex/latex/caption/caption.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
- (/home/julius/.miktex/texmfs/install/tex/latex/caption/caption3.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \captionmargin=\dimen151
 \captionmargin@=\dimen152
@@ -157,9 +147,9 @@ Package caption Info: Standard document class detected.
 )
 \c@subfigure=\count267
 \c@subtable=\count268
-) (/home/julius/.miktex/texmfs/install/tex/latex/sidecap/sidecap.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/sidecap\sidecap.sty
 Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
- (/home/julius/.miktex/texmfs/install/tex/latex/base/ifthen.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \SC@BOXWD=\dimen158
@@ -168,50 +158,50 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \SC@tempdimb=\dimen161
 \c@SC@C=\count269
 \SC@BOX=\box47
-) (/home/julius/.miktex/texmfs/install/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
- (/home/julius/.miktex/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2021-02-10 v7.00j Hypertext links for LaTeX
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (/home/julius/.miktex/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (/home/julius/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/home/julius/.miktex/texmfs/install/tex/generic/kvsetkeys/kvsetkeys.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-) (/home/julius/.miktex/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (/home/julius/.miktex/texmfs/install/tex/generic/pdfescape/pdfescape.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (/home/julius/.miktex/texmfs/install/tex/latex/hycolor/hycolor.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (/home/julius/.miktex/texmfs/install/tex/latex/letltxmacro/letltxmacro.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-) (/home/julius/.miktex/texmfs/install/tex/latex/auxhook/auxhook.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-) (/home/julius/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen162
 \Hy@linkcounter=\count270
 \Hy@pagecounter=\count271
- (/home/julius/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2021-02-10 v7.00j Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (/home/julius/.miktex/texmfs/install/tex/latex/hyperref/hyperref-langpatches.def
-File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel languages
-) (/home/julius/.miktex/texmfs/install/tex/generic/intcalc/intcalc.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-02-10 v7.00j Hyperref: patches for babel languages
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-) (/home/julius/.miktex/texmfs/install/tex/generic/etexcmds/etexcmds.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count272
- (/home/julius/.miktex/texmfs/install/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2021-02-10 v7.00j Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
@@ -223,15 +213,15 @@ Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
 \c@Hy@tempcnt=\count273
- (/home/julius/.miktex/texmfs/install/tex/latex/url/url.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen163
- (/home/julius/.miktex/texmfs/install/tex/generic/bitset/bitset.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (/home/julius/.miktex/texmfs/install/tex/generic/bigintcalc/bigintcalc.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count274
@@ -246,7 +236,7 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6100.
 Package hyperref Info: PDF/A mode OFF on input line 6105.
 LaTeX Info: Redefining \ref on input line 6145.
 LaTeX Info: Redefining \pageref on input line 6149.
- (/home/julius/.miktex/texmfs/install/tex/latex/base/atbegshi-ltx.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
 Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi package
 with kernel methods
 )
@@ -255,25 +245,25 @@ with kernel methods
 \c@Hfootnote=\count277
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/home/julius/.miktex/texmfs/install/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
- (/home/julius/.miktex/texmfs/install/tex/latex/base/atveryend-ltx.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2021-02-10 v7.00j Hyperref driver for pdfTeX
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery package
 with kernel methods
 )
 \Fld@listcount=\count278
 \c@bookmark@seq@number=\count279
- (/home/julius/.miktex/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
- (/home/julius/.miktex/texmfs/install/tex/generic/uniquecounter/uniquecounter.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip58
-) (/home/julius/.miktex/texmfs/install/tex/latex/pythonhighlight/pythonhighlight.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/pythonhighlight\pythonhighlight.sty
 Package: pythonhighlight 2017/02/09 python code highlighting; provided by Olivier Verdier <olivier.verdier@gmail.com>
- (/home/julius/.miktex/texmfs/install/tex/latex/listings/listings.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count280
 \lst@gtempboxa=\box48
 \lst@token=\toks20
@@ -286,18 +276,18 @@ Package: pythonhighlight 2017/02/09 python code highlighting; provided by Olivie
 \lst@newlines=\count284
 \lst@lineno=\count285
 \lst@maxwidth=\dimen169
- (/home/julius/.miktex/texmfs/install/tex/latex/listings/lstmisc.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count286
 \lst@skipnumbers=\count287
 \lst@framebox=\box49
-) (/home/julius/.miktex/texmfs/install/tex/latex/listings/listings.cfg
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
- (/home/julius/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
- (/home/julius/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -310,43 +300,43 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)) (/home/julius/.miktex/texmfs/install/tex/latex/bera/bera.sty
+)) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/bera\bera.sty
 Package: bera 2004/01/31 (WaS)
- (/home/julius/.miktex/texmfs/install/tex/latex/base/fontenc.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
-) (/home/julius/.miktex/texmfs/install/tex/latex/base/textcomp.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-) (/home/julius/.miktex/texmfs/install/tex/latex/bera/beraserif.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/bera\beraserif.sty
 Package: beraserif 2004/01/30 (WaS)
 LaTeX Font Info:    Trying to load font information for T1+fve on input line 30.
- (/home/julius/.miktex/texmfs/install/tex/latex/bera/t1fve.fd
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/bera\t1fve.fd
 File: t1fve.fd 2004/09/07 scalable font definitions for T1/fve.
 )
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 10.79993pt on input line 30.
-) (/home/julius/.miktex/texmfs/install/tex/latex/bera/berasans.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/bera\berasans.sty
 Package: berasans 2004/01/30 (WaS)
-) (/home/julius/.miktex/texmfs/install/tex/latex/bera/beramono.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/bera\beramono.sty
 Package: beramono 2004/01/31 (WaS)
-)) (/home/julius/.miktex/texmfs/install/tex/latex/float/float.sty
+)) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count288
 \float@exts=\toks21
 \float@box=\box50
 \@float@everytoks=\toks22
 \@floatcapt=\box51
-) (/home/julius/.miktex/texmfs/install/tex/latex/setspace/setspace.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
- (/home/julius/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count289
 \l__pdf_internal_box=\box52
-) (/home/julius/Repos/Masterarbeit/LaTeX/Masterarbeit.aux)
+) (Masterarbeit.aux)
 \openout1 = `Masterarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
@@ -367,7 +357,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
- (/home/julius/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count290
 \scratchdimen=\dimen170
@@ -380,18 +370,16 @@ LaTeX Font Info:    ... okay on input line 72.
 \MPnumerator=\count294
 \makeMPintoPDFobject=\count295
 \everyMPtoPDFconversion=\toks24
-) (/home/julius/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
- (/home/julius/.miktex/texmfs/install/tex/latex/grfext/grfext.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
- (/home/julius/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-))
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -432,11 +420,11 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: sidecap package is loaded.
 Package caption Info: End \AtBeginDocument code.
-(/home/julius/.miktex/texmfs/install/tex/latex/ragged2e/ragged2e.sty
+(C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
 Package: ragged2e 2021/02/05 v3.0 ragged2e Package
- (/home/julius/.miktex/texmfs/install/tex/latex/everysel/everysel.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/everysel\everysel.sty
 Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
- (/home/julius/.miktex/texmfs/install/tex/latex/everysel/everysel-2011-10-28.sty ABD: EverySelectfont initializing macros
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/everysel\everysel-2011-10-28.sty ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 123.
 ))
 \CenteringLeftskip=\skip59
@@ -455,11 +443,11 @@ LaTeX Info: Redefining \selectfont on input line 123.
 \JustifyingParindent=\skip72
 )
 Package hyperref Info: Link coloring OFF on input line 72.
- (/home/julius/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
- (/home/julius/.miktex/texmfs/install/tex/latex/refcount/refcount.sty
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (/home/julius/.miktex/texmfs/install/tex/generic/gettitlestring/gettitlestring.sty
+) (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count296
@@ -467,7 +455,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 72.
 LaTeX Info: Redefining \pageref on input line 72.
 LaTeX Info: Redefining \nameref on input line 72.
- (/home/julius/Repos/Masterarbeit/LaTeX/Masterarbeit.out) (/home/julius/Repos/Masterarbeit/LaTeX/Masterarbeit.out)
+ (Masterarbeit.out) (Masterarbeit.out)
 \@outlinefile=\write3
 \openout3 = `Masterarbeit.out'.
 
@@ -511,12 +499,12 @@ LaTeX Font Info:    Font shape `T1/fve/m/n' will be
  [1
 
 
-{/home/julius/.miktex/texmfs/data/pdftex/config/pdftex.map}]
+{C:/Users/Julius Emmel/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 15.55188pt on input line 109.
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 (Font)              scaled to size 15.55188pt on input line 109.
- (/home/julius/Repos/Masterarbeit/LaTeX/Masterarbeit.toc
+ (Masterarbeit.toc
 LaTeX Font Info:    Font shape `T1/fve/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -528,7 +516,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...3.2.2}Detectron2}{56}{subsubsection.3.2.2}
+l.29 ...3.2.2}Detectron2}{55}{subsubsection.3.2.2}
                                                   % [1
 
 ]
@@ -573,132 +561,17 @@ LaTeX Font Info:    Font shape `T1/fve/m/sl' will be
 (Font)              scaled to size 8.99994pt on input line 118.
 
 Underfull \hbox (badness 10000) in paragraph at lines 116--122
-\T1/fve/m/n/12 Dieser Masterstudiengang hat es sich zum Ziel gesetzt, die
- []
-
-
-Underfull \hbox (badness 1348) in paragraph at lines 116--122
-\T1/fve/m/n/12 zu erschlieÿen. In ihm können sich Geisteswissenschaftler*innen mit
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--122
-\T1/fve/m/n/12 der modernen Informationstechnologie auseinandersetzen und die
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--122
-\T1/fve/m/n/12 Konkret ermöglicht das Fach -- welches im internationalen
- []
-
-
-Underfull \hbox (badness 1292) in paragraph at lines 116--122
-\T1/fve/m/n/12 Sprachraum unter dem Namen \T1/fve/m/sl/12 Digital Humanities \T1/fve/m/n/12 gehandelt wird --
- []
-
-
-Underfull \hbox (badness 1264) in paragraph at lines 116--122
-\T1/fve/m/n/12 Wissenschaftler*innen eine neue Herangehensweise an ihr bekanntes
- []
-
-
-Underfull \hbox (badness 1565) in paragraph at lines 116--122
-\T1/fve/m/n/12 nicht in digitaler Form vor. Meist handelt es sich um digitalisierte
- []
-
-
-Underfull \hbox (badness 7540) in paragraph at lines 116--122
-\T1/fve/m/n/12 Bestandskataloge, die nicht zwangsläufig bebildert und öffentlich
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--122
 
  []
 
 [3]
-Underfull \hbox (badness 1502) in paragraph at lines 124--130
-\T1/fve/m/n/12 Merkmale der Plakate als solche aus. Die Bilddatei liefert lediglich
- []
-
-
-Underfull \hbox (badness 1127) in paragraph at lines 124--130
-\T1/fve/m/n/12 zusätzliches Dokument in Form einer CSV- oder XML-Datei, welches
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--130
-\T1/fve/m/n/12 Der Datensatz bietet so kaum einen Mehrwert, der von
- []
-
-
-Underfull \hbox (badness 1142) in paragraph at lines 124--130
-\T1/fve/m/n/12 Daten auf eine Art Vorwissen zurückgegriffen werden kann, um auf
- []
-
-
-Underfull \hbox (badness 1127) in paragraph at lines 124--130
-\T1/fve/m/n/12 einem solchen Training kann ein neuronales Netz beispielsweise ein
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 124--130
 
  []
 
 [4] [5]
-Underfull \hbox (badness 7685) in paragraph at lines 132--135
-\T1/fve/m/n/12 Der Datensatz enthält konkret 17.540 Digitalisate. Diese tragen
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--135
-\T1/fve/m/n/12 Namensbezeichnungen wie fünfzehn1_007 und geben ansonsten
- []
-
-
-Underfull \hbox (badness 1281) in paragraph at lines 132--135
-\T1/fve/m/n/12 keine weiteren Hinweise auf das Plakat, das der Scan zeigt.[][][] Viele
- []
-
-
-Underfull \hbox (badness 5316) in paragraph at lines 132--135
-\T1/fve/m/n/12 Die Abbildungen selbst reichen in ihren Motiven, Formaten und
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 132--135
 
- []
-
-
-Underfull \hbox (badness 1888) in paragraph at lines 137--143
-\T1/fve/m/n/12 im Detail eingegangen. Der Fokus der Betrachtung liegt dabei auf
- []
-
-
-Underfull \hbox (badness 3657) in paragraph at lines 137--143
-\T1/fve/m/n/12 Vorgehensweisen vom Programmierer erwogen werden und welche
- []
-
-
-Underfull \hbox (badness 2318) in paragraph at lines 137--143
-\T1/fve/m/n/12 die mit Vertreter*innen dreier deutscher Museen -- dem deutschen
- []
-
-
-Underfull \hbox (badness 5345) in paragraph at lines 137--143
-\T1/fve/m/n/12 Darauf folgend wird der eigene Umgang mit dieser Technologie
- []
-
-
-Underfull \hbox (badness 3780) in paragraph at lines 137--143
-\T1/fve/m/n/12 beschrieben und wie sich die konkrete Entwicklung ergeben hat.
- []
-
-
-Underfull \hbox (badness 1406) in paragraph at lines 137--143
-\T1/fve/m/n/12 Am Ende der Arbeit steht die Vorstellung der erzielten Ergebnisse,
  []
 
 
@@ -706,189 +579,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--143
 
  []
 
-[6] [7] [8]
-Underfull \hbox (badness 1253) in paragraph at lines 148--153
-\T1/fve/m/n/12 Sieht man im Plakat vor allem die Hauptaufgabe der Wissens- und
- []
-
-
-Underfull \hbox (badness 1292) in paragraph at lines 148--153
-\T1/fve/m/n/12 Botschaften mittels Plakaten der breiten Masse zugänglich gemacht.
- []
-
-
-Underfull \hbox (badness 1158) in paragraph at lines 148--153
-\T1/fve/m/n/12 dabei Ankündigungen von Theaterstücken, Menagerien, Verlosungen,
- []
-
-[9]
-Underfull \hbox (badness 1264) in paragraph at lines 155--155
-\T1/fve/m/n/10 oder unerlaubte Beschriftungen auf Wände und Mauern geschrieben wurden, und
- []
-
-
-Underfull \hbox (badness 2181) in paragraph at lines 155--155
-\T1/fve/m/n/10 seit Gutenbergs Erfindung des Buchdruckverfahrens mit beweglichen Lettern um
- []
-
-
-Underfull \hbox (badness 1297) in paragraph at lines 155--155
-\T1/fve/m/n/10 gestaltete künstlerische Plakat entstand überhaupt erst im letzten Drittel des 19.
- []
-
-
-Underfull \hbox (badness 1552) in paragraph at lines 155--155
-[]\T1/fve/m/n/10 Vorstufen dazu gab es zwar schon seit dem Altertum, als öffentliche
- []
-
-
-Underfull \hbox (badness 6428) in paragraph at lines 155--155
-\T1/fve/m/n/10 Bekanntmachungen oder unerlaubte Beschriftungen auf Wände und
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 155--155
-\T1/fve/m/n/10 Mauern geschrieben wurden, und seit Gutenbergs Erfindung des
- []
-
-
-Underfull \hbox (badness 3590) in paragraph at lines 155--155
-\T1/fve/m/n/10 Stätten, sondern auch gedruckte Handzettel und Flugblätter, die in
+[6] [7] [8] [9]
+Underfull \hbox (badness 1226) in paragraph at lines 155--155
+\T1/fve/m/n/10 fah-rens mit be-weg-li-chen Let-tern um 1450 ent-stan-den nicht mehr nur
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 155--155
 
- []
-
-
-Underfull \hbox (badness 1163) in paragraph at lines 168--168
-[][]\T1/fve/m/n/10 Döring: Halbzeit der Moderne (2020), S. 123; Purcell: Das Museumsplakat als
- []
-
-
-Underfull \hbox (badness 1810) in paragraph at lines 157--170
-\T1/fve/m/n/12 an.[][][] Zusammenfassend erkennt sie, dass das Plakat das Erzeugnis
- []
-
-
-Underfull \hbox (badness 2134) in paragraph at lines 157--170
-\T1/fve/m/n/12 von durch gesellschaftliche[n] und wirtschaftliche[n] Veränderungen
- []
-
-
-Underfull \hbox (badness 1484) in paragraph at lines 157--170
-\T1/fve/m/n/12 Zusammen mit diesem immer gröÿeren Bedürfnis von Akteur*innen,
- []
-
-
-Underfull \hbox (badness 1297) in paragraph at lines 157--170
-\T1/fve/m/n/12 wie Handwerker*innen oder Schausteller*innen, um das Werben von
- []
-
-
-Underfull \hbox (badness 2142) in paragraph at lines 157--170
-\T1/fve/m/n/12 In Deutschland spielt das Plakat eine gewisse Doppelrolle vor der
- []
-
-
-Underfull \hbox (badness 1946) in paragraph at lines 157--170
-\T1/fve/m/n/12 Gebrauchsgraphiker und Kritiker [...] sich nun entschieden gegen
- []
-
-
-Underfull \hbox (badness 2012) in paragraph at lines 157--170
-\T1/fve/m/n/12 den Gedanken einer ästhetischen Erziehung durch die Galerie der
- []
-
-
-Underfull \hbox (badness 6110) in paragraph at lines 157--170
-\T1/fve/m/n/12 -- das politische Plakat.[][][] Wird zuvor vor allem für Sach- und
  []
 
 [10] [11] [12] [13]
-Underfull \hbox (badness 1102) in paragraph at lines 171--171
-[]\T1/fve/m/n/10 Politische Kampfplakate anlässlich von Wahlen oder harte Ja-Nein`-Kampagnen bei
- []
-
-
 Underfull \hbox (badness 4595) in paragraph at lines 171--171
-[]\T1/fve/m/n/10 Politische Kampfplakate anlässlich von Wahlen oder harte Ja-Nein`-
- []
-
-
-Underfull \hbox (badness 5771) in paragraph at lines 171--171
-\T1/fve/m/n/10 Kampagnen bei Volksabstimmungen wie in der Schweiz waren im
- []
-
-
-Underfull \hbox (badness 2277) in paragraph at lines 171--171
-\T1/fve/m/n/10 wilhelminischen Deutschland verpönt und oft sogar verboten worden.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--185
-\T1/fve/m/n/12 Die im deutschen Sachplakat erkennbare Orientierung hin zur
- []
-
-
-Underfull \hbox (badness 1715) in paragraph at lines 173--185
-\T1/fve/m/n/12 rechteckigen Flächen in Verbindung mit schwarz-weiÿ Fotografie zu
- []
-
-
-Underfull \hbox (badness 1490) in paragraph at lines 173--185
-\T1/fve/m/n/12 Der zweite Weltkrieg wird allgemein in der Literatur eher als Zeit
- []
-
-
-Underfull \hbox (badness 6775) in paragraph at lines 173--185
-\T1/fve/m/n/12 der Stagnation bezeichnet -- man scheint sich noch wenig mit
- []
-
-
-Underfull \hbox (badness 1354) in paragraph at lines 173--185
-\T1/fve/m/n/12 dieser Zeit beschäftigt zu haben.[][][] Die Zeit danach wird als Phase
- []
-
-
-Underfull \hbox (badness 6016) in paragraph at lines 173--185
-\T1/fve/m/n/12 der Wiederanknüpfung an die Vorkriegszeit und als gleichzeitige
- []
-
-
-Underfull \hbox (badness 7522) in paragraph at lines 173--185
-\T1/fve/m/n/12 Neuausrichtung in die Zukunft verstanden. Ursächlich für diese
- []
-
-
-Underfull \hbox (badness 2057) in paragraph at lines 173--185
-\T1/fve/m/n/12 Ein Stil, der sich nach dem Krieg herausbildet, ist der Schweizer
- []
-
-
-Underfull \hbox (badness 6348) in paragraph at lines 173--185
-\T1/fve/m/n/12 oder Schweizer typografische Stil.[][][] Flächige Farben, Fotografie,
+[]\T1/fve/m/n/10 Politische Kampf-pla-ka-te an-läss-lich von Wahlen oder har-te Ja-Nein`-
  []
 
 
 Underfull \hbox (badness 1014) in paragraph at lines 173--185
-\T1/fve/m/n/12 das Abhalten von regelmäÿigen Wettbewerben. Im deutschsprachigen
+\T1/fve/m/n/12 das Ab-hal-ten von re-gel-mä-ÿi-gen Wett-be-wer-ben. Im deutsch-spra-chi-gen
  []
 
 
-Underfull \hbox (badness 6542) in paragraph at lines 173--185
-\T1/fve/m/n/12 Im Zusammenhang mit diesen Wettbewerben gründen sich neue
- []
-
-
-Underfull \hbox (badness 3449) in paragraph at lines 173--185
-\T1/fve/m/n/12 Auch das Künstler*innenplakat erlebt nach dem zweiten Weltkrieg
- []
-
-
-Underfull \hbox (badness 1264) in paragraph at lines 173--185
-\T1/fve/m/n/12 Motiven und Sprüchen und wollen den Betrachter zum Nachdenken
+Underfull \hbox (badness 1014) in paragraph at lines 173--185
+\T1/fve/m/n/12 Di-rec-tors Club Deutsch-land, die als Aus-rich-ter sol-cher Wett-be-wer-be
  []
 
 
@@ -897,48 +610,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 173--185
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--185
-\T1/fve/m/n/12 Das Plakat steht als Werbemittel seit seinen Anfängen unter
- []
-
-
-Underfull \hbox (badness 4391) in paragraph at lines 173--185
-\T1/fve/m/n/12 ständigem Konkurrenzdruck. Es muss sich gegen Kleinwerbemittel
+Underfull \hbox (badness 1009) in paragraph at lines 173--185
+\T1/fve/m/n/12 stets Zei-ten des wirt-schaft-li-chen Auf-stiegs. Da-bei ist es un-er-heb-lich,
  []
 
 [14] [15] [16] [17] [18]
-Underfull \hbox (badness 7685) in paragraph at lines 189--192
-\T1/fve/m/n/12 In der Einleitung wurden bereits die Eckdaten der Bayreuther
- []
-
-
-Underfull \hbox (badness 6332) in paragraph at lines 189--192
-\T1/fve/m/n/12 des Mediums Plakat und wie diese sich auf die Leistung von
- []
-
-
-Underfull \hbox (badness 1248) in paragraph at lines 193--193
-\T1/fve/m/n/10 und dadurch vielleicht sogar falsch oder unverständlich erscheinen zu
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--197
-[]\T1/fve/m/n/12 Gerade diese von Rademacher beschriebene Komprimierung
- []
-
-
-Underfull \hbox (badness 3396) in paragraph at lines 195--197
-\T1/fve/m/n/12 der Aussage ist für die Bilderkennung eine Herausforderung, da
- []
-
-
-Underfull \hbox (badness 1668) in paragraph at lines 195--197
-\T1/fve/m/n/12 der erkennende Algorithmus zunächst nur die Information aus dem
- []
-
-
-Underfull \hbox (badness 2772) in paragraph at lines 195--197
-\T1/fve/m/n/12 relevante, Hintergrundinformation besitzt der Algorithmus in seiner
+Underfull \hbox (badness 1910) in paragraph at lines 195--197
+[]\T1/fve/m/n/12 Gerade die-se von Ra-de-ma-cher be-schrie-be-ne Kom-pri-mie-rung der
  []
 
 
@@ -947,43 +625,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--197
  []
 
 [19]
-Underfull \hbox (badness 1127) in paragraph at lines 199--200
-\T1/fve/m/n/12 Bewirbt das Plakat eine Ausstellung, ist das Thema der Ausstellung
- []
-
-
-Underfull \hbox (badness 2970) in paragraph at lines 199--200
-\T1/fve/m/n/12 die erste wichtige Information, die es vermitteln muss. Mit einer
- []
-
-
-Underfull \hbox (badness 1596) in paragraph at lines 199--200
-\T1/fve/m/n/12 hohen Wahrscheinlichkeit ist das Thema der Grund, weswegen sich
- []
-
-
-Underfull \hbox (badness 2469) in paragraph at lines 199--200
-\T1/fve/m/n/12 der Betrachter die Ausstellung schlussendlich anschauen wird. Das
- []
-
-
-Underfull \hbox (badness 1122) in paragraph at lines 199--200
-\T1/fve/m/n/12 Kriterium, ob die Ausstellung besucht wird. Nebeninformationen, die
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
-\T1/fve/m/n/12 Ein Programmplakat bewirbt in der Regel mehrere einzelne
- []
-
-
-Underfull \hbox (badness 1389) in paragraph at lines 202--203
-\T1/fve/m/n/12 auf das Hauptthema Bezug nimmt, in ein Spannungsverhältnis tritt.
  []
 
 
@@ -993,37 +636,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
 [20]
 Underfull \hbox (badness 10000) in paragraph at lines 205--206
-\T1/fve/m/n/12 Im Gegensatz zu Ausstellungs- und Programmplakat wirbt das
- []
 
-
-Underfull \hbox (badness 2990) in paragraph at lines 205--206
-\T1/fve/m/n/12 so beispielsweise für einzelne Abende in einer Veranstaltungsreihe
- []
-
-
-Underfull \hbox (badness 1107) in paragraph at lines 205--206
-\T1/fve/m/n/12 werben. In diesen Fällen kann das Motiv auf die Organisation oder
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
-
- []
-
-
-Underfull \hbox (badness 1308) in paragraph at lines 208--213
-\T1/fve/m/n/12 das politische Plakat. Zumindest dann, wenn das Plakat im Kontext
- []
-
-
-Underfull \hbox (badness 1448) in paragraph at lines 208--213
-\T1/fve/m/n/12 -- und im Kontext des Wahlkampfes an einem bestimmten Tag sein
- []
-
-
-Underfull \hbox (badness 2393) in paragraph at lines 208--213
-\T1/fve/m/n/12 Kreuz bei der entsprechenden Partei oder Person zu machen. Ein
  []
 
 
@@ -1037,23 +650,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--213
  []
 
 [21] [22]
-Underfull \hbox (badness 1803) in paragraph at lines 215--216
-\T1/fve/m/n/12 der Darsteller*innen und oftmals eine Liste an weiteren beteiligten
- []
-
-
-Underfull \hbox (badness 1281) in paragraph at lines 215--216
-\T1/fve/m/n/12 um einen zusätzlichen Werbeeffekt auszulösen. Ebenfalls werden die
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
 
 [23]
 Underfull \hbox (badness 1635) in paragraph at lines 220--220
-\T1/fve/m/n/10 bereits in den 1960er-Jahren angekündigte Trennung von Kultur- und
+\T1/fve/m/n/10 be-reits in den 1960er-Jahren an-ge-kün-dig-te Tren-nung von Kultur- und
  []
 
 
@@ -1062,33 +665,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--220
  []
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 222--223
-[]\T1/fve/m/n/12 und ihrer Beobachtung, dass im Bereich des Kulturplakats noch
- []
-
-
-Underfull \hbox (badness 3601) in paragraph at lines 222--223
-\T1/fve/m/n/12 am ehesten selbstständige Grafiker*innen und kleinere Grafikbüros
- []
-
-
-Underfull \hbox (badness 5260) in paragraph at lines 222--223
-\T1/fve/m/n/12 zwischen Theater- und Filmplakaten, beziehungsweise Kultur- und
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
- []
-
-
-Underfull \hbox (badness 3568) in paragraph at lines 225--226
-\T1/fve/m/n/12 angeboten wird. Das Motiv nimmt darauf Bezug. Textlich werden
- []
-
-
-Underfull \hbox (badness 1320) in paragraph at lines 225--226
-\T1/fve/m/n/12 aufmerksam gemacht haben oder wenn sich bestimmte Aspekte des
  []
 
 
@@ -1102,8 +680,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 228--234
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--234
-\T1/fve/m/n/12 Dieser erste Teil der Plakatanalyse anhand der Bayreuther
+Underfull \hbox (badness 1132) in paragraph at lines 228--234
+\T1/fve/m/n/12 her-zu-stel-len. Be-dingt durch die Ge-mein-sam-kei-ten zwi-schen ein-zel-nen
  []
 
 
@@ -1117,33 +695,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 228--234
  []
 
 [25]
-Underfull \hbox (badness 1082) in paragraph at lines 236--249
-\T1/fve/m/n/12 Schrift. Sie zeigt in klaren Worten an, was das Plakat bewirbt und
- []
-
-
-Underfull \hbox (badness 1371) in paragraph at lines 236--249
-\T1/fve/m/n/12 in welchem Zeitraum seine hauptsächliche Aktualität liegt. Dies gilt
- []
-
-
-Underfull \hbox (badness 1997) in paragraph at lines 236--249
-\T1/fve/m/n/12 Schriftbildern sauber erkannte Daten-\T1/fve/m/sl/12 Strings \T1/fve/m/n/12 zu erzeugen. Vor dem
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 236--249
 
  []
 
 
 Underfull \hbox (badness 1715) in paragraph at lines 236--249
-\T1/fve/m/n/12 Die Text-Ausschnitte sind mitunter schwer zu erstellen, da mit der
- []
-
-
-Underfull \hbox (badness 1371) in paragraph at lines 236--249
-\T1/fve/m/n/12 der Buchstaben sinnvolle Worte ergeben. Bei diesem Ansatz müsste
+\T1/fve/m/n/12 Die Text-Ausschnitte sind mit-un-ter schwer zu er-stel-len, da mit der
  []
 
 
@@ -1153,22 +711,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 236--249
 
 
 Underfull \hbox (badness 1655) in paragraph at lines 236--249
-\T1/fve/m/n/12 für internationale Gegenwartskunst werden die Wörter subvision.,
- []
-
-
-Underfull \hbox (badness 2253) in paragraph at lines 236--249
-\T1/fve/m/n/12 Es stellt sich darüber hinaus die Frage, wie das Schrift-Motiv im
- []
-
-
-Underfull \hbox (badness 5490) in paragraph at lines 236--249
-\T1/fve/m/n/12 Plakatzentrum kategorisiert werden soll, sollte es nicht als Text
- []
-
-
-Underfull \hbox (badness 1215) in paragraph at lines 236--249
-\T1/fve/m/n/12 erkannt werden. Denkbar wäre es ebenfalls für die Verbindung von
+\T1/fve/m/n/12 für in-ter-na-tio-na-le Ge-gen-warts-kunst wer-den die Wör-ter sub-vi-si-on.,
  []
 
 
@@ -1179,26 +722,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 236--249
 
 Underfull \hbox (badness 10000) in paragraph at lines 236--249
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--249
-\T1/fve/m/n/12 Ein letztes mögliches Problemfeld im Gebiet der Schrift sind
- []
-
-
-Underfull \hbox (badness 3343) in paragraph at lines 236--249
-\T1/fve/m/n/12 unterschiedliche Zeichensysteme. In der Sammlung des Bayreuther
- []
-
-
-Underfull \hbox (badness 1867) in paragraph at lines 236--249
-\T1/fve/m/n/12 Plakatmuseums treten asiatische und arabische Schriftzeichen sowie
- []
-
-
-Underfull \hbox (badness 1642) in paragraph at lines 236--249
-\T1/fve/m/n/12 eine weitere Unterscheidungsebene in die Plakate bringen und den
  []
 
 
@@ -1212,13 +735,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--269
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 251--269
-\T1/fve/m/n/12 kann die Farbvarianz zu Irritationen führen. Wie die nebenstehende
- []
+Underfull \hbox (badness 10000) in paragraph at lines 251--269
 
-
-Underfull \hbox (badness 1231) in paragraph at lines 251--269
-\T1/fve/m/n/12 Wirklichkeit ähneln. Durch eine andere Farbgebung können gelernte
  []
 
 
@@ -1227,38 +745,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--269
  []
 
 
-Underfull \hbox (badness 1184) in paragraph at lines 251--269
-\T1/fve/m/n/12 Bildelemente machen möchte -- was in anderen Fällen durchaus ein
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 251--269
-
+Underfull \hbox (badness 1152) in paragraph at lines 251--269
+\T1/fve/m/n/12 Nahezu un-mög-lich wird die Ob-jek-ter-ken-nung, wenn das Dar-ge-stell-te
  []
 
 
 Underfull \hbox (badness 1810) in paragraph at lines 251--269
-\T1/fve/m/n/12 Zirndorf, dem Veranstaltungsplakat zur Kinderbuchmesse in Bologna
+\T1/fve/m/n/12 Zirn-dorf, dem Ver-an-stal-tungs-pla-kat zur Kin-der-buch-mes-se in Bo-lo-gna
  []
 
 
-Underfull \hbox (badness 2269) in paragraph at lines 251--269
-\T1/fve/m/n/12 und dem Werbeplakat der Edition Hoffmann wird dies anschaulich
+Underfull \hbox (badness 1112) in paragraph at lines 251--269
+\T1/fve/m/n/12 ers-te Schritt sein, be-vor über-haupt ent-spre-chen-des Trai-nings-ma-te-ri-al
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 251--269
-\T1/fve/m/n/12 erkennt. Auch die leichte Holzstruktur in den einzelnen Farbflächen
- []
-
-
-Underfull \hbox (badness 1997) in paragraph at lines 251--269
-\T1/fve/m/n/12 wie auf Abbildung 32. Neben abstrakten Skulpturen kommen dann
+Underfull \hbox (badness 1117) in paragraph at lines 251--269
+\T1/fve/m/n/12 könn-te. Der Be-griff der Skulp-tur scheint da-her am zu-tref-fends-ten,
  []
 
 
 Underfull \hbox (badness 1297) in paragraph at lines 251--269
-\T1/fve/m/n/12 einer klaren Unterscheidung von lebenden Menschen, Abbildern von
+\T1/fve/m/n/12 ei-ner kla-ren Un-ter-schei-dung von le-ben-den Men-schen, Ab-bil-dern von
  []
 
 
@@ -1269,11 +777,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--269
 
 Underfull \hbox (badness 10000) in paragraph at lines 251--269
 
- []
-
-
-Underfull \hbox (badness 2469) in paragraph at lines 251--269
-\T1/fve/m/n/12 Die bereits besprochenen Herausforderungen für die Bilderkennung
  []
 
 
@@ -1282,128 +785,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--269
  []
 
 [30] [31] [32] [33] [34] [35]
-Underfull \hbox (badness 1092) in paragraph at lines 273--273
-[][]\T1/fve/m/n/10 Neben Fremdsprachen muss dabei ebenso auf andere Zeichensysteme geachtet
- []
-
-
-Underfull \hbox (badness 1776) in paragraph at lines 271--281
-\T1/fve/m/n/12 sehen ist das am Veranstaltungsplakat der Reveillon de Printemps
- []
-
-
-Underfull \hbox (badness 1127) in paragraph at lines 271--281
-\T1/fve/m/n/12 wird schwarz vor einem gelben Hintergrund gezeigt. In diesen sind
- []
-
-
-Underfull \hbox (badness 1755) in paragraph at lines 271--281
-\T1/fve/m/n/12 blass andere Texte und beschriftete Balken gelegt. Im Bereich der
- []
-
-
-Underfull \hbox (badness 1442) in paragraph at lines 271--281
-\T1/fve/m/n/12 erkennen. Diese besitzt ebenfalls Merkmale, die eine Texterkennung
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 271--281
-\T1/fve/m/n/12 Ausstellungsplakat zur Triennale Schweinfurt für zeitgenössische
- []
-
-
-Underfull \hbox (badness 6510) in paragraph at lines 271--281
-\T1/fve/m/n/12 Kunst (Abb. 44). Dort sind die Namen aller an der Triennale
- []
-
-
-Underfull \hbox (badness 1077) in paragraph at lines 271--281
-\T1/fve/m/n/12 beteiligten Künstler*innen aufgeführt. Ein unwiederbringlicher Verlust
- []
-
-
-Underfull \hbox (badness 2980) in paragraph at lines 271--281
-\T1/fve/m/n/12 an Informationen aus dem Hintergrund liegt hier im Bereich des
- []
-
-
-Underfull \hbox (badness 2894) in paragraph at lines 271--281
-\T1/fve/m/n/12 Ausstellungstitels, der Lupe und in der Fuÿzeile des Plakats. Mit
- []
-
-
-Underfull \hbox (badness 1616) in paragraph at lines 271--281
-\T1/fve/m/n/12 Ein sehr einfaches, dafür aber sehr anschauliches Problem bei der
- []
-
-
-Underfull \hbox (badness 1028) in paragraph at lines 271--281
-\T1/fve/m/n/12 L in den Wörtern ebenfalls zu einem Kreuz zu formen. Sollte die
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 271--281
 
  []
 
 
-Underfull \hbox (badness 2556) in paragraph at lines 271--281
-\T1/fve/m/n/12 abgebildet (Abb. 46). Neben dem Kunstwerk sind auch erklärende
- []
-
-
-Underfull \hbox (badness 1259) in paragraph at lines 271--281
-\T1/fve/m/n/12 Portraitzeichnung Gutenbergs auf der linken Plakathälfte angefertigt.
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 271--281
 
- []
-
-
-Underfull \hbox (badness 2142) in paragraph at lines 271--281
-\T1/fve/m/n/12 Die Verschränkung aus Schrift und Grafik birgt die gröÿte Gefahr
- []
-
-
-Underfull \hbox (badness 2368) in paragraph at lines 271--281
-\T1/fve/m/n/12 an Informationsverlust. Im schlimmsten Fall kann die Schrift nicht
  []
 
 [36] [37] [38]
-Underfull \hbox (badness 1092) in paragraph at lines 283--288
-\T1/fve/m/n/12 solcher Objekte nach einem normierten Vorgang vorgenommen wird,
- []
-
-
-Underfull \hbox (badness 1577) in paragraph at lines 283--288
-\T1/fve/m/n/12 Formate der einzelnen Plakate. So gibt es viele Digitalisate in der
- []
-
-
-Underfull \hbox (badness 1168) in paragraph at lines 283--288
-\T1/fve/m/n/12 deutlich geringere Pixel Anzahl genommen, was die Datenmenge im
- []
-
-
-Underfull \hbox (badness 2343) in paragraph at lines 283--288
-\T1/fve/m/n/12 muss. Theoretisch würden einfache Methoden der \T1/fve/m/sl/12 Computer Vision
- []
-
-
-Underfull \hbox (badness 1107) in paragraph at lines 283--288
-\T1/fve/m/n/12 Ausgrabungsstellen des Deutschen Archäologischen Instituts (DAI) zu
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 283--288
 
- []
-
-
-Underfull \hbox (badness 2626) in paragraph at lines 283--288
-\T1/fve/m/n/12 In diesem Abschnitt der Arbeit ging es um die Besprechung von
  []
 
 
@@ -1412,28 +805,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--288
  []
 
 [39] [40] [41]
-Underfull \hbox (badness 1270) in paragraph at lines 293--293
-\T1/fve/m/n/10 / René Grohnert, vgl. Museum Folkwang, Deutsches Plakat Museum (07.01.2021);
- []
-
-
-Underfull \hbox (badness 3601) in paragraph at lines 290--295
-\T1/fve/m/n/12 Bayreuth, gibt es Sammlungen, die von gröÿeren Institutionen in
- []
-
-
-Underfull \hbox (badness 2401) in paragraph at lines 290--295
-\T1/fve/m/n/12 Deutschland aufgebaut und betreut werden. Dort beschäftigen sich
- []
-
-
-Underfull \hbox (badness 3078) in paragraph at lines 290--295
-\T1/fve/m/n/12 Zu den gröÿten Plakatsammlungen in Deutschland zählen die des
- []
-
-
-Underfull \hbox (badness 1931) in paragraph at lines 290--295
-\T1/fve/m/n/12 Deutschen Plakat Museums im Museum Folkwang in Essen (DPM),
+Underfull \hbox (badness 2005) in paragraph at lines 290--295
+\T1/fve/m/n/12 schen Pla-kat Mu-se-ums im Mu-se-um Folk-wang in Es-sen (DPM), die
  []
 
 
@@ -1443,44 +816,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 290--295
 
 [42]
 LaTeX Font Info:    Trying to load font information for TS1+fve on input line 300.
- (/home/julius/.miktex/texmfs/install/tex/latex/bera/ts1fve.fd
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/bera\ts1fve.fd
 File: ts1fve.fd 2004/09/07 scalable font definitions for TS1/fve.
 )
 LaTeX Font Info:    Font shape `TS1/fve/m/n' will be
 (Font)              scaled to size 10.79993pt on input line 300.
 
-Underfull \hbox (badness 7522) in paragraph at lines 297--303
-\T1/fve/m/n/12 mit Stichworten zu Papiergröÿe, Format, Schaden und weiteren
- []
-
-
-Underfull \hbox (badness 3690) in paragraph at lines 297--303
-\T1/fve/m/n/12 rudimentären Begriffen versehen seien. Diese Verpackungseinheiten
- []
-
-
-Underfull \hbox (badness 1881) in paragraph at lines 297--303
-\T1/fve/m/n/12 würden erst als Gruppen und anschlieÿend einzeln erfasst werden.
- []
-
-
-Underfull \hbox (badness 2680) in paragraph at lines 297--303
-\T1/fve/m/n/12 im Nachhinein. Man profitiere dabei auch aus der Erfahrung von
- []
-
-
-Underfull \hbox (badness 1142) in paragraph at lines 297--303
-\T1/fve/m/n/12 und Inventarnummer. Gegebenenfalls gibt es auch eine Angabe zum
- []
-
-
-Underfull \hbox (badness 6741) in paragraph at lines 297--303
-\T1/fve/m/n/12 zu initialisieren. So habe es schon eine Kooperation mit einer
- []
-
-
-Underfull \hbox (badness 1577) in paragraph at lines 297--303
-\T1/fve/m/n/12 dabei bei der Personenerkennung, grafischen Einbindungen und der
+Underfull \hbox (badness 2671) in paragraph at lines 297--303
+\T1/fve/m/n/12 Per-so-ne-ner-ken-nung, gra-fi-schen Ein-bin-dun-gen und der Frak-tur-schrift
  []
 
 
@@ -1488,169 +831,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 297--303
 
  []
 
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 305--314
-\T1/fve/m/n/12 übernommen. Ein Aufgabenbereich sei die Beantwortung von
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 305--314
-\T1/fve/m/n/12 Erwartung bezögen sich diese nur verhältnismäÿig selten auf
- []
-
-
-Underfull \hbox (badness 2894) in paragraph at lines 305--314
-\T1/fve/m/n/12 Die Bestände des Archivs der Akademie der Künste, zu dem die
- []
-
-
-Underfull \hbox (badness 3138) in paragraph at lines 305--314
-\T1/fve/m/n/12 einsehbar. In den Lesesälen sind umfassende Recherchen in allen
- []
-
-
-Underfull \hbox (badness 2698) in paragraph at lines 305--314
-\T1/fve/m/n/12 Einige Teilbestände werden von der AdK in sogenannten digitalen
- []
-
-
-Underfull \hbox (badness 6047) in paragraph at lines 305--314
-\T1/fve/m/n/12 Schaufenstern vorgestellt.[][][] Diese umfassen den Bestand von 31
- []
-
-
-Underfull \hbox (badness 2809) in paragraph at lines 305--314
-\T1/fve/m/n/12 Das Problem des Urheberrechts und der Publikation von Plakaten
- []
-
-
-Underfull \hbox (badness 2065) in paragraph at lines 305--314
-\T1/fve/m/n/12 erschwere ebenfalls die Förderung von Forschungsprojekten an der
- []
-
-
-Underfull \hbox (badness 1184) in paragraph at lines 305--314
-\T1/fve/m/n/12 möglichst anschaulich und intuitiv präsentiert sei. Konzepte wie das
- []
-
-
-Underfull \hbox (badness 6032) in paragraph at lines 305--314
-\T1/fve/m/n/12 Ein erstrebenswertes Ziel für Schultz wäre die Schaffung eines
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 305--314
-\T1/fve/m/n/12 deutschlandweiten Masterdatensatzes für Plakate -- am Beispiel
- []
-
-
-Underfull \hbox (badness 1635) in paragraph at lines 305--314
-\T1/fve/m/n/12 der Deutschen National Bibliothek. Im idealen Fall könne man alle
- []
-
-
-Underfull \hbox (badness 5681) in paragraph at lines 305--314
-\T1/fve/m/n/12 auf eine gemeinsame Normdatenstruktur, sodass die Sammlungen
- []
-
-
-Underfull \hbox (badness 1117) in paragraph at lines 305--314
-\T1/fve/m/n/12 Dies mache die Notwendigkeit für Normdaten noch ein Mal gröÿer,
- []
-
-
-Underfull \hbox (badness 1789) in paragraph at lines 305--314
-\T1/fve/m/n/12 setze aber auch Maÿstäbe für die Präsentation. Projekte, wie das
- []
-
-
-Underfull \hbox (badness 2237) in paragraph at lines 305--314
-\T1/fve/m/n/12 Erbe Schinkels von 2012 hätten die Forschung in vieler Hinsicht
- []
-
-
-Underfull \hbox (badness 2065) in paragraph at lines 305--314
-\T1/fve/m/n/12 vorangetrieben, seien in Hinblick auf Datenstruktur und Gestaltung
- []
-
-[44] [45] [46]
+[43] [44] [45] [46]
 Underfull \hbox (badness 1803) in paragraph at lines 321--321
-[][]\T1/fve/m/n/10 Vgl. Hamburger Note (11.03.2021); Vgl. Bayerische Staatsgemäldesammlungen,
- []
-
-
-Underfull \hbox (badness 2828) in paragraph at lines 316--328
-\T1/fve/m/n/12 digitalen Erschlieÿung seiner Plakatsammlung. Dieser Prozess habe
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--328
-\T1/fve/m/n/12 geförderten Programms EDV-gestützte Katalogisierung in groÿen
- []
-
-
-Underfull \hbox (badness 2865) in paragraph at lines 316--328
-\T1/fve/m/n/12 Museen genommen. Die in diesem Projekt angelegten Digitalisate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--328
-\T1/fve/m/n/12 Aktuell sind nach Angaben von Brinkmann knapp 37.000 der
- []
-
-
-Underfull \hbox (badness 4193) in paragraph at lines 316--328
-\T1/fve/m/n/12 Metadatenstandard vor und entstammen zum Teil Inventarbüchern
- []
-
-
-Underfull \hbox (badness 4608) in paragraph at lines 316--328
-\T1/fve/m/n/12 und -karten, sowie Publikationen zu Teilbeständen der Sammlung
- []
-
-
-Underfull \hbox (badness 2293) in paragraph at lines 316--328
-\T1/fve/m/n/12 -- die Metadaten der Digitalisate selbst seien hingegen noch nicht
- []
-
-
-Underfull \hbox (badness 2521) in paragraph at lines 316--328
-\T1/fve/m/n/12 stringent. Normiert seien diese Metadaten teilweise, da es in der
- []
-
-
-Underfull \hbox (badness 1975) in paragraph at lines 316--328
-\T1/fve/m/n/12 und mit durch das Personal der Plakatsammlung und des Projekts
+[][]\T1/fve/m/n/10 Vgl. Ham-bur-ger No-te (11.03.2021); Vgl. Baye-ri-sche Staats-ge-mäl-des-amm-lun-gen,
  []
 
 
 Underfull \hbox (badness 3657) in paragraph at lines 316--328
-\T1/fve/m/n/12 sämtliche Arbeitsbereiche auch im Museum (Sammlungsverwaltung,
+\T1/fve/m/n/12 sämt-li-che Ar-beits-be-rei-che auch im Mu-se-um (Samm-lungs-ver-wal-tung,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 316--328
-\T1/fve/m/n/12 Ausstellungsplanung, Vermittlung, Leihverkehr, Provenienzforschung,
+\T1/fve/m/n/12 Aus-stel-lungs-pla-nung, Ver-mitt-lung, Leih-ver-kehr, Pro-ve-ni-enz-for-schung,
  []
 
 
-Underfull \hbox (badness 2961) in paragraph at lines 316--328
-\T1/fve/m/n/12 Restaurierung/Konservierung/Prävention im Sinne von Schonung der
- []
-
-
-Underfull \hbox (badness 1769) in paragraph at lines 316--328
-\T1/fve/m/n/12 einig, ist für Museen in Zukunft unvermeidlich. Dabei müsse nicht
- []
-
-
-Underfull \hbox (badness 1354) in paragraph at lines 316--328
-\T1/fve/m/n/12 Beim aktuellen Stand der Digitalisierung sieht Brinkmann auf jeden
- []
-
-
-Underfull \hbox (badness 1377) in paragraph at lines 316--328
-\T1/fve/m/n/12 wünschen -- indem sich verschiedene Einrichtungen auf gemeinsame
+Underfull \hbox (badness 1102) in paragraph at lines 316--328
+\T1/fve/m/n/12 als auch fi-nan-zi-ell müss-ten Mu-se-en stär-ker ge-för-dert wer-den, da-mit
  []
 
 
@@ -1659,28 +857,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 316--328
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 316--328
-\T1/fve/m/n/12 der Finanzierung musealer Digitalisierungsprojekte. Zwar scheint das
- []
-
-
-Underfull \hbox (badness 1275) in paragraph at lines 316--328
-\T1/fve/m/n/12 Bewusstsein dafür, dass Museen auch den digitalen Raum zukünftig
- []
-
-
-Underfull \hbox (badness 1320) in paragraph at lines 316--328
-\T1/fve/m/n/12 aber einem vergleichbar groÿen Elan, vor einer noch viel gröÿeren
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 316--328
 
  []
 
-[47] [48] [49] [50] [51]
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
-[]\T1/fve/b/n/17.28 Computergestützte Erschlieÿung der
+[47] [48] [49] [50]
+Underfull \hbox (badness 1226) in paragraph at lines 330--330
+[]\T1/fve/b/n/17.28 Computergestützte Er-schlie-ÿung der Pla-
  []
 
 
@@ -1689,28 +872,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 331--334
  []
 
 
-Underfull \hbox (badness 1178) in paragraph at lines 337--337
-[][]\T1/fve/m/n/10 Die Aufgabenfelder sind dabei mannigfaltig, vgl. Esteva: Deep learning-enabled
- []
-
-
-Underfull \hbox (badness 2080) in paragraph at lines 337--340
-\T1/fve/m/n/12 Methoden des \T1/fve/m/sl/12 Machine Learning \T1/fve/m/n/12 zunutze.[][][] \T1/fve/m/sl/12 Computer Vision \T1/fve/m/n/12 meint
- []
-
-
 Underfull \hbox (badness 1184) in paragraph at lines 337--340
-\T1/fve/m/n/12 Überblicke über mögliche Forschungsfelder, die die \T1/fve/m/sl/12 Computer Vision
- []
-
-
-Underfull \hbox (badness 2103) in paragraph at lines 337--340
-\T1/fve/m/n/12 vorwagen möchte. Die bisher an Datensätzen zu Laborbedingungen
- []
-
-
-Underfull \hbox (badness 4467) in paragraph at lines 337--340
-\T1/fve/m/n/12 Kunstwerke, sondern hochkomplexe Bild- und Schrift-Collagen, die
+\T1/fve/m/n/12 Über-bli-cke über mög-li-che For-schungs-fel-der, die die \T1/fve/m/sl/12 Com-pu-ter Vi-si-on
  []
 
 
@@ -1718,34 +881,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 337--340
 
  []
 
-[52] [53]
-Underfull \hbox (badness 4479) in paragraph at lines 342--344
-\T1/fve/m/n/12 benutzt. Für die Visualisierung wird eine \T1/fve/m/sl/12 Feature Extraction \T1/fve/m/n/12 mit
- []
-
-
+[51]
 Underfull \hbox (badness 10000) in paragraph at lines 342--344
 
  []
 
-
-Underfull \hbox (badness 1062) in paragraph at lines 346--350
-\T1/fve/m/n/12 unbekanntes Datenmaterial treffen können.[][][] \T1/fve/m/sl/12 Deep Learning \T1/fve/m/n/12 zeichnet
- []
-
-
-Underfull \hbox (badness 3557) in paragraph at lines 346--350
-\T1/fve/m/n/12 sich dadurch aus, dass zum Erlernen dieses Datengedächtnisses
- []
-
-
-Underfull \hbox (badness 1303) in paragraph at lines 346--350
-\T1/fve/m/n/12 Eine sehr beliebte Bibliothek ist Theano, welche 2008 veröffentlicht
- []
-
-
-Underfull \hbox (badness 1478) in paragraph at lines 346--350
-\T1/fve/m/n/12 Aufsatz auf einen sehr frühen Stand von Tensorflow, weshalb seine
+[52]
+Underfull \hbox (badness 1215) in paragraph at lines 346--350
+\T1/fve/m/n/12 sind scikit-learn (2008), Ac-cord.NET (2008), Mas-si-ve On-li-ne Ana-ly-sis
  []
 
 
@@ -1753,336 +896,175 @@ Underfull \hbox (badness 10000) in paragraph at lines 346--350
 
  []
 
-[54]
+[53]
 Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
 
-[55]
-Underfull \hbox (badness 1226) in paragraph at lines 355--358
-\T1/fve/m/n/12 Tesseract ist eine \T1/fve/m/sl/12 Optical Chracter Recognition \T1/fve/m/n/12 (OCR) Software, die
- []
-
-
-Underfull \hbox (badness 1810) in paragraph at lines 355--358
-\T1/fve/m/n/12 Die groÿe Herausforderung bei OCR liegt im Umgang mit Text in
- []
-
-[56]
-Underfull \hbox (badness 1755) in paragraph at lines 361--361
-[][]\T1/fve/m/n/10 Synsets sind nach der Definition von WordNet unsortierte Wortgruppen aus
- []
-
-
-Underfull \hbox (badness 3039) in paragraph at lines 360--364
-\T1/fve/m/n/12 Der ImageNet Datensatz besteht aus 14.197.122 Bildern, die sich
- []
-
-
-Underfull \hbox (badness 1057) in paragraph at lines 360--364
-\T1/fve/m/n/12 in 21.841 Kategorien, sogenannte synsets, einordnen lassen.[][][] Die
- []
-
-
-Underfull \hbox (badness 1609) in paragraph at lines 360--364
-\T1/fve/m/n/12 Struktur der Kategorien ist hierarchisch und baut auf dem an der
- []
-
-
-Underfull \hbox (badness 5446) in paragraph at lines 360--364
-\T1/fve/m/n/12 vor allem dafür gedacht, neuronalen Netzen Objektsegmentierung
- []
-
-[57]
-Underfull \hbox (badness 1297) in paragraph at lines 365--365
-[]\T1/fve/b/n/14.4 Erstellung von Datensätzen aus der Bayreuther
- []
-
-
-Underfull \hbox (badness 2809) in paragraph at lines 366--372
-\T1/fve/m/n/12 Der dritte Datensatz ist eine Abwandlung vom zweiten und heiÿt
- []
-
-
-Underfull \hbox (badness 5316) in paragraph at lines 366--372
-\T1/fve/m/n/12 entsprechend \T1/fve/m/sl/12 personData200Modified\T1/fve/m/n/12 . Die Änderung besteht darin,
- []
-
-
+[54] [55] [56]
 Underfull \hbox (badness 10000) in paragraph at lines 366--372
 
  []
 
-[58]
-Underfull \hbox (badness 2753) in paragraph at lines 374--376
-\T1/fve/m/n/12 Für die Erstellung der detectron2 Datensätze reicht eine einfache
- []
-
-
-Underfull \hbox (badness 1173) in paragraph at lines 374--376
-\T1/fve/m/n/12 im Bildraum wo zu verordnen und welche Pixel dafür wichtig sind,
- []
-
-
+[57]
 Underfull \hbox (badness 10000) in paragraph at lines 374--376
 
  []
 
-[59]
-Underfull \hbox (badness 3158) in paragraph at lines 379--382
-\T1/fve/m/n/12 Die COCO-konformen Dateien für detectron2 setzen sich aus drei
+[58]
+Underfull \hbox (badness 2012) in paragraph at lines 377--380
+\T1/fve/m/n/12 String mit al-len Klas-se-nat-tri-bu-ten aus und die \T1/fve/m/sl/12 con-vert-To-Dic-tio-na-ry\T1/fve/m/n/12 -
  []
 
 
-Underfull \hbox (badness 7631) in paragraph at lines 379--382
-\T1/fve/m/n/12 Objektkategorien zusammen: Bilder, Kategorien und Annotationen.
- []
-
-
-Underfull \hbox (badness 2012) in paragraph at lines 379--382
-\T1/fve/m/n/12 String mit allen Klassenattributen aus und die \T1/fve/m/sl/12 convertToDictionary\T1/fve/m/n/12 -
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 379--382
+Underfull \hbox (badness 10000) in paragraph at lines 377--380
 
  []
 
-(/home/julius/.miktex/texmfs/install/tex/latex/listings/lstlang1.sty
+(C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 383.
- (/home/julius/.miktex/texmfs/install/tex/latex/bera/t1fvm.fd
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 381.
+ (C:\Users\Julius Emmel\AppData\Local\Programs\MiKTeX\tex/latex/bera\t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 383.
+(Font)              scaled to size 10.79993pt on input line 381.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 383.
+(Font)              scaled to size 8.99994pt on input line 381.
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 384.
- [60]
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
-[]\T1/fve/m/n/12 Die Funktion zu Errechnung der Polygonfläche wurde einer
+(Font)              scaled to size 8.99994pt on input line 382.
+ [59]
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
+[]\T1/fve/m/n/12 Die Funk-ti-on zu Er-rech-nung der Po-ly-gon-flä-che wur-de ei-ner
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
 
  []
 
-[61]
+[60]
 LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 449.
- [62]
-Underfull \hbox (badness 4886) in paragraph at lines 479--480
-\T1/fve/m/sl/12 Dictionary \T1/fve/m/n/12 eingefügt, das die json-Struktur der endgültigen Datei
- []
-
-
-Underfull \hbox (badness 6332) in paragraph at lines 479--480
-\T1/fve/m/n/12 widerspiegeln soll. Dieses wird am Ende in ein entsprechendes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 479--480
+(Font)              scaled to size 8.99994pt on input line 447.
+ [61]
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
 
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 483--485
-\T1/fve/m/n/12 zugeführt. Anstatt eine endgültige Einordnung in Klassen durch den
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 483--485
+Underfull \hbox (badness 10000) in paragraph at lines 481--483
 
  []
 
-[63] [64]
+[62] [63]
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 501--502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--504
-
- []
-
-ngerman: "ck is now obsolete, please use ck instead on input line 523.
-
-Underfull \hbox (badness 3536) in paragraph at lines 520--525
-\T1/fve/m/n/12 besitzen über 100.000 Werte. Zur Reduktion der Werte auf zwei
+Underfull \hbox (badness 1803) in paragraph at lines 518--523
+\T1/fve/m/n/12 kennt und nach grö-ÿe-ren, all-ge-mei-ne-ren Kri-te-ri-en aus-wäh-len muss.
  []
 
 
-Underfull \hbox (badness 2302) in paragraph at lines 520--525
-\T1/fve/m/n/12 Daten mehrmals mit unterschiedlich vielen Clustern analysiert. Für
- []
-
-
-Underfull \hbox (badness 1803) in paragraph at lines 520--525
-\T1/fve/m/n/12 kennt und nach gröÿeren, allgemeineren Kriterien auswählen muss.
- []
-
-
-Underfull \hbox (badness 1484) in paragraph at lines 520--525
-\T1/fve/m/n/12 zwischen den einzelnen Bilddateien dadurch verändert, in dem sich
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 520--525
+Underfull \hbox (badness 10000) in paragraph at lines 518--523
 
  []
 
-[65] [66]
-Underfull \hbox (badness 10000) in paragraph at lines 528--529
+[64]
+Underfull \hbox (badness 10000) in paragraph at lines 526--527
 
  []
 
-
-Underfull \hbox (badness 1515) in paragraph at lines 539--540
-[]\T1/fve/m/n/12 Nach dem Einlesen des Datensatzes über eingebaute Tensorflow-
+[65]
+Underfull \hbox (badness 1515) in paragraph at lines 537--538
+[]\T1/fve/m/n/12 Nach dem Ein-le-sen des Da-ten-sat-zes über ein-ge-bau-te Tensorflow-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 539--540
+Underfull \hbox (badness 10000) in paragraph at lines 537--538
+
+ []
+
+[66]
+Underfull \hbox (badness 10000) in paragraph at lines 551--557
 
  []
 
 [67]
-Underfull \hbox (badness 10000) in paragraph at lines 553--559
-\T1/fve/m/n/12 Gewichte. Um dieses Modell werden zusätzliche Schichten zum
- []
-
-
-Underfull \hbox (badness 1221) in paragraph at lines 553--559
-\T1/fve/m/n/12 eine relativ kleine Schicht klassifiziert. Diese Schicht verändert ihre
- []
-
-
-Underfull \hbox (badness 1142) in paragraph at lines 553--559
-\T1/fve/m/n/12 Es ist denkbar, dass mit einem ausgereifteren Datensatz und einem
- []
-
-
-Underfull \hbox (badness 1371) in paragraph at lines 553--559
-\T1/fve/m/n/12 intensiveren Training bessere Ergebnisse zu erzielen sind. Auch ein
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 553--559
-
- []
-
-[68]
-Underfull \hbox (badness 2073) in paragraph at lines 562--569
-\T1/fve/m/n/12 Der Scatterplot nach dem Training hat sich ebenfalls nur minimal
- []
-
-
-Underfull \hbox (badness 1394) in paragraph at lines 562--569
-\T1/fve/m/n/12 verändert (Abb. 62). Die Cluster sind horizontal gespiegelt, aber in
- []
-
-
-Underfull \hbox (badness 3209) in paragraph at lines 562--569
-\T1/fve/m/n/12 Die Visualisierung in Clustern kann bei zunehmender Datenmenge
- []
-
-
-Underfull \hbox (badness 2547) in paragraph at lines 562--569
-\T1/fve/m/n/12 zu überdecken drohen. Eine Methode dieses Problem zu umgehen
- []
-
-
-Underfull \hbox (badness 2529) in paragraph at lines 562--569
-\T1/fve/m/n/12 wird im Projekt Gugelmann Galaxy vorgestellt.[][][] Hier werden die
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 562--569
+Underfull \hbox (badness 10000) in paragraph at lines 560--567
 
  []
 
 
-Underfull \hbox (badness 1337) in paragraph at lines 562--569
-\T1/fve/m/n/12 zueinander setzen. Konkret Umgesetzt könnte eine Abstandsmessung
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 562--569
+Underfull \hbox (badness 10000) in paragraph at lines 560--567
 
  []
 
-[69] [70]
-Underfull \hbox (badness 2050) in paragraph at lines 572--574
-\T1/fve/m/n/12 Eine groÿe Fragestellung dieser Arbeit ist, ob es möglich ist, mit
+[68] [69]
+Underfull \hbox (badness 10000) in paragraph at lines 570--572
+
  []
 
-
-Underfull \hbox (badness 1701) in paragraph at lines 572--574
-\T1/fve/m/n/12 Abbildungen, als auch den Text auf den hier behandelten Plakaten
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 572--574
+[70]
+Underfull \hbox (badness 10000) in paragraph at lines 573--574
 
  []
 
 [71]
-Underfull \hbox (badness 4341) in paragraph at lines 575--576
-\T1/fve/m/n/12 werden. Für diesen Zweck wurde das Programm \T1/fve/m/sl/12 Serial_Detection
+Underfull \hbox (badness 1168) in paragraph at lines 606--610
+\T1/fve/m/n/12 Samm-lung von Mo-del-len ent-nom-men. Ge-la-den wer-den auf Image-Net
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 575--576
-
- []
-
-[72]
-Underfull \hbox (badness 1168) in paragraph at lines 608--612
-\T1/fve/m/n/12 Sammlung von Modellen entnommen. Geladen werden auf ImageNet
+Underfull \hbox (badness 1314) in paragraph at lines 606--610
+\T1/fve/m/n/12 Die ge-spei-cher-ten \T1/fve/m/sl/12 Dic-tio-na-ri-es \T1/fve/m/n/12 ge-ben Auf-schluss über die er-kann-ten
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 608--612
-\T1/fve/m/n/12 Die gespeicherten \T1/fve/m/sl/12 Dictionaries \T1/fve/m/n/12 geben Aufschluss über die erkannten
- []
-
-
-Underfull \hbox (badness 1558) in paragraph at lines 608--612
-\T1/fve/m/n/12 fälschlicherweise als Uhr erkannt.[][][] Somit fällt dieser Scan in der
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 608--612
+Underfull \hbox (badness 10000) in paragraph at lines 606--610
 
  []
 
-[73] [74]
-Underfull \hbox (badness 10000) in paragraph at lines 615--616
-\T1/fve/m/n/12 Für das Training mit detectron2 wurde das Programm
+[72] [73]
+Underfull \hbox (badness 10000) in paragraph at lines 613--614
+\T1/fve/m/n/12 Für das Trai-ning mit de-tec-tron2 wur-de das Pro-gramm \T1/fve/m/sl/12 Trai-
  []
 
 
-Underfull \hbox (badness 4416) in paragraph at lines 615--616
-\T1/fve/m/sl/12 Training_and_evaluation \T1/fve/m/n/12 geschrieben. Das eigentliche Training wird
+Underfull \hbox (badness 1406) in paragraph at lines 613--614
+\T1/fve/m/sl/12 ning_and_evaluation \T1/fve/m/n/12 ge-schrie-ben. Das ei-gent-li-che Trai-ning wird über
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 615--616
+Underfull \hbox (badness 10000) in paragraph at lines 613--614
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 631--632
+Underfull \hbox (badness 10000) in paragraph at lines 629--630
+
+ []
+
+[74]
+Underfull \hbox (badness 1158) in paragraph at lines 668--669
+[]\T1/fve/m/n/12 Eine kom-plet-te Auf-schlüs-se-lung der Kon-fi-gu-ra-ti-ons-da-tei ist in der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 668--669
 
  []
 
 [75]
-Underfull \hbox (badness 1158) in paragraph at lines 670--671
-[]\T1/fve/m/n/12 Eine komplette Aufschlüsselung der Konfigurationsdatei ist in der
+Underfull \hbox (badness 1147) in paragraph at lines 670--670
+[][]\T1/fve/m/n/10 Auf Grund ei-ner un-glei-chen Ver-tei-lung der Ka-te-go-ri-en im Da-ten-satz \T1/fve/m/sl/10 per-son-Da-
  []
 
 
@@ -2090,346 +1072,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 670--671
 
  []
 
-[76]
-Underfull \hbox (badness 10000) in paragraph at lines 672--672
-[][]\T1/fve/m/n/10 Auf Grund einer ungleichen Verteilung der Kategorien im Datensatz
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 672--673
-
- []
-
-
-Overfull \hbox (1.5395pt too wide) in paragraph at lines 674--703
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 674--703
-
- []
-
-
-Underfull \hbox (badness 3849) in paragraph at lines 674--703
-\T1/fve/m/n/12 Die Tabelle zeigt die letzten Auswertungen der Modelle während
- []
-
-
-Underfull \hbox (badness 2012) in paragraph at lines 674--703
-\T1/fve/m/n/12 auf, dass das Modell auf dem modifizierten Datensatz mehr falsch
- []
-
-
-Underfull \hbox (badness 1052) in paragraph at lines 674--703
-\T1/fve/m/n/12 Plakatklasse besitzt, sondern acht thematische Utnerscheidungen von
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 674--703
-\T1/fve/m/n/12 Neben dem Training mit selbsterstellten Datensätzen aus einer
- []
-
-
-Underfull \hbox (badness 1377) in paragraph at lines 674--703
-\T1/fve/m/n/12 Hierzu müssten die Bilddaten der jeweiligen Datensätze vorgehalten
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 674--703
-
- []
-
-[77]
-Underfull \hbox (badness 1132) in paragraph at lines 706--713
-\T1/fve/m/n/12 Da die einzige Kategorie, die von allen drei Modellen erkannt wird
- []
-
-
-Underfull \hbox (badness 4403) in paragraph at lines 706--713
-\T1/fve/m/n/12 die \T1/fve/m/sl/12 Person\T1/fve/m/n/12 -Kategorie ist, kann nur diese verglichen werden. Das
- []
-
-
-Underfull \hbox (badness 2717) in paragraph at lines 706--713
-\T1/fve/m/n/12 untrainierte Modell erkennt im \T1/fve/m/sl/12 tensorflow \T1/fve/m/n/12 Datensatz 924 Personen
- []
-
-
-Underfull \hbox (badness 4366) in paragraph at lines 706--713
-\T1/fve/m/n/12 bei einer durchschnittlichen Wahrscheinlichkeit von 84%. Trainiert
- []
-
-
-Underfull \hbox (badness 2088) in paragraph at lines 706--713
-\T1/fve/m/n/12 erkannter Objekte ist es nachvollziehbar, dass die durchschnittliche
- []
-
-
-Underfull \hbox (badness 2253) in paragraph at lines 706--713
-\T1/fve/m/n/12 vergleichen. Auf \T1/fve/m/sl/12 personData200 \T1/fve/m/n/12 trainiert erkennt das Modell 6.632
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 706--713
-\T1/fve/m/n/12 Wie schon im vorherigen Abschnitt angedeutet, würde es sich
- []
-
-
-Underfull \hbox (badness 1412) in paragraph at lines 706--713
-\T1/fve/m/n/12 wahrscheinlich lohnen, die Modelle über längere Zeit mit mehreren
- []
-
-
-Underfull \hbox (badness 3118) in paragraph at lines 706--713
-\T1/fve/m/n/12 Datensätzen parallel zu trainieren. Neben MS COCO, COCO Text,
- []
-
-
-Underfull \hbox (badness 2126) in paragraph at lines 706--713
-\T1/fve/m/n/12 Dieser Ansatz könnte mit der \T1/fve/m/sl/12 self-learning noisy student technique
- []
-
-
-Underfull \hbox (badness 1681) in paragraph at lines 706--713
-\T1/fve/m/n/12 ummgesetzt werden.[][][] Hierbei wird ein Modell zunächst auf einen
- []
-
-
-Underfull \hbox (badness 1325) in paragraph at lines 706--713
-\T1/fve/m/n/12 händisch optimiert, um sie dem Datensaz für ein erneutes Training
- []
-
-
-Underfull \hbox (badness 1354) in paragraph at lines 706--713
-\T1/fve/m/n/12 Diese können zwar in Teilen aus anderen Datensätzen übernommen
- []
-
-[78] [79]
-Underfull \hbox (badness 10000) in paragraph at lines 716--717
-
- []
-
-
-Underfull \hbox (badness 3240) in paragraph at lines 718--719
-[]\T1/fve/m/n/12 Das Programm \T1/fve/m/sl/12 Serial_Detection \T1/fve/m/n/12 liefert neben einer statistischen
- []
-
-[80] [81]
-Underfull \hbox (badness 4353) in paragraph at lines 771--772
-\T1/fve/m/n/12 Um eine möglichst groÿe Vergleichsgruppe zu haben, wurde mit
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 771--772
-\T1/fve/m/n/12 dem auf den \T1/fve/m/sl/12 PersonData200 \T1/fve/m/n/12 Datensatz trainierten Modell der
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 771--772
-\T1/fve/m/n/12 Datensatz \T1/fve/m/sl/12 data100 \T1/fve/m/n/12 klassifiziert. Das Ergebnis liegt im Ordner
- []
 
-[82] [83]
-Underfull \hbox (badness 1484) in paragraph at lines 819--820
-\T1/fve/m/n/12 Im direkten Vergleich zur Texterkennung auf dem gesamten Plakat,
+Underfull \hbox (badness 1377) in paragraph at lines 700--702
+\T1/fve/m/n/12 Hier-zu müss-ten die Bild-da-ten der je-wei-li-gen Da-ten-sät-ze vor-ge-hal-ten
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 819--820
+Underfull \hbox (badness 10000) in paragraph at lines 700--702
 
  []
-
-[84] [85] [86]
-Underfull \hbox (badness 10000) in paragraph at lines 883--884
-
- []
-
-ngerman: "TT is now obsolete, please use TTT instead on input line 890.
-ngerman: "LL is now obsolete, please use LLL instead on input line 890.
-ngerman: "LL is now obsolete, please use LLL instead on input line 890.
-
-Underfull \hbox (badness 2065) in paragraph at lines 885--892
-\T1/fve/m/n/12 Das erste, sehr offensichtliche Problem mit der verwendungen von
- []
-
-
-Underfull \hbox (badness 1430) in paragraph at lines 885--892
-\T1/fve/m/n/12 Textausschnitten durch \T1/fve/m/sl/12 Bounding Boxes \T1/fve/m/n/12 sind die Boxen selbst. Sind
- []
-
-
-Underfull \hbox (badness 2512) in paragraph at lines 885--892
-\T1/fve/m/n/12 demnach sein, die Erkennung von Textblöcken zu präzesieren und
- []
-
-
-Underfull \hbox (badness 2818) in paragraph at lines 885--892
-\T1/fve/m/n/12 der Ergebnisse von Tesseract stark mit der angegebenen Sprache
- []
-
-
-Underfull \hbox (badness 2875) in paragraph at lines 885--892
-\T1/fve/m/n/12 Plakats anzupassen. Gibt man beispielsweise bei deutschsprachigen
- []
-
-
-Underfull \hbox (badness 4132) in paragraph at lines 885--892
-\T1/fve/m/n/12 Plakaten nicht an, dass sie deutsch sind, werden Umlaute nicht
- []
-
-
-Underfull \hbox (badness 1127) in paragraph at lines 885--892
-\T1/fve/m/n/12 erkannt. Setzt man die Sprache standardmäÿig auf deutsch, werden
- []
-
-
-Underfull \hbox (badness 1748) in paragraph at lines 885--892
-\T1/fve/m/n/12 Diese Beispiele für die Bedeutung von Kontext und Sprache sollen
- []
-
-
-Underfull \hbox (badness 3769) in paragraph at lines 885--892
-\T1/fve/m/n/12 zu entwickeln. So könnten bei Datumsangaben standardmäÿig die
- []
-
-
-Underfull \hbox (badness 4454) in paragraph at lines 885--892
-\T1/fve/m/n/12 ist und die verschiedenen Label weiterhin klar von einander zu
- []
-
-[87] [88] [89]
-Underfull \hbox (badness 5726) in paragraph at lines 896--906
-\T1/fve/m/n/12 Ausgangspunkt ist die digitale Plakatsammlung des Kunstmuseum
- []
-
-
-Underfull \hbox (badness 1509) in paragraph at lines 896--906
-\T1/fve/m/n/12 einnimmt. Auf der einen Seite ist es ein Werbeträger in vielfacher
- []
-
-
-Underfull \hbox (badness 1675) in paragraph at lines 896--906
-\T1/fve/m/n/12 Wettkampf um mehr Aufmerksamkeit. Es ist ein Mittel die Massen
- []
-
-
-Underfull \hbox (badness 4266) in paragraph at lines 896--906
-\T1/fve/m/n/12 Dieses neue Aufkommen von groÿformatigen Text-Bild-Collagen im
- []
-
-
-Underfull \hbox (badness 1824) in paragraph at lines 896--906
-\T1/fve/m/n/12 Zweck dieser Bilder zu erkennen vermögen müssen und darin viel
- []
-
-
-Underfull \hbox (badness 2393) in paragraph at lines 896--906
-\T1/fve/m/n/12 in den Fokus. Für eine solide Bilderkennung von hoch komplexen
- []
-
-
-Underfull \hbox (badness 1173) in paragraph at lines 896--906
-\T1/fve/m/n/12 von fotografischen Erscheinungsmustern lösen und genreübergreifend
- []
-
-
-Underfull \hbox (badness 1082) in paragraph at lines 896--906
-\T1/fve/m/n/12 Motive auch in malerischen oder zeichnerischen Kontexten erkennen
- []
-
-
-Underfull \hbox (badness 1721) in paragraph at lines 896--906
-\T1/fve/m/n/12 auf Ausstellungsplakaten wichtig ist die gezeigte Kunst anhand der
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 896--906
-\T1/fve/m/n/12 Im Vergleich muss der Texterkennung eine höhere Bedeutung
- []
-
-
-Underfull \hbox (badness 1910) in paragraph at lines 896--906
-\T1/fve/m/n/12 Die Bayreuther Plakatsammlung ist hierfür ein sehr gutes Beispiel.
- []
-
-
-Underfull \hbox (badness 1931) in paragraph at lines 896--906
-\T1/fve/m/n/12 von den einzelnen Plakaten zu sein. Informationen wie Grafiker*in,
- []
-
-
-Underfull \hbox (badness 1466) in paragraph at lines 896--906
-\T1/fve/m/n/12 einzige Informationsquelle für Algorithmen sind in dieser Sammlung
- []
-
-
-Underfull \hbox (badness 1028) in paragraph at lines 896--906
-\T1/fve/m/n/12 das mögliche Thema des Beworbenen. Kategorien wie Jahr, Ort und
- []
-
-
-Underfull \hbox (badness 1383) in paragraph at lines 896--906
-\T1/fve/m/n/12 ungeeignet, wenn ein Algorithmus auf den Inhalt von Plakaten und
- []
-
-
-Underfull \hbox (badness 3148) in paragraph at lines 896--906
-\T1/fve/m/n/12 durch Spiegelungen oder Unebenheiten zusätzliche Schwierigkeiten.
- []
-
-
-Underfull \hbox (badness 1052) in paragraph at lines 896--906
-\T1/fve/m/n/12 Kooperation mit groÿen, institutionellen Plakatsammlungen entstehen.
- []
-
 
-Underfull \hbox (badness 5741) in paragraph at lines 896--906
-\T1/fve/m/n/12 Diese können die Infrastruktur für ein normiertes Scanverfahren
+[76] [77] [78] [79] [80]
+Underfull \hbox (badness 4353) in paragraph at lines 769--770
+\T1/fve/m/n/12 Um ei-ne mög-lichst groÿe Ver-gleichs-grup-pe zu ha-ben, wur-de mit
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 896--906
-\T1/fve/m/n/12 bereitstellen und auf ein Archiv oder eine Datenbank zurückgreifen,
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
+\T1/fve/m/n/12 dem auf den \T1/fve/m/sl/12 Per-son-Da-ta200 \T1/fve/m/n/12 Da-ten-satz trai-nier-ten Mo-dell der
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 896--906
-\T1/fve/m/n/12 der Plakate in thematische Gruppen erkennen. Das Netz bezog sich
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
+\T1/fve/m/n/12 Da-ten-satz \T1/fve/m/sl/12 da-ta100 \T1/fve/m/n/12 klas-si-fi-ziert. Das Er-geb-nis liegt im Ord-ner
  []
 
 
-Underfull \hbox (badness 1939) in paragraph at lines 896--906
-\T1/fve/m/n/12 der Bayreuther Plakatsammlung, \T1/fve/m/sl/12 unsupervised \T1/fve/m/n/12 vortrainiert wird und
+Underfull \hbox (badness 2452) in paragraph at lines 769--770
+\T1/fve/m/n/12 ./detections/data100/16,04,2021-12,43/. Dort wer-den auch die json-
  []
 
 
-Underfull \hbox (badness 1163) in paragraph at lines 896--906
-\T1/fve/m/n/12 vorliegenden Plakatsammlung besitzt wiederum zu wenig Kategorien,
+Underfull \hbox (badness 1521) in paragraph at lines 769--770
+\T1/fve/m/n/12 Dateien von \T1/fve/m/sl/12 tes-seract \T1/fve/m/n/12 ge-spei-chert. Im Fol-gen-den sol-len nur we-ni-ge
  []
 
+[81] [82]
+Underfull \hbox (badness 10000) in paragraph at lines 817--818
 
-Underfull \hbox (badness 2512) in paragraph at lines 896--906
-\T1/fve/m/n/12 Datensatz, der zwischen verschiedenen Schriftzeichen unterscheidet,
  []
 
+[83] [84]
+Underfull \hbox (badness 10000) in paragraph at lines 881--882
 
-Underfull \hbox (badness 2050) in paragraph at lines 896--906
-\T1/fve/m/n/12 ihre den Algorithmen entgegenkommenden, Datensätze zu verlassen
  []
 
-[90] [91] [92] [93] [94]
+[85] [86] [87] [88] [89] [90] [91] [92] [93] [94]
 Underfull \hbox (badness 10000) in paragraph at lines 910--911
 
  []
 
-<./Abbildungen//Abbildung_1_(acht1_028).jpg, id=1249, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_1_(acht1_028).jpg, id=1253, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_1_(acht1_028).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_1_(acht1_028).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_1_(acht1_028).jpg  used on input line 913.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
 [95]
-<./Abbildungen//Abbildung_2_(acht1_066).jpg, id=1254, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_2_(acht1_066).jpg, id=1258, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_2_(acht1_066).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_2_(acht1_066).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_2_(acht1_066).jpg  used on input line 920.
@@ -2442,26 +1141,26 @@ Package textcomp Info: Symbol \textasciiacute not provided by
 (textcomp)             Default family used instead on input line 922.
 
 Underfull \hbox (badness 3009) in paragraph at lines 922--922
-[]\T1/fve/m/n/12 Abbildung 2: |Programmplakat -- Volksfest \TS1/cmr/m/n/12 ´\T1/fve/m/n/12 77, UZ Recklinghausen,
+[]\T1/fve/m/n/12 Abbildung 2: |Pro-gramm-pla-kat -- Volks-fest \TS1/cmr/m/n/12 ´\T1/fve/m/n/12 77, UZ Reck-ling-hau-sen,
  []
 
-<./Abbildungen//Abbildung_3_(acht2_043).jpg, id=1255, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_3_(acht2_043).jpg, id=1259, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_3_(acht2_043).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_3_(acht2_043).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_3_(acht2_043).jpg  used on input line 927.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
 
 Underfull \hbox (badness 2894) in paragraph at lines 929--929
-[]\T1/fve/m/n/12 Abbildung 3: |Eindruckplakat -- Kleines Plakatmuseum, ohne Datum
+[]\T1/fve/m/n/12 Abbildung 3: |Ein-druck-pla-kat -- Klei-nes Pla-kat-mu-se-um, oh-ne Da-tum
  []
 
 [96 <./Abbildungen//Abbildung_1_(acht1_028).jpg>] [97 <./Abbildungen//Abbildung_2_(acht1_066).jpg>] [98 <./Abbildungen//Abbildung_3_(acht2_043).jpg>]
-<./Abbildungen//Abbildung_4a_(acht3_212).jpg, id=1273, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_4a_(acht3_212).jpg, id=1277, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_4a_(acht3_212).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_4a_(acht3_212).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_4a_(acht3_212).jpg  used on input line 937.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen//Abbildung_4b_(acht3_213).jpg, id=1274, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_4b_(acht3_213).jpg, id=1278, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_4b_(acht3_213).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_4b_(acht3_213).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_4b_(acht3_213).jpg  used on input line 941.
@@ -2472,37 +1171,37 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 935--943
  []
 
 [99 <./Abbildungen//Abbildung_4a_(acht3_212).jpg> <./Abbildungen//Abbildung_4b_(acht3_213).jpg>]
-<./Abbildungen//Abbildung_5_(acht2_189).jpg, id=1280, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_5_(acht2_189).jpg, id=1284, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_5_(acht2_189).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_5_(acht2_189).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_5_(acht2_189).jpg  used on input line 949.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_6_(acht2_208).jpg, id=1281, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_6_(acht2_208).jpg, id=1285, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_6_(acht2_208).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_6_(acht2_208).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_6_(acht2_208).jpg  used on input line 956.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_7_(fÃ¼nfzehn5_070).jpg, id=1282, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_7_(fÃ¼nfzehn5_070).jpg, id=1286, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_7_(fÃ¼nfzehn5_070).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_7_(fÃ¼nfzehn5_070).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_7_(fÃ¼nfzehn5_070).jpg  used on input line 963.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_8a_(acht1_079).jpg, id=1283, 2794.44pt x 1862.96pt>
+<./Abbildungen//Abbildung_8a_(acht1_079).jpg, id=1287, 2794.44pt x 1862.96pt>
 File: ./Abbildungen//Abbildung_8a_(acht1_079).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_8a_(acht1_079).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_8a_(acht1_079).jpg  used on input line 972.
 (pdftex.def)             Requested size: 309.39342pt x 206.28249pt.
-<./Abbildungen//Abbildung_8b_(acht1_080).jpg, id=1284, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_8b_(acht1_080).jpg, id=1288, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_8b_(acht1_080).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_8b_(acht1_080).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_8b_(acht1_080).jpg  used on input line 976.
 (pdftex.def)             Requested size: 206.28249pt x 309.39342pt.
-<./Abbildungen//Abbildung_8c_(acht1_081).jpg, id=1285, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_8c_(acht1_081).jpg, id=1289, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_8c_(acht1_081).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_8c_(acht1_081).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_8c_(acht1_081).jpg  used on input line 980.
 (pdftex.def)             Requested size: 206.28249pt x 309.39342pt.
-<./Abbildungen//Abbildung_8d_(acht1_082).jpg, id=1286, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_8d_(acht1_082).jpg, id=1290, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_8d_(acht1_082).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_8d_(acht1_082).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_8d_(acht1_082).jpg  used on input line 984.
@@ -2517,63 +1216,53 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 970--986
 [] [] 
  []
 
-<./Abbildungen//Abbildung_9_(zehn4_209).JPG, id=1287, 3758.04pt x 5637.06pt>
-File: ./Abbildungen//Abbildung_9_(zehn4_209).JPG Graphic file (type jpg)
-<use ./Abbildungen//Abbildung_9_(zehn4_209).JPG>
-Package pdftex.def Info: ./Abbildungen//Abbildung_9_(zehn4_209).JPG  used on input line 991.
+<./Abbildungen//Abbildung_9_(zehn4_209).jpg, id=1291, 3758.04pt x 5637.06pt>
+File: ./Abbildungen//Abbildung_9_(zehn4_209).jpg Graphic file (type jpg)
+<use ./Abbildungen//Abbildung_9_(zehn4_209).jpg>
+Package pdftex.def Info: ./Abbildungen//Abbildung_9_(zehn4_209).jpg  used on input line 991.
 (pdftex.def)             Requested size: 412.56497pt x 618.78831pt.
-<./Abbildungen//Abbildung_10_(acht3_299).jpg, id=1288, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_10_(acht3_299).jpg, id=1292, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_10_(acht3_299).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_10_(acht3_299).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_10_(acht3_299).jpg  used on input line 998.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_11_(sechzehn7_002).jpg, id=1289, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_11_(sechzehn7_002).jpg, id=1293, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_11_(sechzehn7_002).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_11_(sechzehn7_002).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_11_(sechzehn7_002).jpg  used on input line 1005.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_12_(acht3_020).jpg, id=1290, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_12_(acht3_020).jpg, id=1294, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_12_(acht3_020).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_12_(acht3_020).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_12_(acht3_020).jpg  used on input line 1012.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_13_(acht2_172).jpg, id=1291, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_13_(acht2_172).jpg, id=1295, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_13_(acht2_172).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_13_(acht2_172).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_13_(acht2_172).jpg  used on input line 1019.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_14_(Sechzehn9_027).jpg, id=1292, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_14_(Sechzehn9_027).jpg, id=1296, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_14_(Sechzehn9_027).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_14_(Sechzehn9_027).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_14_(Sechzehn9_027).jpg  used on input line 1026.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_15_(vierzehn3_036).jpg, id=1293, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_15_(vierzehn3_036).jpg, id=1297, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_15_(vierzehn3_036).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_15_(vierzehn3_036).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_15_(vierzehn3_036).jpg  used on input line 1033.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_16_(acht2_081).jpg, id=1294, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_16_(acht2_081).jpg, id=1298, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_16_(acht2_081).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_16_(acht2_081).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_16_(acht2_081).jpg  used on input line 1040.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-
-Underfull \hbox (badness 6559) in paragraph at lines 1042--1042
-[]\T1/fve/m/n/12 Abbildung 16: |Ausstellungsplakat -- Topography in Britain Today,
- []
-
-
-Underfull \hbox (badness 2617) in paragraph at lines 1042--1042
-\T1/fve/m/n/12 Meisterschule für Graphik und Buchgewerbe, 06.05.1964-06.06.1964
- []
-
-[100 <./Abbildungen//Abbildung_5_(acht2_189).jpg>] [101 <./Abbildungen//Abbildung_6_(acht2_208).jpg>] [102 <./Abbildungen//Abbildung_7_(fÃ¼nfzehn5_070).jpg>] [103 <./Abbildungen//Abbildung_8a_(acht1_079).jpg> <./Abbildungen//Abbildung_8b_(acht1_080).jpg> <./Abbildungen//Abbildung_8c_(acht1_081).jpg> <./Abbildungen//Abbildung_8d_(acht1_082).jpg>] [104 <./Abbildungen//Abbildung_9_(zehn4_209).JPG>] [105 <./Abbildungen//Abbildung_10_(acht3_299).jpg>] [106 <./Abbildungen//Abbildung_11_(sechzehn7_002).jpg>] [107 <./Abbildungen//Abbildung_12_(acht3_020).jpg>] [108 <./Abbildungen//Abbildung_13_(acht2_172).jpg>] [109 <./Abbildungen//Abbildung_14_(Sechzehn9_027).jpg>] [110 <./Abbildungen//Abbildung_15_(vierzehn3_036).jpg>] [111 <./Abbildungen//Abbildung_16_(acht2_081).jpg>]
-<./Abbildungen//Abbildung_17_(acht1_006).jpg, id=1357, 1862.96pt x 2794.44pt>
+[100 <./Abbildungen//Abbildung_5_(acht2_189).jpg>] [101 <./Abbildungen//Abbildung_6_(acht2_208).jpg>] [102 <./Abbildungen//Abbildung_7_(fÃ¼nfzehn5_070).jpg>] [103 <./Abbildungen//Abbildung_8a_(acht1_079).jpg> <./Abbildungen//Abbildung_8b_(acht1_080).jpg> <./Abbildungen//Abbildung_8c_(acht1_081).jpg> <./Abbildungen//Abbildung_8d_(acht1_082).jpg>] [104 <./Abbildungen//Abbildung_9_(zehn4_209).jpg>] [105 <./Abbildungen//Abbildung_10_(acht3_299).jpg>] [106 <./Abbildungen//Abbildung_11_(sechzehn7_002).jpg>] [107 <./Abbildungen//Abbildung_12_(acht3_020).jpg>] [108 <./Abbildungen//Abbildung_13_(acht2_172).jpg>] [109 <./Abbildungen//Abbildung_14_(Sechzehn9_027).jpg>] [110 <./Abbildungen//Abbildung_15_(vierzehn3_036).jpg>] [111 <./Abbildungen//Abbildung_16_(acht2_081).jpg>]
+<./Abbildungen//Abbildung_17_(acht1_006).jpg, id=1361, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_17_(acht1_006).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_17_(acht1_006).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_17_(acht1_006).jpg  used on input line 1050.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_17_(acht1_006)_with_detections.jpg, id=1358, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_17_(acht1_006)_with_detections.jpg, id=1362, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_17_(acht1_006)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_17_(acht1_006)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_17_(acht1_006)_with_detections.jpg  used on input line 1054.
@@ -2584,12 +1273,12 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1048--1056
  []
 
 [112 <./Abbildungen//Abbildung_17_(acht1_006).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_17_(acht1_006)_with_detections.jpg>]
-<./Abbildungen//Abbildung_18_(acht4_096).jpg, id=1364, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_18_(acht4_096).jpg, id=1368, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_18_(acht4_096).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_18_(acht4_096).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_18_(acht4_096).jpg  used on input line 1065.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_18_(acht4_096)_with_detections.jpg, id=1365, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_18_(acht4_096)_with_detections.jpg, id=1369, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_18_(acht4_096)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_18_(acht4_096)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_18_(acht4_096)_with_detections.jpg  used on input line 1069.
@@ -2600,28 +1289,18 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1063--1071
  []
 
 [113 <./Abbildungen//Abbildung_18_(acht4_096).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_18_(acht4_096)_with_detections.jpg>]
-<./Abbildungen//Abbildung_19_(acht1_131).jpg, id=1371, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_19_(acht1_131).jpg, id=1375, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_19_(acht1_131).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_19_(acht1_131).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_19_(acht1_131).jpg  used on input line 1077.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1079--1079
-[]\T1/fve/m/n/12 Abbildung 19: |Veranstaltungsplakat -- Festival für internationale
- []
-
-<./Abbildungen//Abbildung_20_(acht2_049).jpg, id=1372, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_20_(acht2_049).jpg, id=1376, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_20_(acht2_049).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_20_(acht2_049).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_20_(acht2_049).jpg  used on input line 1084.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-
-Underfull \hbox (badness 1077) in paragraph at lines 1086--1086
-[]\T1/fve/m/n/12 Abbildung 20: |Ausstellungsplakat -- Mythos Berlin, Anhalter Bahnhof,
- []
-
-[114 <./Abbildungen//Abbildung_19_(acht1_131).jpg>] [115 <./Abbildungen//Abbildung_20_(acht2_049).jpg>]
-<./Abbildungen//Abbildung_21_(acht2_112).jpg, id=1384, 1862.96pt x 2794.44pt>
+ [114 <./Abbildungen//Abbildung_19_(acht1_131).jpg>] [115 <./Abbildungen//Abbildung_20_(acht2_049).jpg>]
+<./Abbildungen//Abbildung_21_(acht2_112).jpg, id=1388, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_21_(acht2_112).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_21_(acht2_112).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_21_(acht2_112).jpg  used on input line 1092.
@@ -2631,28 +1310,28 @@ Package pdftex.def Info: ./Abbildungen//Abbildung_21_(acht2_112).jpg  used on in
 LaTeX Warning: Float too large for page by 18.23418pt on input line 1095.
 
 [116 <./Abbildungen//Abbildung_21_(acht2_112).jpg>]
-<./Abbildungen//Abbildung_22_(acht1_063).jpg, id=1390, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_22_(acht1_063).jpg, id=1394, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_22_(acht1_063).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_22_(acht1_063).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_22_(acht1_063).jpg  used on input line 1100.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_23_(acht2_105).jpg, id=1391, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_23_(acht2_105).jpg, id=1395, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_23_(acht2_105).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_23_(acht2_105).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_23_(acht2_105).jpg  used on input line 1109.
 (pdftex.def)             Requested size: 275.02585pt x 412.56497pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_23_(acht2_105)_with_detections.jpg, id=1392, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_23_(acht2_105)_with_detections.jpg, id=1396, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_23_(acht2_105)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_23_(acht2_105)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_23_(acht2_105)_with_detections.jpg  used on input line 1113.
 (pdftex.def)             Requested size: 275.0523pt x 412.56497pt.
  [117 <./Abbildungen//Abbildung_22_(acht1_063).jpg>] [118 <./Abbildungen//Abbildung_23_(acht2_105).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_23_(acht2_105)_with_detections.jpg>]
-<./Abbildungen//Abbildung_24_(acht1_109).jpg, id=1403, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_24_(acht1_109).jpg, id=1407, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_24_(acht1_109).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_24_(acht1_109).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_24_(acht1_109).jpg  used on input line 1124.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_24_(acht1_109)_with_detections.jpg, id=1404, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_24_(acht1_109)_with_detections.jpg, id=1408, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_24_(acht1_109)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_24_(acht1_109)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_24_(acht1_109)_with_detections.jpg  used on input line 1128.
@@ -2663,12 +1342,12 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1122--1130
  []
 
 [119 <./Abbildungen//Abbildung_24_(acht1_109).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_24_(acht1_109)_with_detections.jpg>]
-<./Abbildungen//Abbildung_25_(acht1_165).jpg, id=1410, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_25_(acht1_165).jpg, id=1414, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_25_(acht1_165).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_25_(acht1_165).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_25_(acht1_165).jpg  used on input line 1139.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_25_(acht1_165)_with_detections.jpg, id=1411, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_25_(acht1_165)_with_detections.jpg, id=1415, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_25_(acht1_165)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_25_(acht1_165)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_25_(acht1_165)_with_detections.jpg  used on input line 1143.
@@ -2679,7 +1358,7 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1137--1145
  []
 
 [120 <./Abbildungen//Abbildung_25_(acht1_165).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_25_(acht1_165)_with_detections.jpg>]
-<./Abbildungen//Abbildung_26_(acht3_313).jpg, id=1418, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_26_(acht3_313).jpg, id=1422, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_26_(acht3_313).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_26_(acht3_313).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_26_(acht3_313).jpg  used on input line 1152.
@@ -2689,12 +1368,12 @@ Package pdftex.def Info: ./Abbildungen//Abbildung_26_(acht3_313).jpg  used on in
 LaTeX Warning: Float too large for page by 18.23418pt on input line 1155.
 
 [121 <./Abbildungen//Abbildung_26_(acht3_313).jpg>]
-<./Abbildungen//Abbildung_27_(acht2_068).jpg, id=1424, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_27_(acht2_068).jpg, id=1428, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_27_(acht2_068).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_27_(acht2_068).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_27_(acht2_068).jpg  used on input line 1163.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_27_(acht2_068)_with_detections.jpg, id=1425, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_27_(acht2_068)_with_detections.jpg, id=1429, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_27_(acht2_068)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_27_(acht2_068)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_27_(acht2_068)_with_detections.jpg  used on input line 1167.
@@ -2705,36 +1384,28 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1161--1169
  []
 
 [122 <./Abbildungen//Abbildung_27_(acht2_068).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_27_(acht2_068)_with_detections.jpg>]
-<./Abbildungen//Abbildung_28_(fÃ¼nfzehn5_085).jpg, id=1431, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_28_(fÃ¼nfzehn5_085).jpg, id=1435, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_28_(fÃ¼nfzehn5_085).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_28_(fÃ¼nfzehn5_085).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_28_(fÃ¼nfzehn5_085).jpg  used on input line 1175.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-
-Underfull \hbox (badness 2735) in paragraph at lines 1177--1177
-[]\T1/fve/m/n/12 Abbildung 28: |Politisches Plakat -- !nein! zur Todesstrafe, amnesty
- []
-
-<./Abbildungen//Abbildung_29_(acht1_015).jpg, id=1432, 2794.44pt x 1862.96pt>
+<./Abbildungen//Abbildung_29_(acht1_015).jpg, id=1436, 2794.44pt x 1862.96pt>
 File: ./Abbildungen//Abbildung_29_(acht1_015).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_29_(acht1_015).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_29_(acht1_015).jpg  used on input line 1184.
-(pdftex.def)             Requested size: 618.82948pt x 412.56497pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_29_(acht1_015)_with_detections.jpg, id=1433, 3352.525pt x 2235.35126pt>
+(pdftex.def)             Requested size: 412.56497pt x 275.02585pt.
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_29_(acht1_015)_with_detections.jpg, id=1437, 3352.525pt x 2235.35126pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_29_(acht1_015)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_29_(acht1_015)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_29_(acht1_015)_with_detections.jpg  used on input line 1188.
-(pdftex.def)             Requested size: 618.72392pt x 412.56497pt.
-
-LaTeX Warning: Float too large for page by 560.54393pt on input line 1191.
-
-[123 <./Abbildungen//Abbildung_28_(fÃ¼nfzehn5_085).jpg>] [124 <./Abbildungen//Abbildung_29_(acht1_015).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_29_(acht1_015)_with_detections.jpg>]
-<./Abbildungen//Abbildung_30_(acht1_023).jpg, id=1444, 1862.96pt x 2794.44pt>
+(pdftex.def)             Requested size: 412.56497pt x 275.0523pt.
+ [123 <./Abbildungen//Abbildung_28_(fÃ¼nfzehn5_085).jpg>] [124 <./Abbildungen//Abbildung_29_(acht1_015).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_29_(acht1_015)_with_detections.jpg>]
+<./Abbildungen//Abbildung_30_(acht1_023).jpg, id=1448, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_30_(acht1_023).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_30_(acht1_023).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_30_(acht1_023).jpg  used on input line 1198.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_30_(acht1_023)_with_detections.jpg, id=1445, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_30_(acht1_023)_with_detections.jpg, id=1449, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_30_(acht1_023)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_30_(acht1_023)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_30_(acht1_023)_with_detections.jpg  used on input line 1202.
@@ -2745,12 +1416,12 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1196--1204
  []
 
 [125 <./Abbildungen//Abbildung_30_(acht1_023).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_30_(acht1_023)_with_detections.jpg>]
-<./Abbildungen//Abbildung_31_(acht1_016).jpg, id=1451, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_31_(acht1_016).jpg, id=1455, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_31_(acht1_016).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_31_(acht1_016).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_31_(acht1_016).jpg  used on input line 1213.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_31_(acht1_016)_with_detections.jpg, id=1452, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_31_(acht1_016)_with_detections.jpg, id=1456, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_31_(acht1_016)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_31_(acht1_016)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_31_(acht1_016)_with_detections.jpg  used on input line 1217.
@@ -2761,22 +1432,22 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1211--1219
  []
 
 [126 <./Abbildungen//Abbildung_31_(acht1_016).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_31_(acht1_016)_with_detections.jpg>]
-<./Abbildungen//Abbildung_32_(acht1_128).jpg, id=1459, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_32_(acht1_128).jpg, id=1463, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_32_(acht1_128).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_32_(acht1_128).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_32_(acht1_128).jpg  used on input line 1225.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_33_(acht1_021).jpg, id=1460, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_33_(acht1_021).jpg, id=1464, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_33_(acht1_021).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_33_(acht1_021).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_33_(acht1_021).jpg  used on input line 1232.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_34_(acht1_058).jpg, id=1461, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_34_(acht1_058).jpg, id=1465, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_34_(acht1_058).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_34_(acht1_058).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_34_(acht1_058).jpg  used on input line 1239.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_35_(acht1_043).jpg, id=1462, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_35_(acht1_043).jpg, id=1466, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_35_(acht1_043).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_35_(acht1_043).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_35_(acht1_043).jpg  used on input line 1246.
@@ -2787,18 +1458,13 @@ Package textcomp Info: Symbol \textasciiacute not provided by
 Package textcomp Info: Symbol \textasciiacute not provided by
 (textcomp)             font family fve in TS1 encoding.
 (textcomp)             Default family used instead on input line 1248.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1248--1248
-[]\T1/fve/m/n/12 Abbildung 35: |Ausstellungsplakat Danner Preis \TS1/cmr/m/n/12 ´\T1/fve/m/n/12 90, Bayerisches
- []
-
-[127 <./Abbildungen//Abbildung_32_(acht1_128).jpg>] [128 <./Abbildungen//Abbildung_33_(acht1_021).jpg>] [129 <./Abbildungen//Abbildung_34_(acht1_058).jpg>] [130 <./Abbildungen//Abbildung_35_(acht1_043).jpg>]
-<./Abbildungen//Abbildung_36_(acht1_029).jpg, id=1483, 1862.96pt x 2794.44pt>
+ [127 <./Abbildungen//Abbildung_32_(acht1_128).jpg>] [128 <./Abbildungen//Abbildung_33_(acht1_021).jpg>] [129 <./Abbildungen//Abbildung_34_(acht1_058).jpg>] [130 <./Abbildungen//Abbildung_35_(acht1_043).jpg>]
+<./Abbildungen//Abbildung_36_(acht1_029).jpg, id=1487, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_36_(acht1_029).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_36_(acht1_029).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_36_(acht1_029).jpg  used on input line 1256.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_36_(acht1_029)_with_detections.jpg, id=1484, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_36_(acht1_029)_with_detections.jpg, id=1488, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_36_(acht1_029)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_36_(acht1_029)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_36_(acht1_029)_with_detections.jpg  used on input line 1260.
@@ -2809,12 +1475,12 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1254--1262
  []
 
 [131 <./Abbildungen//Abbildung_36_(acht1_029).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_36_(acht1_029)_with_detections.jpg>]
-<./Abbildungen//Abbildung_37_(acht1_038).jpg, id=1490, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_37_(acht1_038).jpg, id=1494, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_37_(acht1_038).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_37_(acht1_038).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_37_(acht1_038).jpg  used on input line 1271.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_37_(acht1_038)_with_detections.jpg, id=1491, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_37_(acht1_038)_with_detections.jpg, id=1495, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_37_(acht1_038)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_37_(acht1_038)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_37_(acht1_038)_with_detections.jpg  used on input line 1275.
@@ -2825,12 +1491,12 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1269--1277
  []
 
 [132 <./Abbildungen//Abbildung_37_(acht1_038).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_37_(acht1_038)_with_detections.jpg>]
-<./Abbildungen//Abbildung_38_(acht1_108).jpg, id=1498, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_38_(acht1_108).jpg, id=1502, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_38_(acht1_108).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_38_(acht1_108).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_38_(acht1_108).jpg  used on input line 1286.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_38_(acht1_108)_with_detections.jpg, id=1499, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_38_(acht1_108)_with_detections.jpg, id=1503, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_38_(acht1_108)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_38_(acht1_108)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_38_(acht1_108)_with_detections.jpg  used on input line 1290.
@@ -2841,18 +1507,18 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1284--1292
  []
 
 [133 <./Abbildungen//Abbildung_38_(acht1_108).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_38_(acht1_108)_with_detections.jpg>]
-<./Abbildungen//Abbildung_39_(acht1_034).jpg, id=1505, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_39_(acht1_034).jpg, id=1509, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_39_(acht1_034).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_39_(acht1_034).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_39_(acht1_034).jpg  used on input line 1298.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
  [134 <./Abbildungen//Abbildung_39_(acht1_034).jpg>]
-<./Abbildungen//Abbildung_40_(acht2_147).jpg, id=1511, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_40_(acht2_147).jpg, id=1515, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_40_(acht2_147).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_40_(acht2_147).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_40_(acht2_147).jpg  used on input line 1308.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_40_(acht2_147)_with_detections.jpg, id=1512, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_40_(acht2_147)_with_detections.jpg, id=1516, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_40_(acht2_147)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_40_(acht2_147)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_40_(acht2_147)_with_detections.jpg  used on input line 1312.
@@ -2863,12 +1529,12 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1306--1314
  []
 
 [135 <./Abbildungen//Abbildung_40_(acht2_147).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_40_(acht2_147)_with_detections.jpg>]
-<./Abbildungen//Abbildung_41_(acht3_006).jpg, id=1518, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_41_(acht3_006).jpg, id=1522, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_41_(acht3_006).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_41_(acht3_006).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_41_(acht3_006).jpg  used on input line 1323.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_41_(acht3_006)_with_detections.jpg, id=1519, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_41_(acht3_006)_with_detections.jpg, id=1523, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_41_(acht3_006)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_41_(acht3_006)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_41_(acht3_006)_with_detections.jpg  used on input line 1327.
@@ -2879,23 +1545,23 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1321--1329
  []
 
 [136 <./Abbildungen//Abbildung_41_(acht3_006).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_41_(acht3_006)_with_detections.jpg>]
-<./Abbildungen//Abbildung_42_(acht3_433).jpg, id=1525, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_42_(acht3_433).jpg, id=1529, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_42_(acht3_433).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_42_(acht3_433).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_42_(acht3_433).jpg  used on input line 1335.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_43_(acht1_053).jpg, id=1526, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_43_(acht1_053).jpg, id=1530, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_43_(acht1_053).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_43_(acht1_053).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_43_(acht1_053).jpg  used on input line 1342.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
  [137 <./Abbildungen//Abbildung_42_(acht3_433).jpg>] [138 <./Abbildungen//Abbildung_43_(acht1_053).jpg>]
-<./Abbildungen//Abbildung_44_(acht1_124).jpg, id=1538, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_44_(acht1_124).jpg, id=1542, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_44_(acht1_124).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_44_(acht1_124).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_44_(acht1_124).jpg  used on input line 1352.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_44_(acht1_124)_with_detections.jpg, id=1539, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_44_(acht1_124)_with_detections.jpg, id=1543, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_44_(acht1_124)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_44_(acht1_124)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_44_(acht1_124)_with_detections.jpg  used on input line 1356.
@@ -2906,13 +1572,13 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1350--1358
  []
 
 [139 <./Abbildungen//Abbildung_44_(acht1_124).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_44_(acht1_124)_with_detections.jpg>]
-<./Abbildungen//Abbildung_45_(acht1_094).jpg, id=1545, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_45_(acht1_094).jpg, id=1549, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_45_(acht1_094).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_45_(acht1_094).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_45_(acht1_094).jpg  used on input line 1364.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
  [140 <./Abbildungen//Abbildung_45_(acht1_094).jpg>]
-<./Abbildungen//Abbildung_46_(acht2_003).jpg, id=1551, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_46_(acht2_003).jpg, id=1555, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_46_(acht2_003).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_46_(acht2_003).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_46_(acht2_003).jpg  used on input line 1372.
@@ -2922,28 +1588,28 @@ Package pdftex.def Info: ./Abbildungen//Abbildung_46_(acht2_003).jpg  used on in
 LaTeX Warning: Float too large for page by 18.23418pt on input line 1375.
 
 [141 <./Abbildungen//Abbildung_46_(acht2_003).jpg>]
-<./Abbildungen//Abbildung_47_(acht2_163).jpg, id=1557, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_47_(acht2_163).jpg, id=1561, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_47_(acht2_163).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_47_(acht2_163).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_47_(acht2_163).jpg  used on input line 1380.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_48_(acht2_148).jpg, id=1558, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_48_(acht2_148).jpg, id=1562, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_48_(acht2_148).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_48_(acht2_148).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_48_(acht2_148).jpg  used on input line 1387.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_49_(zehn1_085).jpg, id=1559, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_49_(zehn1_085).jpg, id=1563, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_49_(zehn1_085).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_49_(zehn1_085).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_49_(zehn1_085).jpg  used on input line 1394.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
  [142 <./Abbildungen//Abbildung_47_(acht2_163).jpg>] [143 <./Abbildungen//Abbildung_48_(acht2_148).jpg>] [144 <./Abbildungen//Abbildung_49_(zehn1_085).jpg>]
-<./Abbildungen//Abbildung_50_(acht1_033).jpg, id=1576, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_50_(acht1_033).jpg, id=1580, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_50_(acht1_033).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_50_(acht1_033).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_50_(acht1_033).jpg  used on input line 1404.
 (pdftex.def)             Requested size: 238.98111pt x 358.50473pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_50_(acht1_033)_with_detections.jpg, id=1577, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_50_(acht1_033)_with_detections.jpg, id=1581, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_50_(acht1_033)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_50_(acht1_033)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_50_(acht1_033)_with_detections.jpg  used on input line 1408.
@@ -2954,54 +1620,49 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1402--1410
  []
 
 [145 <./Abbildungen//Abbildung_50_(acht1_033).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_50_(acht1_033)_with_detections.jpg>]
-<./Abbildungen//Abbildung_51_(acht2_033).jpg, id=1583, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_51_(acht2_033).jpg, id=1587, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_51_(acht2_033).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_51_(acht2_033).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_51_(acht2_033).jpg  used on input line 1416.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
-<./Abbildungen//Abbildung_52_(achtzehn2_025).jpg, id=1584, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_52_(achtzehn2_025).jpg, id=1588, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_52_(achtzehn2_025).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_52_(achtzehn2_025).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_52_(achtzehn2_025).jpg  used on input line 1425.
 (pdftex.def)             Requested size: 275.02585pt x 412.56497pt.
-<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_52_(achtzehn2_025)_with_detections.jpg, id=1585, 2235.35126pt x 3352.525pt>
+<./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_52_(achtzehn2_025)_with_detections.jpg, id=1589, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_52_(achtzehn2_025)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_52_(achtzehn2_025)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_52_(achtzehn2_025)_with_detections.jpg  used on input line 1429.
 (pdftex.def)             Requested size: 275.0523pt x 412.56497pt.
-<./Abbildungen//Abbildung_53_(elf4_300).jpg, id=1586, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_53_(elf4_300).jpg, id=1590, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_53_(elf4_300).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_53_(elf4_300).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_53_(elf4_300).jpg  used on input line 1436.
 (pdftex.def)             Requested size: 412.56497pt x 618.82948pt.
  [146 <./Abbildungen//Abbildung_51_(acht2_033).jpg>] [147 <./Abbildungen//Abbildung_52_(achtzehn2_025).jpg> <./Abbildungen/detections/05,04,2021-15,39,10//Abbildung_52_(achtzehn2_025)_with_detections.jpg>] [148 <./Abbildungen//Abbildung_53_(elf4_300).jpg>]
-<./Abbildungen//Abbildung_54a_(acht2_074).jpg, id=1602, 1862.96pt x 2794.44pt>
+<./Abbildungen//Abbildung_54a_(acht2_074).jpg, id=1606, 1862.96pt x 2794.44pt>
 File: ./Abbildungen//Abbildung_54a_(acht2_074).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_54a_(acht2_074).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_54a_(acht2_074).jpg  used on input line 1445.
 (pdftex.def)             Requested size: 234.20547pt x 351.33856pt.
-<./Abbildungen//Abbildung_54b_(acht2_074).jpg, id=1603, 670.505pt x 1003.75pt>
+<./Abbildungen//Abbildung_54b_(acht2_074).jpg, id=1607, 670.505pt x 1003.75pt>
 File: ./Abbildungen//Abbildung_54b_(acht2_074).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_54b_(acht2_074).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_54b_(acht2_074).jpg  used on input line 1447.
 (pdftex.def)             Requested size: 234.70073pt x 351.33856pt.
-<./Abbildungen//Abbildung_54c_(acht2_074).jpg, id=1604, 670.505pt x 1003.75pt>
+<./Abbildungen//Abbildung_54c_(acht2_074).jpg, id=1608, 670.505pt x 1003.75pt>
 File: ./Abbildungen//Abbildung_54c_(acht2_074).jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_54c_(acht2_074).jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_54c_(acht2_074).jpg  used on input line 1449.
 (pdftex.def)             Requested size: 234.70073pt x 351.33856pt.
  [149 <./Abbildungen//Abbildung_54a_(acht2_074).jpg> <./Abbildungen//Abbildung_54b_(acht2_074).jpg> <./Abbildungen//Abbildung_54c_(acht2_074).jpg>]
-<./Abbildungen//Labelme_Screenshot.png, id=1610, 1003.75pt x 1098.1025pt>
+<./Abbildungen//Labelme_Screenshot.png, id=1614, 1003.75pt x 1098.1025pt>
 File: ./Abbildungen//Labelme_Screenshot.png Graphic file (type png)
 <use ./Abbildungen//Labelme_Screenshot.png>
 Package pdftex.def Info: ./Abbildungen//Labelme_Screenshot.png  used on input line 1456.
 (pdftex.def)             Requested size: 412.56497pt x 451.34756pt.
-
-Underfull \hbox (badness 1292) in paragraph at lines 1458--1458
-[]\T1/fve/m/n/12 Abbildung 55: |Screenshot eines annotierten Plakats in der Software
- []
-
-[150
+ [150
 
 
 
@@ -3041,18 +1702,18 @@ Underfull \hbox (badness 1292) in paragraph at lines 1458--1458
 
 
  <./Abbildungen//Labelme_Screenshot.png>]
-<./Abbildungen/graphs//Ellbow_Method.png, id=1617, 391.864pt x 285.868pt>
+<./Abbildungen/graphs//Ellbow_Method.png, id=1621, 391.864pt x 285.868pt>
 File: ./Abbildungen/graphs//Ellbow_Method.png Graphic file (type png)
 <use ./Abbildungen/graphs//Ellbow_Method.png>
 Package pdftex.def Info: ./Abbildungen/graphs//Ellbow_Method.png  used on input line 1463.
 (pdftex.def)             Requested size: 412.56497pt x 300.98158pt.
  [151 <./Abbildungen/graphs//Ellbow_Method.png>]
-<./Abbildungen/graphs//4_clusters_untrained.jpg, id=1625, 722.7pt x 722.7pt>
+<./Abbildungen/graphs//4_clusters_untrained.jpg, id=1629, 722.7pt x 722.7pt>
 File: ./Abbildungen/graphs//4_clusters_untrained.jpg Graphic file (type jpg)
 <use ./Abbildungen/graphs//4_clusters_untrained.jpg>
 Package pdftex.def Info: ./Abbildungen/graphs//4_clusters_untrained.jpg  used on input line 1473.
 (pdftex.def)             Requested size: 358.50401pt x 358.50473pt.
-<./Abbildungen/graphs//8_clusters_untrained.jpg, id=1626, 722.7pt x 722.7pt>
+<./Abbildungen/graphs//8_clusters_untrained.jpg, id=1630, 722.7pt x 722.7pt>
 File: ./Abbildungen/graphs//8_clusters_untrained.jpg Graphic file (type jpg)
 <use ./Abbildungen/graphs//8_clusters_untrained.jpg>
 Package pdftex.def Info: ./Abbildungen/graphs//8_clusters_untrained.jpg  used on input line 1477.
@@ -3063,7 +1724,7 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1471--1479
  []
 
 [152 <./Abbildungen/graphs//4_clusters_untrained.jpg> <./Abbildungen/graphs//8_clusters_untrained.jpg>]
-<./Abbildungen/graphs//image_cluster_untrained.jpg, id=1632, 7227.0pt x 7227.0pt>
+<./Abbildungen/graphs//image_cluster_untrained.jpg, id=1636, 7227.0pt x 7227.0pt>
 File: ./Abbildungen/graphs//image_cluster_untrained.jpg Graphic file (type jpg)
 <use ./Abbildungen/graphs//image_cluster_untrained.jpg>
 Package pdftex.def Info: ./Abbildungen/graphs//image_cluster_untrained.jpg  used on input line 1485.
@@ -3072,29 +1733,24 @@ Package pdftex.def Info: ./Abbildungen/graphs//image_cluster_untrained.jpg  used
 
 
  <./Abbildungen/graphs//image_cluster_untrained.jpg>]
-<./Abbildungen/graphs//first_training.png, id=1638, 674.52pt x 662.475pt>
+<./Abbildungen/graphs//first_training.png, id=1642, 674.52pt x 662.475pt>
 File: ./Abbildungen/graphs//first_training.png Graphic file (type png)
 <use ./Abbildungen/graphs//first_training.png>
 Package pdftex.def Info: ./Abbildungen/graphs//first_training.png  used on input line 1492.
 (pdftex.def)             Requested size: 412.56497pt x 405.20088pt.
  [154 <./Abbildungen/graphs//first_training.png>]
-<./Abbildungen/graphs//second_training.png, id=1645, 647.41875pt x 662.475pt>
+<./Abbildungen/graphs//second_training.png, id=1649, 647.41875pt x 662.475pt>
 File: ./Abbildungen/graphs//second_training.png Graphic file (type png)
 <use ./Abbildungen/graphs//second_training.png>
 Package pdftex.def Info: ./Abbildungen/graphs//second_training.png  used on input line 1499.
 (pdftex.def)             Requested size: 412.56497pt x 422.16302pt.
-
-Underfull \hbox (badness 1270) in paragraph at lines 1501--1501
-[]\T1/fve/m/n/12 Abbildung 60: |Entwicklung von Genauigkeit und \T1/fve/m/sl/12 Loss \T1/fve/m/n/12 während dem
- []
-
-[155 <./Abbildungen/graphs//second_training.png>]
-<./Abbildungen/graphs//4_clusters_trained.jpg, id=1652, 722.7pt x 722.7pt>
+ [155 <./Abbildungen/graphs//second_training.png>]
+<./Abbildungen/graphs//4_clusters_trained.jpg, id=1656, 722.7pt x 722.7pt>
 File: ./Abbildungen/graphs//4_clusters_trained.jpg Graphic file (type jpg)
 <use ./Abbildungen/graphs//4_clusters_trained.jpg>
 Package pdftex.def Info: ./Abbildungen/graphs//4_clusters_trained.jpg  used on input line 1509.
 (pdftex.def)             Requested size: 358.50401pt x 358.50473pt.
-<./Abbildungen/graphs//8_clusters_trained.jpg, id=1653, 722.7pt x 722.7pt>
+<./Abbildungen/graphs//8_clusters_trained.jpg, id=1657, 722.7pt x 722.7pt>
 File: ./Abbildungen/graphs//8_clusters_trained.jpg Graphic file (type jpg)
 <use ./Abbildungen/graphs//8_clusters_trained.jpg>
 Package pdftex.def Info: ./Abbildungen/graphs//8_clusters_trained.jpg  used on input line 1513.
@@ -3105,7 +1761,7 @@ Overfull \hbox (2.61359pt too wide) in paragraph at lines 1507--1515
  []
 
 [156 <./Abbildungen/graphs//4_clusters_trained.jpg> <./Abbildungen/graphs//8_clusters_trained.jpg>]
-<./Abbildungen/graphs//image_cluster_trained.jpg, id=1660, 7227.0pt x 7227.0pt>
+<./Abbildungen/graphs//image_cluster_trained.jpg, id=1664, 7227.0pt x 7227.0pt>
 File: ./Abbildungen/graphs//image_cluster_trained.jpg Graphic file (type jpg)
 <use ./Abbildungen/graphs//image_cluster_trained.jpg>
 Package pdftex.def Info: ./Abbildungen/graphs//image_cluster_trained.jpg  used on input line 1521.
@@ -3114,183 +1770,178 @@ Package pdftex.def Info: ./Abbildungen/graphs//image_cluster_trained.jpg  used o
 
 
  <./Abbildungen/graphs//image_cluster_trained.jpg>]
-<./Abbildungen/graphs//Analyse_des_gesamten_Datensatzes.jpg, id=1666, 1445.4pt x 1445.4pt>
+<./Abbildungen/graphs//Analyse_des_gesamten_Datensatzes.jpg, id=1670, 1445.4pt x 1445.4pt>
 File: ./Abbildungen/graphs//Analyse_des_gesamten_Datensatzes.jpg Graphic file (type jpg)
 <use ./Abbildungen/graphs//Analyse_des_gesamten_Datensatzes.jpg>
 Package pdftex.def Info: ./Abbildungen/graphs//Analyse_des_gesamten_Datensatzes.jpg  used on input line 1528.
 (pdftex.def)             Requested size: 412.56497pt x 412.56082pt.
  [158 <./Abbildungen/graphs//Analyse_des_gesamten_Datensatzes.jpg>]
-<./Abbildungen//Abbildung_64a_(acht1_036)_with_detections.jpg, id=1672, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_64a_(acht1_036)_with_detections.jpg, id=1676, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_64a_(acht1_036)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_64a_(acht1_036)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_64a_(acht1_036)_with_detections.jpg  used on input line 1537.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_64b_(acht1_036)_with_detections.jpg, id=1673, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_64b_(acht1_036)_with_detections.jpg, id=1677, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_64b_(acht1_036)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_64b_(acht1_036)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_64b_(acht1_036)_with_detections.jpg  used on input line 1539.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_64c_(acht1_036)_with_detections.jpg, id=1674, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_64c_(acht1_036)_with_detections.jpg, id=1678, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_64c_(acht1_036)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_64c_(acht1_036)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_64c_(acht1_036)_with_detections.jpg  used on input line 1541.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
  [159 <./Abbildungen//Abbildung_64a_(acht1_036)_with_detections.jpg> <./Abbildungen//Abbildung_64b_(acht1_036)_with_detections.jpg> <./Abbildungen//Abbildung_64c_(acht1_036)_with_detections.jpg>]
-<./Abbildungen//Abbildung_65a_(acht1_067)_with_detections.jpg, id=1680, 3352.525pt x 2235.35126pt>
+<./Abbildungen//Abbildung_65a_(acht1_067)_with_detections.jpg, id=1684, 3352.525pt x 2235.35126pt>
 File: ./Abbildungen//Abbildung_65a_(acht1_067)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_65a_(acht1_067)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_65a_(acht1_067)_with_detections.jpg  used on input line 1550.
 (pdftex.def)             Requested size: 351.33856pt x 234.25835pt.
-<./Abbildungen//Abbildung_65b_(acht1_067)_with_detections.jpg, id=1681, 3352.525pt x 2235.35126pt>
+<./Abbildungen//Abbildung_65b_(acht1_067)_with_detections.jpg, id=1685, 3352.525pt x 2235.35126pt>
 File: ./Abbildungen//Abbildung_65b_(acht1_067)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_65b_(acht1_067)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_65b_(acht1_067)_with_detections.jpg  used on input line 1552.
 (pdftex.def)             Requested size: 351.33856pt x 234.25835pt.
-<./Abbildungen//Abbildung_65c_(acht1_067)_with_detections.jpg, id=1682, 3352.525pt x 2235.35126pt>
+<./Abbildungen//Abbildung_65c_(acht1_067)_with_detections.jpg, id=1686, 3352.525pt x 2235.35126pt>
 File: ./Abbildungen//Abbildung_65c_(acht1_067)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_65c_(acht1_067)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_65c_(acht1_067)_with_detections.jpg  used on input line 1554.
 (pdftex.def)             Requested size: 351.33856pt x 234.25835pt.
  [160 <./Abbildungen//Abbildung_65a_(acht1_067)_with_detections.jpg> <./Abbildungen//Abbildung_65b_(acht1_067)_with_detections.jpg> <./Abbildungen//Abbildung_65c_(acht1_067)_with_detections.jpg>]
-<./Abbildungen//Abbildung_66a_(acht1_100)_with_detections.jpg, id=1688, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_66a_(acht1_100)_with_detections.jpg, id=1692, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_66a_(acht1_100)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_66a_(acht1_100)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_66a_(acht1_100)_with_detections.jpg  used on input line 1563.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_66b_(acht1_100)_with_detections.jpg, id=1689, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_66b_(acht1_100)_with_detections.jpg, id=1693, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_66b_(acht1_100)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_66b_(acht1_100)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_66b_(acht1_100)_with_detections.jpg  used on input line 1565.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_66c_(acht1_100)_with_detections.jpg, id=1690, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_66c_(acht1_100)_with_detections.jpg, id=1694, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_66c_(acht1_100)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_66c_(acht1_100)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_66c_(acht1_100)_with_detections.jpg  used on input line 1567.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
  [161 <./Abbildungen//Abbildung_66a_(acht1_100)_with_detections.jpg> <./Abbildungen//Abbildung_66b_(acht1_100)_with_detections.jpg> <./Abbildungen//Abbildung_66c_(acht1_100)_with_detections.jpg>]
-<./Abbildungen//Abbildung_67a_(acht1_158)_with_detections.jpg, id=1696, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_67a_(acht1_158)_with_detections.jpg, id=1700, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_67a_(acht1_158)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_67a_(acht1_158)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_67a_(acht1_158)_with_detections.jpg  used on input line 1576.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_67b_(acht1_158)_with_detections.jpg, id=1697, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_67b_(acht1_158)_with_detections.jpg, id=1701, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_67b_(acht1_158)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_67b_(acht1_158)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_67b_(acht1_158)_with_detections.jpg  used on input line 1578.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_67c_(acht1_158)_with_detections.jpg, id=1698, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_67c_(acht1_158)_with_detections.jpg, id=1702, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_67c_(acht1_158)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_67c_(acht1_158)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_67c_(acht1_158)_with_detections.jpg  used on input line 1580.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
  [162 <./Abbildungen//Abbildung_67a_(acht1_158)_with_detections.jpg> <./Abbildungen//Abbildung_67b_(acht1_158)_with_detections.jpg> <./Abbildungen//Abbildung_67c_(acht1_158)_with_detections.jpg>]
-<./Abbildungen//Abbildung_68a_(acht2_024)_with_detections.jpg, id=1705, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_68a_(acht2_024)_with_detections.jpg, id=1709, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_68a_(acht2_024)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_68a_(acht2_024)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_68a_(acht2_024)_with_detections.jpg  used on input line 1589.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_68b_(acht2_024)_with_detections.jpg, id=1706, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_68b_(acht2_024)_with_detections.jpg, id=1710, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_68b_(acht2_024)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_68b_(acht2_024)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_68b_(acht2_024)_with_detections.jpg  used on input line 1591.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_68c_(acht2_024)_with_detections.jpg, id=1707, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_68c_(acht2_024)_with_detections.jpg, id=1711, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_68c_(acht2_024)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_68c_(acht2_024)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_68c_(acht2_024)_with_detections.jpg  used on input line 1593.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
  [163 <./Abbildungen//Abbildung_68a_(acht2_024)_with_detections.jpg> <./Abbildungen//Abbildung_68b_(acht2_024)_with_detections.jpg> <./Abbildungen//Abbildung_68c_(acht2_024)_with_detections.jpg>]
-<./Abbildungen//Abbildung_69a_(acht2_085)_with_detections.jpg, id=1713, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_69a_(acht2_085)_with_detections.jpg, id=1717, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_69a_(acht2_085)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_69a_(acht2_085)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_69a_(acht2_085)_with_detections.jpg  used on input line 1602.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_69b_(acht2_085)_with_detections.jpg, id=1714, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_69b_(acht2_085)_with_detections.jpg, id=1718, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_69b_(acht2_085)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_69b_(acht2_085)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_69b_(acht2_085)_with_detections.jpg  used on input line 1604.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_69c_(acht2_085)_with_detections.jpg, id=1715, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_69c_(acht2_085)_with_detections.jpg, id=1719, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_69c_(acht2_085)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_69c_(acht2_085)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_69c_(acht2_085)_with_detections.jpg  used on input line 1606.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
  [164 <./Abbildungen//Abbildung_69a_(acht2_085)_with_detections.jpg> <./Abbildungen//Abbildung_69b_(acht2_085)_with_detections.jpg> <./Abbildungen//Abbildung_69c_(acht2_085)_with_detections.jpg>]
-<./Abbildungen//Abbildung_70a_(acht2_140)_with_detections.jpg, id=1721, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_70a_(acht2_140)_with_detections.jpg, id=1725, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_70a_(acht2_140)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_70a_(acht2_140)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_70a_(acht2_140)_with_detections.jpg  used on input line 1615.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_70b_(acht2_140)_with_detections.jpg, id=1722, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_70b_(acht2_140)_with_detections.jpg, id=1726, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_70b_(acht2_140)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_70b_(acht2_140)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_70b_(acht2_140)_with_detections.jpg  used on input line 1617.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_70c_(acht2_140)_with_detections.jpg, id=1723, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_70c_(acht2_140)_with_detections.jpg, id=1727, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_70c_(acht2_140)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_70c_(acht2_140)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_70c_(acht2_140)_with_detections.jpg  used on input line 1619.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
  [165 <./Abbildungen//Abbildung_70a_(acht2_140)_with_detections.jpg> <./Abbildungen//Abbildung_70b_(acht2_140)_with_detections.jpg> <./Abbildungen//Abbildung_70c_(acht2_140)_with_detections.jpg>]
-<./Abbildungen//Abbildung_71a_(acht2_153)_with_detections.jpg, id=1729, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_71a_(acht2_153)_with_detections.jpg, id=1733, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_71a_(acht2_153)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_71a_(acht2_153)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_71a_(acht2_153)_with_detections.jpg  used on input line 1628.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_71b_(acht2_153)_with_detections.jpg, id=1730, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_71b_(acht2_153)_with_detections.jpg, id=1734, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_71b_(acht2_153)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_71b_(acht2_153)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_71b_(acht2_153)_with_detections.jpg  used on input line 1630.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_71c_(acht2_153)_with_detections.jpg, id=1731, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_71c_(acht2_153)_with_detections.jpg, id=1735, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_71c_(acht2_153)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_71c_(acht2_153)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_71c_(acht2_153)_with_detections.jpg  used on input line 1632.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
  [166 <./Abbildungen//Abbildung_71a_(acht2_153)_with_detections.jpg> <./Abbildungen//Abbildung_71b_(acht2_153)_with_detections.jpg> <./Abbildungen//Abbildung_71c_(acht2_153)_with_detections.jpg>]
-<./Abbildungen//Abbildung_72a_(acht2_242)_with_detections.jpg, id=1737, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_72a_(acht2_242)_with_detections.jpg, id=1741, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_72a_(acht2_242)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_72a_(acht2_242)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_72a_(acht2_242)_with_detections.jpg  used on input line 1641.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_72b_(acht2_242)_with_detections.jpg, id=1738, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_72b_(acht2_242)_with_detections.jpg, id=1742, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_72b_(acht2_242)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_72b_(acht2_242)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_72b_(acht2_242)_with_detections.jpg  used on input line 1643.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_72c_(acht2_242)_with_detections.jpg, id=1739, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_72c_(acht2_242)_with_detections.jpg, id=1743, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_72c_(acht2_242)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_72c_(acht2_242)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_72c_(acht2_242)_with_detections.jpg  used on input line 1645.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
  [167 <./Abbildungen//Abbildung_72a_(acht2_242)_with_detections.jpg> <./Abbildungen//Abbildung_72b_(acht2_242)_with_detections.jpg> <./Abbildungen//Abbildung_72c_(acht2_242)_with_detections.jpg>]
-<./Abbildungen//Abbildung_73a_(acht5_030)_with_detections.jpg, id=1745, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_73a_(acht5_030)_with_detections.jpg, id=1749, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_73a_(acht5_030)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_73a_(acht5_030)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_73a_(acht5_030)_with_detections.jpg  used on input line 1654.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_73b_(acht5_030)_with_detections.jpg, id=1746, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_73b_(acht5_030)_with_detections.jpg, id=1750, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_73b_(acht5_030)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_73b_(acht5_030)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_73b_(acht5_030)_with_detections.jpg  used on input line 1656.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
-<./Abbildungen//Abbildung_73c_(acht5_030)_with_detections.jpg, id=1747, 2235.35126pt x 3352.525pt>
+<./Abbildungen//Abbildung_73c_(acht5_030)_with_detections.jpg, id=1751, 2235.35126pt x 3352.525pt>
 File: ./Abbildungen//Abbildung_73c_(acht5_030)_with_detections.jpg Graphic file (type jpg)
 <use ./Abbildungen//Abbildung_73c_(acht5_030)_with_detections.jpg>
 Package pdftex.def Info: ./Abbildungen//Abbildung_73c_(acht5_030)_with_detections.jpg  used on input line 1658.
 (pdftex.def)             Requested size: 234.25835pt x 351.33856pt.
  [168 <./Abbildungen//Abbildung_73a_(acht5_030)_with_detections.jpg> <./Abbildungen//Abbildung_73b_(acht5_030)_with_detections.jpg> <./Abbildungen//Abbildung_73c_(acht5_030)_with_detections.jpg>]
-<./Abbildungen/graphs//Analyse_untrainiert.jpg, id=1754, 1445.4pt x 1445.4pt>
+<./Abbildungen/graphs//Analyse_untrainiert.jpg, id=1758, 1445.4pt x 1445.4pt>
 File: ./Abbildungen/graphs//Analyse_untrainiert.jpg Graphic file (type jpg)
 <use ./Abbildungen/graphs//Analyse_untrainiert.jpg>
 Package pdftex.def Info: ./Abbildungen/graphs//Analyse_untrainiert.jpg  used on input line 1665.
 (pdftex.def)             Requested size: 412.56497pt x 412.56082pt.
-
-Underfull \hbox (badness 2856) in paragraph at lines 1667--1667
-[]\T1/fve/m/n/12 Abbildung 74: |Übersicht der Anzahl der im \T1/fve/m/sl/12 tensorflow \T1/fve/m/n/12 Datensastz
- []
-
-[169
+ [169
 
 
 
@@ -3312,67 +1963,47 @@ Underfull \hbox (badness 2856) in paragraph at lines 1667--1667
 
 
  <./Abbildungen/graphs//Analyse_untrainiert.jpg>]
-<./Abbildungen/graphs//Analyse_trainiert_(PersonData200).jpg, id=1760, 1445.4pt x 1445.4pt>
+<./Abbildungen/graphs//Analyse_trainiert_(PersonData200).jpg, id=1764, 1445.4pt x 1445.4pt>
 File: ./Abbildungen/graphs//Analyse_trainiert_(PersonData200).jpg Graphic file (type jpg)
 <use ./Abbildungen/graphs//Analyse_trainiert_(PersonData200).jpg>
 Package pdftex.def Info: ./Abbildungen/graphs//Analyse_trainiert_(PersonData200).jpg  used on input line 1672.
 (pdftex.def)             Requested size: 412.56497pt x 412.56082pt.
-
-Underfull \hbox (badness 2856) in paragraph at lines 1674--1674
-[]\T1/fve/m/n/12 Abbildung 75: |Übersicht der Anzahl der im \T1/fve/m/sl/12 tensorflow \T1/fve/m/n/12 Datensastz
- []
-
-[170 <./Abbildungen/graphs//Analyse_trainiert_(PersonData200).jpg>]
-<./Abbildungen/graphs//Analyse_trainiert_(PersonData200Modified).jpg, id=1766, 1445.4pt x 1445.4pt>
+ [170 <./Abbildungen/graphs//Analyse_trainiert_(PersonData200).jpg>]
+<./Abbildungen/graphs//Analyse_trainiert_(PersonData200Modified).jpg, id=1770, 1445.4pt x 1445.4pt>
 File: ./Abbildungen/graphs//Analyse_trainiert_(PersonData200Modified).jpg Graphic file (type jpg)
 <use ./Abbildungen/graphs//Analyse_trainiert_(PersonData200Modified).jpg>
 Package pdftex.def Info: ./Abbildungen/graphs//Analyse_trainiert_(PersonData200Modified).jpg  used on input line 1679.
 (pdftex.def)             Requested size: 412.56497pt x 412.56082pt.
-
-Underfull \hbox (badness 2856) in paragraph at lines 1681--1681
-[]\T1/fve/m/n/12 Abbildung 76: |Übersicht der Anzahl der im \T1/fve/m/sl/12 tensorflow \T1/fve/m/n/12 Datensastz
- []
-
-[171 <./Abbildungen/graphs//Analyse_trainiert_(PersonData200Modified).jpg>]
-<./Abbildungen//Abbildung_77_(eins1_(158)).JPG, id=1772, 541.81851pt x 812.72777pt>
-File: ./Abbildungen//Abbildung_77_(eins1_(158)).JPG Graphic file (type jpg)
-<use ./Abbildungen//Abbildung_77_(eins1_(158)).JPG>
-Package pdftex.def Info: ./Abbildungen//Abbildung_77_(eins1_(158)).JPG  used on input line 1686.
+ [171 <./Abbildungen/graphs//Analyse_trainiert_(PersonData200Modified).jpg>]
+<./Abbildungen//Abbildung_77_(eins1_(158)).jpg, id=1776, 541.81851pt x 812.72777pt>
+File: ./Abbildungen//Abbildung_77_(eins1_(158)).jpg Graphic file (type jpg)
+<use ./Abbildungen//Abbildung_77_(eins1_(158)).jpg>
+Package pdftex.def Info: ./Abbildungen//Abbildung_77_(eins1_(158)).jpg  used on input line 1686.
 (pdftex.def)             Requested size: 412.56497pt x 618.84525pt.
 
-Underfull \hbox (badness 2478) in paragraph at lines 1688--1688
-[]\T1/fve/m/n/12 Abbildung 77: |Ausstellungsplakat -- Fragen wagen. Zusammenstösse
+Underfull \hbox (badness 4595) in paragraph at lines 1688--1688
+[]\T1/fve/m/n/12 Abbildung 77: |Aus-stel-lungs-pla-kat -- Fra-gen wa-gen. Zu-sam-men-stös-
  []
 
 
-Underfull \hbox (badness 7522) in paragraph at lines 1688--1688
-\T1/fve/m/n/12 mit der Sammlung Marta, Marta Herford, 01.06.2014-10.08.2014
+Underfull \hbox (badness 1668) in paragraph at lines 1688--1688
+\T1/fve/m/n/12 se mit der Samm-lung Mar-ta, Mar-ta Her-ford, 01.06.2014-10.08.2014
  []
 
-[172 <./Abbildungen//Abbildung_77_(eins1_(158)).JPG>]
-<./Abbildungen//Abbildung_78_(eins1_(156)).JPG, id=1778, 541.81851pt x 812.72777pt>
-File: ./Abbildungen//Abbildung_78_(eins1_(156)).JPG Graphic file (type jpg)
-<use ./Abbildungen//Abbildung_78_(eins1_(156)).JPG>
-Package pdftex.def Info: ./Abbildungen//Abbildung_78_(eins1_(156)).JPG  used on input line 1693.
+[172 <./Abbildungen//Abbildung_77_(eins1_(158)).jpg>]
+<./Abbildungen//Abbildung_78_(eins1_(156)).jpg, id=1782, 541.81851pt x 812.72777pt>
+File: ./Abbildungen//Abbildung_78_(eins1_(156)).jpg Graphic file (type jpg)
+<use ./Abbildungen//Abbildung_78_(eins1_(156)).jpg>
+Package pdftex.def Info: ./Abbildungen//Abbildung_78_(eins1_(156)).jpg  used on input line 1693.
 (pdftex.def)             Requested size: 412.56497pt x 618.84525pt.
- [173 <./Abbildungen//Abbildung_78_(eins1_(156)).JPG>]
-Underfull \hbox (badness 3068) in paragraph at lines 1713--1714
-[]\T1/fve/m/n/12 Gibt es Pläne, die Plakatsammlung in eine gewisse Richtung
+ [173 <./Abbildungen//Abbildung_78_(eins1_(156)).jpg>] [174] [175]
+Underfull \hbox (badness 10000) in paragraph at lines 1743--1744
+\T1/fve/m/n/12 9780199688975.001.0001/acref-9780199688975-e-
  []
 
 
-Underfull \hbox (badness 6526) in paragraph at lines 1714--1715
-[]\T1/fve/m/n/12 Wird die Digitalisierung Hausintern bewältigt oder bestehen
- []
-
-[174] [175]
-Overfull \hbox (91.60635pt too wide) in paragraph at lines 1743--1744
-[]\T1/fve/m/n/12 https://www.oxfordreference.com/view/10.1093/acref/9780199688975.001.0001/acref-
- []
-
-
-Overfull \hbox (91.60635pt too wide) in paragraph at lines 1744--1745
-[]\T1/fve/m/n/12 https://www.oxfordreference.com/view/10.1093/acref/9780199688975.001.0001/acref-
+Underfull \hbox (badness 10000) in paragraph at lines 1744--1745
+\T1/fve/m/n/12 9780199688975.001.0001/acref-9780199688975-e-
  []
 
 
@@ -3381,11 +2012,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 1749--1750
  []
 
 [176]
-Underfull \hbox (badness 3690) in paragraph at lines 1754--1755
-[]\T1/fve/m/n/12 Dlology, How to create custom COCO data set for instance
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1754--1755
 []\T1/fve/m/n/12 https://www.dlology.com/blog/how-to-create-custom-coco-data-set-for-
  []
@@ -3400,12 +2026,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1765--1766
 []\T1/fve/m/n/12 https://franky07724-57962.medium.com/using-keras-pre-trained-
  []
 
-
+[178]
 Overfull \hbox (0.70354pt too wide) in paragraph at lines 1766--1767
 []\T1/fve/m/n/12 https://www.museum-folkwang.de/de/ueber-uns/sammlung/deutsches-
  []
 
-[178]
+
 Overfull \hbox (27.26047pt too wide) in paragraph at lines 1767--1768
 []\T1/fve/m/n/12 http://sammlung-online.museum-folkwang.de/eMP/eMuseumPlus?service= 
  []
@@ -3416,8 +2042,8 @@ Overfull \hbox (33.85939pt too wide) in paragraph at lines 1767--1768
  []
 
 
-Overfull \hbox (77.06972pt too wide) in paragraph at lines 1772--1773
-[]\T1/fve/m/n/12 https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_digits.html#sphx-
+Overfull \hbox (14.0738pt too wide) in paragraph at lines 1772--1773
+[]\T1/fve/m/n/12 https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_digits. 
  []
 
 [179]
@@ -3436,97 +2062,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 1776--1777
  []
 
 
-Underfull \hbox (badness 1642) in paragraph at lines 1778--1779
-[]\T1/fve/m/n/12 Towards data science, How to cluster images based on visual
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1778--1779
 []\T1/fve/m/n/12 https://towardsdatascience.com/how-to-cluster-images-based-on-
  []
 
 [180]
 Underfull \hbox (badness 2181) in paragraph at lines 1787--1788
-[]\T1/fve/m/n/12 Bernhard, Mathias: Gugelmann Galaxy. An Unexpected Journey
+[]\T1/fve/m/n/12 Bernhard, Ma-thi-as: Gu-gel-mann Ga-la-xy. An Un-ex-pec-ted Jour-ney
  []
 
-[181]
-Underfull \hbox (badness 1490) in paragraph at lines 1797--1798
-\T1/fve/m/n/12 Deep learning-enabled medical computer vision, Nature Partner
- []
-
-
-Underfull \hbox (badness 2547) in paragraph at lines 1802--1803
-[]\T1/fve/m/n/12 Hirt-Tenger, Hans: Entwicklung und Techniken der Lithografie,
- []
-
-[182]
-Underfull \hbox (badness 3333) in paragraph at lines 1803--1804
-\T1/fve/m/n/12 Kristian; Melvad, Claus; Raitoharju, Jenni: Deep learning and
- []
-
-
-Underfull \hbox (badness 1968) in paragraph at lines 1803--1804
-\T1/fve/m/n/12 computer vision will transform entomology, Proceedings of the
- []
-
-
+[181] [182]
 Underfull \hbox (badness 10000) in paragraph at lines 1805--1806
-[]\T1/fve/m/n/12 Krause, Jürgen: Einleitung. Zwischen Oberlehrer-Traktaten,
+[]\T1/fve/m/n/12 Krause, Jür-gen: Ein-lei-tung. Zwi-schen Oberlehrer-Traktaten,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1805--1806
-\T1/fve/m/n/12 Granatsplitter-Stil` und Horror-Monstern -- Stichworte zum
+Underfull \hbox (badness 1038) in paragraph at lines 1805--1806
+\T1/fve/m/n/12 Granatsplitter-Stil` und Horror-Monstern -- Stich-wor-te zum Bild-
  []
 
-
-Underfull \hbox (badness 2213) in paragraph at lines 1805--1806
-\T1/fve/m/n/12 in: Propaganda trifft Grabenkrieg. Plakatkunst um 1915, hrsg.
- []
-
-
-Underfull \hbox (badness 4913) in paragraph at lines 1805--1806
-\T1/fve/m/n/12 Landschaftsverband Westfalen-Lippe, Ausst.-Kat. Münster, LWL-
- []
-
-
-Underfull \hbox (badness 1478) in paragraph at lines 1808--1809
-[]\T1/fve/m/n/12 Lückerath, Martina: Galerie der Straÿe. Zur Entwicklung der
- []
-
-
-Underfull \hbox (badness 1226) in paragraph at lines 1808--1809
-\T1/fve/m/n/12 von ihren Anfängen bis heute, hrsg. Hessisches Landesmuseum
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1808--1809
-\T1/fve/m/n/12 Darmstadt, Ausst.-Kat. Darmstadt, Hessisches Landesmuseum,
- []
-
-[183]
-Underfull \hbox (badness 10000) in paragraph at lines 1815--1816
-[]\T1/fve/m/n/12 Rademacher, Hellmut: Theater Plakate. Ein internationaler
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1819--1820
-[]\T1/fve/m/n/12 Witamwas, Birgit: Geklebte NS-Propaganda. Verführung und
- []
-
-[184] [185] (/home/julius/Repos/Masterarbeit/LaTeX/Masterarbeit.aux)
+[183] [184] [185] (Masterarbeit.aux)
 Package rerunfilecheck Info: File `Masterarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: CA19A32D1F94E73B978711F92E2BFE36;8624.
+(rerunfilecheck)             Checksum: FD5B1BEF9238E8F5BC7B33E8D5C4615B;8634.
  ) 
 Here is how much of TeX's memory you used:
- 17168 strings out of 481257
- 286745 string characters out of 2908297
- 1003454 words of memory out of 3000000
- 33317 multiletter control sequences out of 15000+600000
- 448152 words of font info for 70 fonts, out of 8000000 for 9000
- 0 hyphenation exceptions out of 8191
- 71i,12n,77p,2554b,2384s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 17128 strings out of 479334
+ 289043 string characters out of 2853721
+ 1042194 words of memory out of 3000000
+ 33515 multiletter control sequences out of 15000+200000
+ 448152 words of font info for 70 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 71i,12n,77p,2551b,2382s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.129} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.128} has been referenced but does not exist, replaced by a fixed one
+
 pdfTeX warning (dest): name{Hfootnote.127} has been referenced but does not exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.126} has been referenced but does not exist, replaced by a fixed one
@@ -3781,10 +2351,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
- </home/julius/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk>{/home/julius/.miktex/texmfs/install/fonts/enc/dvips/base/8r.enc}</home/julius/.miktex/texmfs/install/fonts/type1/bera/fveb8a.pfb></home/julius/.miktex/texmfs/install/fonts/type1/bera/fver8a.pfb></home/julius/.miktex/texmfs/install/fonts/type1/bera/fver8a.pfb></home/julius/.miktex/texmfs/install/fonts/type1/bera/fvmb8a.pfb></home/julius/.miktex/texmfs/install/fonts/type1/bera/fvmr8a.pfb></home/julius/.miktex/texmfs/install/fonts/type1/bera/fvmro8a.pfb>
-Output written on /home/julius/Repos/Masterarbeit/LaTeX/Masterarbeit.pdf (186 pages, 149394935 bytes).
+ <C:\Users\Julius Emmel\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk>{C:/Users/Julius Emmel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/Julius Emmel/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fveb8a.pfb><C:/Users/Julius Emmel/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fver8a.pfb><C:/Users/Julius Emmel/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fver8a.pfb><C:/Users/Julius Emmel/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmb8a.pfb><C:/Users/Julius Emmel/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/Julius Emmel/AppData/Local/Programs/MiKTeX/fonts/type1/bera/fvmro8a.pfb>
+Output written on Masterarbeit.pdf (186 pages, 149399835 bytes).
 PDF statistics:
- 2104 PDF objects out of 2487 (max. 8388607)
- 808 named destinations out of 1000 (max. 500000)
+ 2114 PDF objects out of 2487 (max. 8388607)
+ 810 named destinations out of 1000 (max. 500000)
  1000 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,41 +5,41 @@
 \contentsline {subsection}{\numberline {1.4}Die Struktur der Arbeit}{7}{subsection.1.4}%
 \contentsline {section}{\numberline {2}Plakatkunst}{9}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Die Geschichte des Plakats}{9}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Herausforderungen der Bilderkennung}{19}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Herausforderungen der Objekterkennung}{19}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Das Ausstellungsplakat}{20}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Das Programmplakat}{20}{subsubsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Das Veranstaltungsplakat}{21}{subsubsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}Das politische Plakat}{22}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.4}Das politische Plakat}{21}{subsubsection.2.2.4}%
 \contentsline {subsubsection}{\numberline {2.2.5}Das Filmplakat}{23}{subsubsection.2.2.5}%
-\contentsline {subsubsection}{\numberline {2.2.6}Das Theaterplakat}{24}{subsubsection.2.2.6}%
+\contentsline {subsubsection}{\numberline {2.2.6}Das Theaterplakat}{23}{subsubsection.2.2.6}%
 \contentsline {subsubsection}{\numberline {2.2.7}Das Produktplakat}{24}{subsubsection.2.2.7}%
 \contentsline {subsubsection}{\numberline {2.2.8}Das Buchplakat}{25}{subsubsection.2.2.8}%
 \contentsline {subsubsection}{\numberline {2.2.9}Schrift}{26}{subsubsection.2.2.9}%
 \contentsline {subsubsection}{\numberline {2.2.10}Grafik}{30}{subsubsection.2.2.10}%
 \contentsline {subsubsection}{\numberline {2.2.11}Schrift-Grafik-Verschränkungen}{36}{subsubsection.2.2.11}%
-\contentsline {subsubsection}{\numberline {2.2.12}Scans}{40}{subsubsection.2.2.12}%
+\contentsline {subsubsection}{\numberline {2.2.12}Scans}{39}{subsubsection.2.2.12}%
 \contentsline {subsection}{\numberline {2.3}Digitale Plakatsammlungen in drei Museen}{42}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}René Grohnert -- Deutsches Plakat Museum}{43}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Anna Schultz -- Akademie der Künste}{45}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2}Anna Schultz -- Akademie der Künste}{44}{subsubsection.2.3.2}%
 \contentsline {subsubsection}{\numberline {2.3.3}Insa Brinkmann und Dr. Antje Schmidt -- Museum für Kunst und Gewerbe Hamburg}{47}{subsubsection.2.3.3}%
-\contentsline {section}{\numberline {3}Computergestützte Erschließung der Plakatsammlung}{52}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Computer Vision und Machine Learning}{52}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Die technischen Grundlagen}{54}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Tensorflow}{54}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Detectron2}{56}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Tesseract}{56}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Datensätze}{57}{subsubsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.3}Erstellung von Datensätzen aus der Bayreuther Plakatsammlung}{58}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Labelme}{59}{subsubsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.4}Image Clustering}{64}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Tensorflow Training}{67}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Vergleich der Ergebnisse}{70}{subsubsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.5}Objekterkennung auf Plakaten}{71}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}detectron2 Training}{75}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Vergleich der Ergebnisse}{78}{subsubsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.6}Generierung von möglichen Labeln}{80}{subsection.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}Vergleich der Ergebnisse}{82}{subsubsection.3.6.1}%
-\contentsline {section}{\numberline {4}Konklusion}{90}{section.4}%
+\contentsline {section}{\numberline {3}Computergestützte Erschließung der Plakatsammlung}{51}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Computer Vision und Machine Learning}{51}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Die technischen Grundlagen}{53}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Tensorflow}{53}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Detectron2}{55}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Tesseract}{55}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Datensätze}{56}{subsubsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3}Erstellung von Datensätzen aus der Bayreuther Plakatsammlung}{57}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Labelme}{58}{subsubsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.4}Image Clustering}{63}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Tensorflow Training}{66}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Vergleich der Ergebnisse}{69}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Objekterkennung auf Plakaten}{70}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}detectron2 Training}{74}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Vergleich der Ergebnisse}{77}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.6}Generierung von möglichen Labeln}{79}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Vergleich der Ergebnisse}{81}{subsubsection.3.6.1}%
+\contentsline {section}{\numberline {4}Konklusion}{89}{section.4}%
 \contentsline {section}{\numberline {5}Abbildungen}{95}{section.5}%
 \contentsline {section}{\numberline {6}Anlagen}{174}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Fragebogen: Fragen bezüglich der Digitalisierung}{174}{subsection.6.1}%
